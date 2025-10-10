@@ -4,7 +4,7 @@ Uses the new hierarchical dropdown system for data entry.
 """
 
 import streamlit as st
-from datetime import date, datetime
+from datetime import date
 from src.database.operations import DatabaseStorage
 from src.utils.dropdowns import DropdownManager
 from src.services import CachedQueryService

@@ -22,7 +22,7 @@ class CachedQueryService:
         Eliminates N+1 query pattern.
         """
         conn = _db._get_connection()
-        cursor = conn.cursor()
+        cursor = _db._get_cursor(conn)
         
         # Single JOIN query instead of N individual queries
         cursor.execute('''
@@ -42,15 +42,16 @@ class CachedQueryService:
         
         results = []
         for row in cursor.fetchall():
+            row_dict = dict(row)
             results.append({
-                'id': row[0],
-                'name': row[1],
-                'category': row[2],
-                'goal_hours': row[3],
-                'date_added': row[4],
-                'logged_hours': row[5],
-                'session_count': row[6],
-                'progress_pct': (row[5] / row[3] * 100) if row[3] > 0 else 0
+                'id': row_dict['id'],
+                'name': row_dict['name'],
+                'category': row_dict['category'],
+                'goal_hours': row_dict['goal_hours'],
+                'date_added': row_dict['date_added'],
+                'logged_hours': row_dict['logged_hours'],
+                'session_count': row_dict['session_count'],
+                'progress_pct': (row_dict['logged_hours'] / row_dict['goal_hours'] * 100) if row_dict['goal_hours'] > 0 else 0
             })
         
         logging.info(f"CachedQueryService: Fetched {len(results)} tech stack entries with metrics (cached)")
@@ -58,19 +59,10 @@ class CachedQueryService:
     
     @staticmethod
     @st.cache_data(ttl=60, show_spinner=False)
-    def get_dropdown_values_cached(_db: DatabaseStorage, field_name: str, parent_field: str = "", 
-                                   parent_value: str = "", show_all: bool = False) -> List[str]:
-        """Cached dropdown values query."""
-        p_field = parent_field if parent_field else None
-        p_value = parent_value if parent_value else None
-        return _db.get_dropdown_values(field_name, p_field, p_value, show_all)
-    
-    @staticmethod
-    @st.cache_data(ttl=60, show_spinner=False)
     def get_all_dropdown_data(_db: DatabaseStorage) -> Dict[str, List[str]]:
         """Get all dropdown data at once (cached)."""
         conn = _db._get_connection()
-        cursor = conn.cursor()
+        cursor = _db._get_cursor(conn)
         
         cursor.execute('''
             SELECT field_name, field_value 
@@ -80,8 +72,9 @@ class CachedQueryService:
         
         all_data = {}
         for row in cursor.fetchall():
-            field_name = row[0]
-            field_value = row[1]
+            row_dict = dict(row)
+            field_name = row_dict['field_name']
+            field_value = row_dict['field_value']
             
             if field_name not in all_data:
                 all_data[field_name] = []
@@ -96,7 +89,7 @@ class CachedQueryService:
     def get_dashboard_metrics(_db: DatabaseStorage) -> Dict[str, Any]:
         """Get all dashboard metrics in one batch query."""
         conn = _db._get_connection()
-        cursor = conn.cursor()
+        cursor = _db._get_cursor(conn)
         
         # Get aggregated stats
         cursor.execute('''
@@ -109,12 +102,13 @@ class CachedQueryService:
         ''')
         
         row = cursor.fetchone()
+        row_dict = dict(row)
         
         return {
-            'total_sessions': row[0] or 0,
-            'total_hours': row[1] or 0.0,
-            'tech_count': row[2] or 0,
-            'category_count': row[3] or 0
+            'total_sessions': row_dict['total_sessions'] or 0,
+            'total_hours': row_dict['total_hours'] or 0.0,
+            'tech_count': row_dict['tech_count'] or 0,
+            'category_count': row_dict['category_count'] or 0
         }
     
     @staticmethod
@@ -128,23 +122,23 @@ class CachedQueryService:
     def get_sessions_with_details(_db: DatabaseStorage, limit: int = 100, offset: int = 0) -> List[Dict[str, Any]]:
         """Get sessions with pagination (cached)."""
         conn = _db._get_connection()
-        cursor = conn.cursor()
+        cursor = _db._get_cursor(conn)
+        placeholder = _db._get_placeholder()
         
-        cursor.execute('''
+        cursor.execute(f'''
             SELECT * FROM sessions 
             ORDER BY session_date DESC, created_at DESC
-            LIMIT %s OFFSET %s
+            LIMIT {placeholder} OFFSET {placeholder}
         ''', (limit, offset))
         
-        rows = cursor.fetchall()
-        return [dict(row) for row in rows]
+        return [dict(row) for row in cursor.fetchall()]
     
     @staticmethod
     @st.cache_data(ttl=60, show_spinner=False)
     def get_technology_session_counts(_db: DatabaseStorage) -> Dict[str, int]:
         """Get session counts by technology (for delete safety checks)."""
         conn = _db._get_connection()
-        cursor = conn.cursor()
+        cursor = _db._get_cursor(conn)
         
         cursor.execute('''
             SELECT technology, COUNT(*) as count
@@ -152,14 +146,14 @@ class CachedQueryService:
             GROUP BY technology
         ''')
         
-        return {row[0]: row[1] for row in cursor.fetchall()}
+        return {dict(row)['technology']: dict(row)['count'] for row in cursor.fetchall()}
     
     @staticmethod
     @st.cache_data(ttl=60, show_spinner=False)
     def get_category_usage_stats(_db: DatabaseStorage) -> Dict[str, Dict[str, int]]:
         """Get usage statistics for categories."""
         conn = _db._get_connection()
-        cursor = conn.cursor()
+        cursor = _db._get_cursor(conn)
         
         # Get tech count and session count per category
         cursor.execute('''
@@ -170,7 +164,7 @@ class CachedQueryService:
             GROUP BY category
         ''')
         
-        tech_counts = {row[0]: row[1] for row in cursor.fetchall()}
+        tech_counts = {dict(row)['category']: dict(row)['tech_count'] for row in cursor.fetchall()}
         
         cursor.execute('''
             SELECT 
@@ -180,7 +174,7 @@ class CachedQueryService:
             GROUP BY category_name
         ''')
         
-        session_counts = {row[0]: row[1] for row in cursor.fetchall()}
+        session_counts = {dict(row)['category_name']: dict(row)['session_count'] for row in cursor.fetchall()}
         
         # Combine results
         all_categories = set(tech_counts.keys()) | set(session_counts.keys())
@@ -198,7 +192,7 @@ class CachedQueryService:
     def get_category_hours_aggregated(_db: DatabaseStorage) -> Dict[str, float]:
         """Get hours by category using true aggregation (no row limit)."""
         conn = _db._get_connection()
-        cursor = conn.cursor()
+        cursor = _db._get_cursor(conn)
         
         cursor.execute('''
             SELECT 
@@ -208,14 +202,14 @@ class CachedQueryService:
             GROUP BY category_name
         ''')
         
-        return {row[0]: row[1] for row in cursor.fetchall()}
+        return {dict(row)['category_name']: dict(row)['total_hours'] for row in cursor.fetchall()}
     
     @staticmethod
     @st.cache_data(ttl=60, show_spinner=False)
     def get_category_analytics(_db: DatabaseStorage) -> List[Dict[str, Any]]:
         """Get category analytics with technology breakdown."""
         conn = _db._get_connection()
-        cursor = conn.cursor()
+        cursor = _db._get_cursor(conn)
         
         # Get category totals with technology breakdown
         cursor.execute('''
@@ -233,10 +227,11 @@ class CachedQueryService:
         # Organize by category
         category_data = {}
         for row in cursor.fetchall():
-            cat_name = row[0]
-            tech_name = row[1]
-            hours = row[2]
-            sessions = row[3]
+            row_dict = dict(row)
+            cat_name = row_dict['category_name']
+            tech_name = row_dict['technology']
+            hours = row_dict['hours']
+            sessions = row_dict['sessions']
             
             if cat_name not in category_data:
                 category_data[cat_name] = {
@@ -261,7 +256,7 @@ class CachedQueryService:
     def get_technology_analytics(_db: DatabaseStorage) -> List[Dict[str, Any]]:
         """Get technology analytics with work item breakdown."""
         conn = _db._get_connection()
-        cursor = conn.cursor()
+        cursor = _db._get_cursor(conn)
         
         # Get technology totals with work item breakdown
         cursor.execute('''
@@ -280,11 +275,12 @@ class CachedQueryService:
         # Organize by technology
         tech_data = {}
         for row in cursor.fetchall():
-            tech_name = row[0]
-            cat_name = row[1]
-            work_item = row[2] if row[2] else 'General Practice'
-            hours = row[3]
-            sessions = row[4]
+            row_dict = dict(row)
+            tech_name = row_dict['technology']
+            cat_name = row_dict['category_name']
+            work_item = row_dict['work_item'] if row_dict['work_item'] else 'General Practice'
+            hours = row_dict['hours']
+            sessions = row_dict['sessions']
             
             if tech_name not in tech_data:
                 tech_data[tech_name] = {
@@ -310,7 +306,7 @@ class CachedQueryService:
     def get_work_item_analytics(_db: DatabaseStorage) -> List[Dict[str, Any]]:
         """Get work item analytics with skill breakdown."""
         conn = _db._get_connection()
-        cursor = conn.cursor()
+        cursor = _db._get_cursor(conn)
         
         # Get work item totals with skill breakdown
         cursor.execute('''
@@ -330,12 +326,13 @@ class CachedQueryService:
         # Organize by work item
         work_item_data = {}
         for row in cursor.fetchall():
-            work_item = row[0]
-            tech_name = row[1]
-            skill = row[2] if row[2] else 'General'
-            session_type = row[3]
-            hours = row[4]
-            sessions = row[5]
+            row_dict = dict(row)
+            work_item = row_dict['work_item']
+            tech_name = row_dict['technology']
+            skill = row_dict['skill_topic'] if row_dict['skill_topic'] else 'General'
+            session_type = row_dict['session_type']
+            hours = row_dict['hours']
+            sessions = row_dict['sessions']
             
             if work_item not in work_item_data:
                 work_item_data[work_item] = {

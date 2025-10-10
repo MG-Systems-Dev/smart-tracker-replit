@@ -7,7 +7,6 @@ import streamlit as st
 import pandas as pd
 from src.database.operations import DatabaseStorage
 from src.services import CachedQueryService
-import logging
 
 def show_sessions_page():
     """Display the Personal Development Dashboard / Sessions page."""

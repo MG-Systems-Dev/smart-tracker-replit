@@ -206,3 +206,40 @@
 2025-10-10 00:52:21,397 | INFO | CachedQueryService: Fetched 0 tech stack entries with metrics (cached)
 2025-10-10 00:54:00,187 | INFO | Database initialized successfully
 2025-10-10 00:54:00,194 | INFO | CachedQueryService: Fetched 0 tech stack entries with metrics (cached)
+2025-10-10 01:22:50,155 | INFO | SQLite database initialized successfully
+2025-10-10 01:24:31,725 | INFO | SQLite database initialized successfully
+2025-10-10 01:24:39,303 | INFO | CachedQueryService: Fetched 0 tech stack entries with metrics (cached)
+2025-10-10 01:24:39,605 | INFO | SQLite database initialized successfully
+2025-10-10 01:32:07,660 | INFO | SQLite database initialized successfully
+2025-10-10 01:32:08,111 | INFO | CachedQueryService: Fetched 1 tech stack entries with metrics (cached)
+2025-10-10 01:32:17,819 | INFO | SQLite database initialized successfully
+2025-10-10 01:47:05,823 | INFO | SQLite database initialized successfully
+2025-10-10 01:47:05,838 | INFO | CachedQueryService: Fetched 1 tech stack entries with metrics (cached)
+2025-10-10 01:50:29,914 | INFO | SQLite database initialized successfully
+2025-10-10 01:50:29,921 | INFO | CachedQueryService: Fetched 1 tech stack entries with metrics (cached)
+2025-10-10 01:52:21,764 | INFO | SQLite database initialized successfully
+2025-10-10 01:52:21,771 | INFO | CachedQueryService: Fetched 1 tech stack entries with metrics (cached)
+2025-10-10 01:52:45,585 | INFO | Added work item: firt 8 fingers → Test Tech
+2025-10-10 01:52:45,585 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 01:52:55,250 | INFO | Added skill: hey → firt 8 fingers
+2025-10-10 01:52:55,250 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 01:53:26,212 | INFO | Added session ID 10: Test Tech - hey
+2025-10-10 01:53:26,213 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 01:53:26,213 | INFO | Added session ID 10: Test Tech - 1.0h
+2025-10-10 01:53:31,524 | INFO | CachedQueryService: Fetched 1 tech stack entries with metrics (cached)
+2025-10-10 01:54:06,946 | INFO | Deleted session ID 10
+2025-10-10 01:54:06,947 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 01:54:09,165 | INFO | Deleted session ID 9
+2025-10-10 01:54:09,165 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 01:54:11,277 | INFO | Deleted session ID 8
+2025-10-10 01:54:11,278 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 01:54:12,314 | INFO | Deleted session ID 7
+2025-10-10 01:54:12,314 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 01:54:14,084 | INFO | CachedQueryService: Fetched 1 tech stack entries with metrics (cached)
+2025-10-10 01:55:19,658 | INFO | Deleted technology ID 44
+2025-10-10 01:55:19,659 | INFO | TechnologySyncService: Deleted Test Tech from both tables
+2025-10-10 01:55:30,329 | INFO | Deleted work item: firt 8 fingers → Test Tech
+2025-10-10 01:55:30,329 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 01:55:37,782 | INFO | Deleted skill: hey → firt 8 fingers
+2025-10-10 01:55:37,783 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 01:55:46,669 | INFO | CachedQueryService: Fetched 0 tech stack entries with metrics (cached)

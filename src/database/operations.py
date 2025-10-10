@@ -37,12 +37,19 @@ class DatabaseStorage:
     def _get_connection(self):
         """Get database connection with appropriate cursor type."""
         if self.use_postgresql:
-            if self.conn is None or (hasattr(self.conn, "closed") and self.conn.closed):
-                self.conn = psycopg2.connect(self.database_url)
+            try:
+                # Test if connection is still valid
+                if self.conn is not None:
+                    self.conn.cursor().execute('SELECT 1')
+                    return self.conn
+            except (psycopg2.OperationalError, psycopg2.InterfaceError, AttributeError):
+                pass
+            # Create new connection
+            self.conn = psycopg2.connect(self.database_url)
             return self.conn
         else:
             if self.conn is None:
-                self.conn = sqlite3.connect(self.db_path)
+                self.conn = sqlite3.connect(self.db_path, check_same_thread=False)
                 self.conn.row_factory = sqlite3.Row  # Enable dict-like access
             return self.conn
 
@@ -66,6 +73,38 @@ class DatabaseStorage:
             return "TIMESTAMP DEFAULT CURRENT_TIMESTAMP"
         else:
             return "DATETIME DEFAULT CURRENT_TIMESTAMP"
+    
+    def execute_query_fetchall(self, query: str, params: tuple = ()) -> List[Dict[str, Any]]:
+        """Execute a query and return all results as list of dicts."""
+        conn = self._get_connection()
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
+        
+        # Replace %s with appropriate placeholder for the database type
+        if placeholder != "%s":
+            formatted_query = query.replace("%s", placeholder)
+        else:
+            formatted_query = query
+            
+        cursor.execute(formatted_query, params)
+        results = cursor.fetchall()
+        return [dict(row) for row in results]
+    
+    def execute_query_fetchone(self, query: str, params: tuple = ()) -> Optional[Dict[str, Any]]:
+        """Execute a query and return one result as dict or None."""
+        conn = self._get_connection()
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
+        
+        # Replace %s with appropriate placeholder for the database type
+        if placeholder != "%s":
+            formatted_query = query.replace("%s", placeholder)
+        else:
+            formatted_query = query
+            
+        cursor.execute(formatted_query, params)
+        result = cursor.fetchone()
+        return dict(result) if result else None
 
     def _initialize_database(self):
         """Create database tables if they don't exist."""
@@ -215,7 +254,8 @@ class DatabaseStorage:
                     session_data.get("notes"),
                 ),
             )
-            session_id = cursor.fetchone()["session_id"]
+            result = cursor.fetchone()
+            session_id = dict(result)["session_id"] if result else 0
         else:
             cursor.execute(
                 f"""
@@ -243,10 +283,12 @@ class DatabaseStorage:
             session_id = cursor.lastrowid
 
         conn.commit()
+        if session_id is None:
+            session_id = 0
         logging.info(
             f"Added session ID {session_id}: {session_data.get('technology')} - {session_data.get('skill_topic')}"
         )
-        return session_id
+        return int(session_id)
 
     def get_all_sessions(self) -> List[Dict[str, Any]]:
         """Retrieve all learning sessions."""
@@ -260,8 +302,11 @@ class DatabaseStorage:
     def get_session_by_id(self, session_id: int) -> Optional[Dict[str, Any]]:
         """Retrieve a specific session by ID."""
         conn = self._get_connection()
-        cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-        cursor.execute("SELECT * FROM sessions WHERE session_id = %s", (session_id,))
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
+        cursor.execute(
+            f"SELECT * FROM sessions WHERE session_id = {placeholder}", (session_id,)
+        )
 
         row = cursor.fetchone()
         return dict(row) if row else None
@@ -269,25 +314,26 @@ class DatabaseStorage:
     def update_session(self, session_id: int, session_data: Dict[str, Any]) -> bool:
         """Update an existing session."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
 
         cursor.execute(
-            """
+            f"""
             UPDATE sessions SET
-                session_date = %s,
-                session_type = %s,
-                category_name = %s,
-                technology = %s,
-                work_item = %s,
-                skill_topic = %s,
-                category_source = %s,
-                difficulty = %s,
-                status = %s,
-                hours_spent = %s,
-                tags = %s,
-                notes = %s,
+                session_date = {placeholder},
+                session_type = {placeholder},
+                category_name = {placeholder},
+                technology = {placeholder},
+                work_item = {placeholder},
+                skill_topic = {placeholder},
+                category_source = {placeholder},
+                difficulty = {placeholder},
+                status = {placeholder},
+                hours_spent = {placeholder},
+                tags = {placeholder},
+                notes = {placeholder},
                 updated_at = CURRENT_TIMESTAMP
-            WHERE session_id = %s
+            WHERE session_id = {placeholder}
         """,
             (
                 session_data.get("session_date"),
@@ -313,8 +359,9 @@ class DatabaseStorage:
     def delete_session(self, session_id: int) -> bool:
         """Delete a session by ID."""
         conn = self._get_connection()
-        cursor = conn.cursor()
-        cursor.execute("DELETE FROM sessions WHERE session_id = %s", (session_id,))
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
+        cursor.execute(f"DELETE FROM sessions WHERE session_id = {placeholder}", (session_id,))
         conn.commit()
         logging.info(f"Deleted session ID {session_id}")
         return cursor.rowcount > 0
@@ -324,7 +371,7 @@ class DatabaseStorage:
     def get_total_sessions(self) -> int:
         """Get total number of sessions."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
         cursor.execute("SELECT COUNT(*) FROM sessions")
         row = cursor.fetchone()
         if row:
@@ -334,7 +381,7 @@ class DatabaseStorage:
     def get_total_hours(self) -> float:
         """Get total hours spent across all sessions."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
         cursor.execute("SELECT COALESCE(SUM(hours_spent), 0) FROM sessions")
         row = cursor.fetchone()
         if row:
@@ -344,7 +391,7 @@ class DatabaseStorage:
     def get_total_technologies(self) -> int:
         """Get total number of unique technologies."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
         cursor.execute("SELECT COUNT(DISTINCT technology) FROM sessions")
         row = cursor.fetchone()
         if row:
@@ -354,7 +401,7 @@ class DatabaseStorage:
     def get_overall_progress(self) -> float:
         """Calculate overall progress percentage based on total hours vs total goals."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
 
         cursor.execute("SELECT COALESCE(SUM(goal_hours), 0) FROM tech_stack")
         row = cursor.fetchone()
@@ -377,40 +424,51 @@ class DatabaseStorage:
         """Add a new technology to the tech stack."""
         conn = self._get_connection()
         try:
-            cursor = conn.cursor()
-            cursor.execute(
-                """
-                INSERT INTO tech_stack (name, category, goal_hours, date_added)
-                VALUES (%s, %s, %s, %s)
-                RETURNING id
-            """,
-                (name, category, goal_hours, date_added),
-            )
+            cursor = self._get_cursor(conn)
+            placeholder = self._get_placeholder()
+            
+            if self.use_postgresql:
+                cursor.execute(
+                    f"""
+                    INSERT INTO tech_stack (name, category, goal_hours, date_added)
+                    VALUES ({placeholder}, {placeholder}, {placeholder}, {placeholder})
+                    RETURNING id
+                """,
+                    (name, category, goal_hours, date_added),
+                )
+                result = cursor.fetchone()
+                tech_id = dict(result)["id"] if result else 0
+            else:
+                cursor.execute(
+                    f"""
+                    INSERT INTO tech_stack (name, category, goal_hours, date_added)
+                    VALUES ({placeholder}, {placeholder}, {placeholder}, {placeholder})
+                """,
+                    (name, category, goal_hours, date_added),
+                )
+                tech_id = cursor.lastrowid or 0
 
             conn.commit()
-            row = cursor.fetchone()
-            if row:
-                tech_id = row[0]
-                logging.info(f"Added technology: {name} (ID: {tech_id})")
-                return tech_id
-            return 0
-        except psycopg2.IntegrityError:
+            logging.info(f"Added technology: {name} (ID: {tech_id})")
+            return int(tech_id)
+        except (psycopg2.IntegrityError, sqlite3.IntegrityError):
             conn.rollback()
             logging.warning(f"Technology {name} already exists")
-            return 0
+            return -1
 
     def get_all_tech_stack(self) -> List[Dict[str, Any]]:
         """Retrieve all technologies in the tech stack."""
         conn = self._get_connection()
-        cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+        cursor = self._get_cursor(conn)
         cursor.execute("SELECT * FROM tech_stack ORDER BY name")
         return [dict(row) for row in cursor.fetchall()]
 
     def get_technology_by_id(self, tech_id: int) -> Optional[Dict[str, Any]]:
         """Get a specific technology by ID."""
         conn = self._get_connection()
-        cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-        cursor.execute("SELECT * FROM tech_stack WHERE id = %s", (tech_id,))
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
+        cursor.execute(f"SELECT * FROM tech_stack WHERE id = {placeholder}", (tech_id,))
 
         row = cursor.fetchone()
         return dict(row) if row else None
@@ -418,8 +476,9 @@ class DatabaseStorage:
     def get_tech_by_name(self, name: str) -> Optional[Dict[str, Any]]:
         """Get a specific technology by name."""
         conn = self._get_connection()
-        cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
-        cursor.execute("SELECT * FROM tech_stack WHERE name = %s", (name,))
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
+        cursor.execute(f"SELECT * FROM tech_stack WHERE name = {placeholder}", (name,))
 
         row = cursor.fetchone()
         return dict(row) if row else None
@@ -429,13 +488,14 @@ class DatabaseStorage:
     ) -> bool:
         """Update an existing technology."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
 
         cursor.execute(
-            """
+            f"""
             UPDATE tech_stack 
-            SET name = %s, category = %s, goal_hours = %s
-            WHERE id = %s
+            SET name = {placeholder}, category = {placeholder}, goal_hours = {placeholder}
+            WHERE id = {placeholder}
         """,
             (name, category, goal_hours, tech_id),
         )
@@ -447,8 +507,9 @@ class DatabaseStorage:
     def delete_technology(self, tech_id: int) -> bool:
         """Delete a technology from the tech stack."""
         conn = self._get_connection()
-        cursor = conn.cursor()
-        cursor.execute("DELETE FROM tech_stack WHERE id = %s", (tech_id,))
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
+        cursor.execute(f"DELETE FROM tech_stack WHERE id = {placeholder}", (tech_id,))
         conn.commit()
         logging.info(f"Deleted technology ID {tech_id}")
         return cursor.rowcount > 0
@@ -459,13 +520,14 @@ class DatabaseStorage:
         """Add a new category."""
         conn = self._get_connection()
         try:
-            cursor = conn.cursor()
+            cursor = self._get_cursor(conn)
+            placeholder = self._get_placeholder()
             date_added = datetime.now().strftime("%Y-%m-%d")
 
             cursor.execute(
-                """
+                f"""
                 INSERT INTO categories (category_name, is_custom, date_added)
-                VALUES (%s, %s, %s)
+                VALUES ({placeholder}, {placeholder}, {placeholder})
             """,
                 (category_name, 1 if is_custom else 0, date_added),
             )
@@ -473,7 +535,7 @@ class DatabaseStorage:
             conn.commit()
             logging.info(f"Added category: {category_name}")
             return True
-        except psycopg2.IntegrityError:
+        except (psycopg2.IntegrityError, sqlite3.IntegrityError):
             conn.rollback()
             logging.warning(f"Category {category_name} already exists")
             return False
@@ -481,14 +543,14 @@ class DatabaseStorage:
     def get_all_categories(self) -> List[str]:
         """Get all category names."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
         cursor.execute("SELECT category_name FROM categories ORDER BY category_name")
         return [row[0] for row in cursor.fetchall()]
 
     def get_custom_categories(self) -> List[str]:
         """Get custom (user-added) categories only."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
         cursor.execute(
             "SELECT category_name FROM categories WHERE is_custom = 1 ORDER BY category_name"
         )
@@ -497,9 +559,10 @@ class DatabaseStorage:
     def delete_category(self, category_name: str) -> bool:
         """Delete a category."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
         cursor.execute(
-            "DELETE FROM categories WHERE category_name = %s", (category_name,)
+            f"DELETE FROM categories WHERE category_name = {placeholder}", (category_name,)
         )
         conn.commit()
         logging.info(f"Deleted category: {category_name}")
@@ -508,12 +571,13 @@ class DatabaseStorage:
     def rename_category(self, old_name: str, new_name: str) -> bool:
         """Rename a category."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
         cursor.execute(
-            """
+            f"""
             UPDATE categories 
-            SET category_name = %s
-            WHERE category_name = %s
+            SET category_name = {placeholder}
+            WHERE category_name = {placeholder}
         """,
             (new_name, old_name),
         )
@@ -524,11 +588,37 @@ class DatabaseStorage:
     def category_exists(self, category_name: str) -> bool:
         """Check if a category exists."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
         cursor.execute(
-            "SELECT 1 FROM categories WHERE category_name = %s", (category_name,)
+            f"SELECT 1 FROM categories WHERE category_name = {placeholder}", (category_name,)
         )
         return cursor.fetchone() is not None
+    
+    def count_sessions_by_category(self, category_name: str) -> int:
+        """Count sessions using a specific category."""
+        conn = self._get_connection()
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
+        cursor.execute(
+            f"SELECT COUNT(*) FROM sessions WHERE category_name = {placeholder}",
+            (category_name,)
+        )
+        row = cursor.fetchone()
+        return row[0] if row else 0
+    
+    def update_tech_stack_category(self, old_name: str, new_name: str) -> bool:
+        """Update category name in tech_stack table."""
+        conn = self._get_connection()
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
+        cursor.execute(
+            f"UPDATE tech_stack SET category = {placeholder} WHERE category = {placeholder}",
+            (new_name, old_name)
+        )
+        conn.commit()
+        logging.info(f"Updated tech_stack category: {old_name} -> {new_name}")
+        return cursor.rowcount > 0
 
     # ==================== DROPDOWN OPERATIONS ====================
 
@@ -542,12 +632,13 @@ class DatabaseStorage:
         """Add a new dropdown value with optional parent relationship."""
         conn = self._get_connection()
         try:
-            cursor = conn.cursor()
+            cursor = self._get_cursor(conn)
+            placeholder = self._get_placeholder()
 
             cursor.execute(
-                """
+                f"""
                 INSERT INTO dropdowns (field_name, field_value, parent_field, parent_value)
-                VALUES (%s, %s, %s, %s)
+                VALUES ({placeholder}, {placeholder}, {placeholder}, {placeholder})
             """,
                 (field_name, field_value, parent_field, parent_value),
             )
@@ -555,7 +646,7 @@ class DatabaseStorage:
             conn.commit()
             logging.info(f"Added dropdown: {field_name} = {field_value}")
             return True
-        except psycopg2.IntegrityError:
+        except (psycopg2.IntegrityError, sqlite3.IntegrityError):
             conn.rollback()
             return False
 
@@ -564,22 +655,23 @@ class DatabaseStorage:
     ) -> List[str]:
         """Get dropdown values for a specific field, optionally filtered by parent."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
 
         if parent_value:
             cursor.execute(
-                """
+                f"""
                 SELECT DISTINCT field_value FROM dropdowns
-                WHERE field_name = %s AND parent_value = %s
+                WHERE field_name = {placeholder} AND parent_value = {placeholder}
                 ORDER BY field_value
             """,
                 (field_name, parent_value),
             )
         else:
             cursor.execute(
-                """
+                f"""
                 SELECT DISTINCT field_value FROM dropdowns
-                WHERE field_name = %s
+                WHERE field_name = {placeholder}
                 ORDER BY field_value
             """,
                 (field_name,),
@@ -590,11 +682,12 @@ class DatabaseStorage:
     def delete_dropdown_value(self, field_name: str, field_value: str) -> bool:
         """Delete a specific dropdown value."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
+        placeholder = self._get_placeholder()
         cursor.execute(
-            """
+            f"""
             DELETE FROM dropdowns 
-            WHERE field_name = %s AND field_value = %s
+            WHERE field_name = {placeholder} AND field_value = {placeholder}
         """,
             (field_name, field_value),
         )
@@ -659,12 +752,13 @@ class DatabaseStorage:
 
     def get_technologies_by_category(self, category: str) -> List[str]:
         """Get all technologies for a specific category from tech_stack table."""
+        placeholder = self._get_placeholder()
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
         cursor.execute(
-            """
+            f"""
             SELECT name FROM tech_stack
-            WHERE category = %s
+            WHERE category = {placeholder}
             ORDER BY name
         """,
             (category,),
@@ -674,14 +768,15 @@ class DatabaseStorage:
 
     def get_work_items_by_technology(self, technology: str) -> List[str]:
         """Get work items for a technology - merges manual + auto-populated from sessions."""
+        placeholder = self._get_placeholder()
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
 
         # Get manually defined work items
         cursor.execute(
-            """
+            f"""
             SELECT name FROM work_items
-            WHERE technology = %s
+            WHERE technology = {placeholder}
             ORDER BY name
         """,
             (technology,),
@@ -690,9 +785,9 @@ class DatabaseStorage:
 
         # Get auto-populated from sessions
         cursor.execute(
-            """
+            f"""
             SELECT DISTINCT work_item FROM sessions
-            WHERE technology = %s AND work_item IS NOT NULL AND work_item != ''
+            WHERE technology = {placeholder} AND work_item IS NOT NULL AND work_item != ''
             ORDER BY work_item
         """,
             (technology,),
@@ -705,14 +800,15 @@ class DatabaseStorage:
 
     def get_skills_by_work_item(self, work_item: str) -> List[str]:
         """Get skills for a work item - merges manual + auto-populated from sessions."""
+        placeholder = self._get_placeholder()
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
 
         # Get manually defined skills
         cursor.execute(
-            """
+            f"""
             SELECT name FROM skills
-            WHERE work_item = %s
+            WHERE work_item = {placeholder}
             ORDER BY name
         """,
             (work_item,),
@@ -721,9 +817,9 @@ class DatabaseStorage:
 
         # Get auto-populated from sessions
         cursor.execute(
-            """
+            f"""
             SELECT DISTINCT skill_topic FROM sessions
-            WHERE work_item = %s AND skill_topic IS NOT NULL AND skill_topic != ''
+            WHERE work_item = {placeholder} AND skill_topic IS NOT NULL AND skill_topic != ''
             ORDER BY skill_topic
         """,
             (work_item,),
@@ -738,33 +834,35 @@ class DatabaseStorage:
 
     def add_work_item(self, name: str, technology: str) -> bool:
         """Add a manually defined work item linked to a technology."""
+        placeholder = self._get_placeholder()
         conn = self._get_connection()
         try:
-            cursor = conn.cursor()
+            cursor = self._get_cursor(conn)
             cursor.execute(
-                """
+                f"""
                 INSERT INTO work_items (name, technology)
-                VALUES (%s, %s)
+                VALUES ({placeholder}, {placeholder})
             """,
                 (name, technology),
             )
             conn.commit()
             logging.info(f"Added work item: {name} → {technology}")
             return True
-        except psycopg2.IntegrityError:
+        except (psycopg2.IntegrityError, sqlite3.IntegrityError):
             conn.rollback()
             logging.warning(f"Work item {name} already exists for {technology}")
             return False
 
     def delete_work_item(self, name: str, technology: str) -> bool:
         """Delete a manually defined work item."""
+        placeholder = self._get_placeholder()
         try:
             conn = self._get_connection()
-            cursor = conn.cursor()
+            cursor = self._get_cursor(conn)
             cursor.execute(
-                """
+                f"""
                 DELETE FROM work_items
-                WHERE name = %s AND technology = %s
+                WHERE name = {placeholder} AND technology = {placeholder}
             """,
                 (name, technology),
             )
@@ -790,33 +888,35 @@ class DatabaseStorage:
 
     def add_skill(self, name: str, work_item: str) -> bool:
         """Add a manually defined skill linked to a work item."""
+        placeholder = self._get_placeholder()
         conn = self._get_connection()
         try:
-            cursor = conn.cursor()
+            cursor = self._get_cursor(conn)
             cursor.execute(
-                """
+                f"""
                 INSERT INTO skills (name, work_item)
-                VALUES (%s, %s)
+                VALUES ({placeholder}, {placeholder})
             """,
                 (name, work_item),
             )
             conn.commit()
             logging.info(f"Added skill: {name} → {work_item}")
             return True
-        except psycopg2.IntegrityError:
+        except (psycopg2.IntegrityError, sqlite3.IntegrityError):
             conn.rollback()
             logging.warning(f"Skill {name} already exists for {work_item}")
             return False
 
     def delete_skill(self, name: str, work_item: str) -> bool:
         """Delete a manually defined skill."""
+        placeholder = self._get_placeholder()
         try:
             conn = self._get_connection()
-            cursor = conn.cursor()
+            cursor = self._get_cursor(conn)
             cursor.execute(
-                """
+                f"""
                 DELETE FROM skills
-                WHERE name = %s AND work_item = %s
+                WHERE name = {placeholder} AND work_item = {placeholder}
             """,
                 (name, work_item),
             )
@@ -861,10 +961,11 @@ class DatabaseStorage:
 
     def count_sessions_by_technology(self, technology: str) -> int:
         """Count sessions for a specific technology."""
+        placeholder = self._get_placeholder()
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
         cursor.execute(
-            "SELECT COUNT(*) FROM sessions WHERE technology = %s", (technology,)
+            f"SELECT COUNT(*) FROM sessions WHERE technology = {placeholder}", (technology,)
         )
         row = cursor.fetchone()
         if row:
@@ -873,13 +974,14 @@ class DatabaseStorage:
 
     def update_sessions_technology(self, old_name: str, new_name: str) -> bool:
         """Update technology name in all sessions."""
+        placeholder = self._get_placeholder()
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
         cursor.execute(
-            """
+            f"""
             UPDATE sessions
-            SET technology = %s
-            WHERE technology = %s
+            SET technology = {placeholder}
+            WHERE technology = {placeholder}
         """,
             (new_name, old_name),
         )
@@ -888,13 +990,14 @@ class DatabaseStorage:
 
     def update_sessions_category(self, old_name: str, new_name: str) -> bool:
         """Update category name in all sessions."""
+        placeholder = self._get_placeholder()
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
         cursor.execute(
-            """
+            f"""
             UPDATE sessions
-            SET category_name = %s
-            WHERE category_name = %s
+            SET category_name = {placeholder}
+            WHERE category_name = {placeholder}
         """,
             (new_name, old_name),
         )
@@ -903,31 +1006,32 @@ class DatabaseStorage:
 
     def merge_categories(self, source: str, target: str) -> bool:
         """Merge source category into target category."""
+        placeholder = self._get_placeholder()
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
 
         # Update all sessions
         cursor.execute(
-            """
+            f"""
             UPDATE sessions
-            SET category_name = %s
-            WHERE category_name = %s
+            SET category_name = {placeholder}
+            WHERE category_name = {placeholder}
         """,
             (target, source),
         )
 
         # Update all technologies
         cursor.execute(
-            """
+            f"""
             UPDATE tech_stack
-            SET category = %s
-            WHERE category = %s
+            SET category = {placeholder}
+            WHERE category = {placeholder}
         """,
             (target, source),
         )
 
         # Delete source category
-        cursor.execute("DELETE FROM categories WHERE category_name = %s", (source,))
+        cursor.execute(f"DELETE FROM categories WHERE category_name = {placeholder}", (source,))
 
         conn.commit()
         logging.info(f"Merged category: {source} -> {target}")

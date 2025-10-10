@@ -280,26 +280,43 @@ class DropdownManager:
         else:
             selected_values['work_item'] = ''
         
-        # Skill/Topic - Show ALL skills (no work item filter)
+        # Skill/Topic - FILTERED by selected work item (or show all if no work item selected)
         st.markdown("**🎯 Skill / Topic**")
-        all_skills = []
-        for tech in all_techs_list:
-            work_items_for_tech = self.db.get_work_items_by_technology(tech)
-            for wi in work_items_for_tech:
-                all_skills.extend(self.db.get_skills_by_work_item(wi))
-        all_skills = sorted(list(set(all_skills)))
         
-        if all_skills:
+        # Get skills based on selected work item
+        selected_work_item = selected_values.get('work_item', '')
+        if selected_work_item:
+            # Show only skills for the selected work item
+            filtered_skills = self.db.get_skills_by_work_item(selected_work_item)
+            filtered_skills = sorted(list(set(filtered_skills)))
+        else:
+            # No work item selected - show ALL skills
+            all_skills = []
+            for tech in all_techs_list:
+                work_items_for_tech = self.db.get_work_items_by_technology(tech)
+                for wi in work_items_for_tech:
+                    all_skills.extend(self.db.get_skills_by_work_item(wi))
+            filtered_skills = sorted(list(set(all_skills)))
+        
+        if filtered_skills:
             skill = st.selectbox(
                 "skill_dropdown",
-                options=[""] + all_skills,
+                options=[""] + filtered_skills,
                 key=f"skill_simple_{key_suffix}",
                 label_visibility="collapsed",
-                help="Select a skill or leave empty"
+                help="Select a skill/topic (filtered by work item)" if selected_work_item else "Select a skill/topic"
             )
             selected_values['skill_topic'] = skill if skill else ''
         else:
-            selected_values['skill_topic'] = ''
+            # Allow manual entry if no skills in database
+            st.info("💡 No skills found. Enter a custom skill below:")
+            custom_skill = st.text_input(
+                "Custom skill",
+                key=f"custom_skill_{key_suffix}",
+                label_visibility="collapsed",
+                placeholder="Enter skill/topic name..."
+            )
+            selected_values['skill_topic'] = custom_skill if custom_skill else ''
         
         # Auto-pair category from selected technology
         technology = selected_values.get('technology')

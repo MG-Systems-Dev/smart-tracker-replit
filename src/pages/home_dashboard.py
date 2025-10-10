@@ -7,7 +7,6 @@ import streamlit as st
 from src.database.operations import DatabaseStorage
 from src.services import CachedQueryService
 from datetime import datetime, timedelta
-import pandas as pd
 
 def show_home_kpi_dashboard():
     """Display the Home page as KPI dashboard only."""

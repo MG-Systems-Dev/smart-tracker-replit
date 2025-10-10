@@ -9,13 +9,14 @@ import logging
 import os
 import sys
 from pathlib import Path
-from datetime import date
-from src.database.operations import DatabaseStorage
-from src.core.config import __version__
 
-# Add project root to Python path for Streamlit Community Cloud
+# Add project root to Python path FIRST (before src imports)
 project_root = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(project_root))
+
+# Now import from src
+from src.database.operations import DatabaseStorage
+from src.core.config import __version__
 
 # Setup logging
 os.makedirs("logs", exist_ok=True)
@@ -24,74 +25,6 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s | %(levelname)s | %(message)s"
 )
-
-def validate_session(session_date, technology, hours):
-    """Validate session data. Returns (is_valid, error_message)."""
-    # Check hours
-    if hours < 0 or hours > 12:
-        return False, "⚠️ Hours must be between 0 and 12 (inclusive)"
-    
-    # Check future date
-    if session_date > date.today():
-        return False, "⚠️ Cannot log sessions for future dates"
-    
-    # Check technology not empty
-    if not technology or not technology.strip():
-        return False, "⚠️ Technology cannot be empty"
-    
-    return True, ""
-
-def get_tech_list(tech_stack):
-    """Get list of technology names from tech stack."""
-    if not tech_stack:
-        return ["Python", "Pandas", "Streamlit", "FastAPI", "SQL", "AI/ML"]
-    return [tech['name'] for tech in tech_stack]
-
-def ensure_tech_in_stack(technology, tech_stack, storage, category="❓ Uncategorized"):
-    """Add technology to tech stack if it doesn't exist."""
-    tech_names = [tech['name'] for tech in tech_stack]
-    if technology not in tech_names:
-        new_tech = {
-            "name": technology,
-            "category": category,
-            "goal_hours": 50,
-            "date_added": str(date.today())
-        }
-        tech_stack.append(new_tech)
-        storage.save_tech_stack(tech_stack)
-        logging.info(f"Auto-added technology to stack: {technology} in category: {category}")
-        return True
-    return False
-
-def get_studying_practice_breakdown(sessions, technology=None):
-    """Calculate studying vs practice hours breakdown.
-    
-    Args:
-        sessions: List of session dictionaries
-        technology: Optional technology name to filter by
-    
-    Returns:
-        dict with total_hours, studying_hours, studying_pct, practice_hours, practice_pct
-    """
-    # Filter sessions if technology is specified
-    if technology:
-        sessions = [s for s in sessions if s.get('technology') == technology]
-    
-    total_hours = sum(s.get('hours', 0) for s in sessions)
-    studying_hours = sum(s.get('hours', 0) for s in sessions if s.get('type') == 'Studying')
-    practice_hours = sum(s.get('hours', 0) for s in sessions if s.get('type') == 'Practice')
-    
-    # Calculate percentages
-    studying_pct = (studying_hours / total_hours * 100) if total_hours > 0 else 0
-    practice_pct = (practice_hours / total_hours * 100) if total_hours > 0 else 0
-    
-    return {
-        'total_hours': total_hours,
-        'studying_hours': studying_hours,
-        'studying_pct': studying_pct,
-        'practice_hours': practice_hours,
-        'practice_pct': practice_pct
-    }
 
 def main():
     """Main Streamlit application function."""
