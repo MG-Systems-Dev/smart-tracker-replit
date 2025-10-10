@@ -7,8 +7,7 @@ Migrated from SQLite to PostgreSQL for permanent data persistence.
 import psycopg2
 import psycopg2.extras
 import os
-import json
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Optional
 from datetime import datetime
 import logging
 
