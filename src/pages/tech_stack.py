@@ -132,6 +132,21 @@ def show_tech_stack_crud_page():
                     hours_remaining = max(0, goal_hours - logged_hours)
                     st.metric("⏳ Remaining", f"{hours_remaining:.1f}h")
                 
+                # Practice vs Studying breakdown for this tech
+                tech_sessions = db.get_all_sessions()
+                tech_filtered = [s for s in tech_sessions if s.get('technology') == tech_name]
+                
+                if tech_filtered:
+                    studying_h = sum(s.get('hours_spent', 0) for s in tech_filtered if s.get('session_type') == 'Studying')
+                    practice_h = sum(s.get('hours_spent', 0) for s in tech_filtered if s.get('session_type') == 'Practice')
+                    total_typed = studying_h + practice_h
+                    
+                    if total_typed > 0:
+                        studying_pct = (studying_h / total_typed * 100)
+                        practice_pct = (practice_h / total_typed * 100)
+                        
+                        st.caption(f"📊 **Type Split:** 📚 Studying {studying_h:.1f}h ({studying_pct:.0f}%) • 💪 Practice {practice_h:.1f}h ({practice_pct:.0f}%)")
+                
                 # Progress bar
                 st.progress(min(progress_pct / 100, 1.0))
                 

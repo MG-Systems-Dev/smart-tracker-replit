@@ -67,6 +67,25 @@ def show_sessions_page():
         with col4:
             st.metric("Completion Rate", f"{completion_rate:.1f}%")
         
+        # Practice vs Studying breakdown
+        st.markdown("### 📊 Session Type Breakdown")
+        
+        studying_hours = sum(s['hours'] for s in sessions_display if s.get('type') == 'Studying')
+        practice_hours = sum(s['hours'] for s in sessions_display if s.get('type') == 'Practice')
+        total_typed = studying_hours + practice_hours
+        
+        studying_pct = (studying_hours / total_typed * 100) if total_typed > 0 else 0
+        practice_pct = (practice_hours / total_typed * 100) if total_typed > 0 else 0
+        
+        breakdown_col1, breakdown_col2, breakdown_col3 = st.columns(3)
+        
+        with breakdown_col1:
+            st.metric("Total Hours", f"{total_typed:.1f}h")
+        with breakdown_col2:
+            st.metric("📚 Studying", f"{studying_hours:.1f}h ({studying_pct:.0f}%)")
+        with breakdown_col3:
+            st.metric("💪 Practice", f"{practice_hours:.1f}h ({practice_pct:.0f}%)")
+        
         st.markdown("---")
         
         # Filters

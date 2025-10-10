@@ -943,7 +943,7 @@ class DatabaseStorage:
     def get_session_type_breakdown(self) -> Dict[str, float]:
         """Get total hours spent per session type."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
         cursor.execute("""
             SELECT session_type, SUM(hours_spent) as total_hours
             FROM sessions
@@ -953,7 +953,8 @@ class DatabaseStorage:
 
         breakdown = {}
         for row in cursor.fetchall():
-            breakdown[row[0]] = row[1]
+            row_dict = dict(row)
+            breakdown[row_dict['session_type']] = row_dict['total_hours']
 
         return breakdown
 

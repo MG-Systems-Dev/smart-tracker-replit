@@ -59,6 +59,28 @@ def show_planning_page():
             'goal_hours': tech.get('goal_hours', 50)
         })
     
+    # Overall breakdown
+    st.markdown("### 📊 Overall Session Type Breakdown")
+    
+    studying_hours = sum(s.get('hours_spent', 0) for s in all_sessions if s.get('session_type') == 'Studying')
+    practice_hours = sum(s.get('hours_spent', 0) for s in all_sessions if s.get('session_type') == 'Practice')
+    total_typed = studying_hours + practice_hours
+    
+    if total_typed > 0:
+        studying_pct = (studying_hours / total_typed * 100)
+        practice_pct = (practice_hours / total_typed * 100)
+        
+        breakdown_col1, breakdown_col2, breakdown_col3 = st.columns(3)
+        
+        with breakdown_col1:
+            st.metric("Total Hours", f"{total_typed:.1f}h")
+        with breakdown_col2:
+            st.metric("📚 Studying", f"{studying_hours:.1f}h ({studying_pct:.0f}%)")
+        with breakdown_col3:
+            st.metric("💪 Practice", f"{practice_hours:.1f}h ({practice_pct:.0f}%)")
+    
+    st.markdown("---")
+    
     # Display categories
     st.markdown("### 🗂️ Technologies by Category")
     

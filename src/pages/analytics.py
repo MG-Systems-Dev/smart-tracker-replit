@@ -44,13 +44,25 @@ def show_analytics_page():
         for cat_data in categories_data:
             with st.expander(f"📂 {cat_data['category']} - {cat_data['total_hours']:.1f}h total", expanded=False):
                 # Category KPI metrics
-                col1, col2 = st.columns(2)
+                col1, col2, col3 = st.columns(3)
                 
                 with col1:
                     st.metric("Total Hours", f"{cat_data['total_hours']:.1f}h")
                 
                 with col2:
                     st.metric("Total Sessions", cat_data['total_sessions'])
+                
+                # Practice vs Studying for this category
+                cat_sessions = [s for s in db.get_all_sessions() if s.get('category_name') == cat_data['category']]
+                studying_h = sum(s.get('hours_spent', 0) for s in cat_sessions if s.get('session_type') == 'Studying')
+                practice_h = sum(s.get('hours_spent', 0) for s in cat_sessions if s.get('session_type') == 'Practice')
+                total_t = studying_h + practice_h
+                
+                with col3:
+                    if total_t > 0:
+                        studying_pct = (studying_h / total_t * 100)
+                        practice_pct = (practice_h / total_t * 100)
+                        st.metric("📊 Type Split", f"📚 {studying_pct:.0f}% / 💪 {practice_pct:.0f}%")
                 
                 st.markdown("---")
                 st.markdown("**🔧 Technology Breakdown:**")
