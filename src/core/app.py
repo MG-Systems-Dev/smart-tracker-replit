@@ -5,19 +5,17 @@ A web-based interface for the Smart Tracker application using Streamlit.
 """
 
 import streamlit as st
-import pandas as pd
-from datetime import date, datetime
 import logging
 import os
 import sys
 from pathlib import Path
+from datetime import date
+from src.database.operations import DatabaseStorage
+from src.core.config import __version__
 
 # Add project root to Python path for Streamlit Community Cloud
 project_root = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(project_root))
-
-from src.database.operations import DatabaseStorage
-from src.core.config import PLANNING_BLUEPRINT, __version__
 
 # Setup logging
 os.makedirs("logs", exist_ok=True)
