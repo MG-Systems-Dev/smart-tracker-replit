@@ -130,6 +130,10 @@ def main():
             st.session_state.current_page = "analytics"
             st.rerun()
         
+        if st.button("📚 Learning Sources", width="stretch"):
+            st.session_state.current_page = "learning_sources"
+            st.rerun()
+        
         st.markdown("---")
         
         # Professional info section
@@ -179,6 +183,9 @@ def main():
     elif st.session_state.current_page == "analytics":
         from src.pages.analytics import show_analytics_page
         show_analytics_page()
+    elif st.session_state.current_page == "learning_sources":
+        from src.pages.learning_sources import show_learning_sources_page
+        show_learning_sources_page()
 
 if __name__ == "__main__":
     main()
