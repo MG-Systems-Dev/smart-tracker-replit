@@ -258,3 +258,201 @@
 2025-10-10 22:50:36,549 | INFO | CategorySyncService: Deleted Test Category, migrated 0 techs and 0 sessions
 2025-10-10 22:50:36,550 | INFO | CachedQueryService: Cache invalidated
 2025-10-10 22:50:41,682 | INFO | CachedQueryService: Fetched 0 tech stack entries with metrics (cached)
+2025-10-10 22:53:35,672 | INFO | SQLite database initialized successfully
+2025-10-10 22:53:35,678 | INFO | CachedQueryService: Fetched 0 tech stack entries with metrics (cached)
+2025-10-10 22:54:23,496 | INFO | Added category: 💻 Front-End
+2025-10-10 22:54:23,497 | INFO | Added dropdown: category_name = 💻 Front-End
+2025-10-10 22:54:23,497 | INFO | CategorySyncService: Added 💻 Front-End to both tables
+2025-10-10 22:54:23,498 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:54:37,223 | INFO | Added category: ⚙️ Back-End
+2025-10-10 22:54:37,224 | INFO | Added dropdown: category_name = ⚙️ Back-End
+2025-10-10 22:54:37,224 | INFO | CategorySyncService: Added ⚙️ Back-End to both tables
+2025-10-10 22:54:37,224 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:55:21,528 | INFO | Added category: 🔗 Lightweight APIs / Model Serving
+2025-10-10 22:55:21,529 | INFO | Added dropdown: category_name = 🔗 Lightweight APIs / Model Serving
+2025-10-10 22:55:21,529 | INFO | CategorySyncService: Added 🔗 Lightweight APIs / Model Serving to both tables
+2025-10-10 22:55:21,530 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:55:46,316 | INFO | Added category: 🏗️ Integration
+2025-10-10 22:55:46,317 | INFO | Added dropdown: category_name = 🏗️ Integration
+2025-10-10 22:55:46,317 | INFO | CategorySyncService: Added 🏗️ Integration to both tables
+2025-10-10 22:55:46,318 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:55:58,773 | INFO | Added category: ☁️ Deployment
+2025-10-10 22:55:58,774 | INFO | Added dropdown: category_name = ☁️ Deployment
+2025-10-10 22:55:58,774 | INFO | CategorySyncService: Added ☁️ Deployment to both tables
+2025-10-10 22:55:58,775 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:56:12,566 | INFO | Added category: 📈 Visualization
+2025-10-10 22:56:12,568 | INFO | Added dropdown: category_name = 📈 Visualization
+2025-10-10 22:56:12,568 | INFO | CategorySyncService: Added 📈 Visualization to both tables
+2025-10-10 22:56:12,568 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:56:24,898 | INFO | Added category: 🤖 Machine Learning
+2025-10-10 22:56:24,899 | INFO | Added dropdown: category_name = 🤖 Machine Learning
+2025-10-10 22:56:24,899 | INFO | CategorySyncService: Added 🤖 Machine Learning to both tables
+2025-10-10 22:56:24,900 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:56:39,869 | INFO | Added category: 🔁 Pipelines
+2025-10-10 22:56:39,870 | INFO | Added dropdown: category_name = 🔁 Pipelines
+2025-10-10 22:56:39,870 | INFO | CategorySyncService: Added 🔁 Pipelines to both tables
+2025-10-10 22:56:39,870 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:56:54,445 | INFO | Added category: 🗄️ Databases
+2025-10-10 22:56:54,446 | INFO | Added dropdown: category_name = 🗄️ Databases
+2025-10-10 22:56:54,446 | INFO | CategorySyncService: Added 🗄️ Databases to both tables
+2025-10-10 22:56:54,447 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:57:09,908 | INFO | Added category: 📑 Excel Automation
+2025-10-10 22:57:09,910 | INFO | Added dropdown: category_name = 📑 Excel Automation
+2025-10-10 22:57:09,910 | INFO | CategorySyncService: Added 📑 Excel Automation to both tables
+2025-10-10 22:57:09,910 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:57:25,133 | INFO | Added category: 🤖 Automation
+2025-10-10 22:57:25,135 | INFO | Added dropdown: category_name = 🤖 Automation
+2025-10-10 22:57:25,135 | INFO | CategorySyncService: Added 🤖 Automation to both tables
+2025-10-10 22:57:25,135 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:59:23,750 | INFO | Added category: 🔒 Security & Testing
+2025-10-10 22:59:23,752 | INFO | Added dropdown: category_name = 🔒 Security & Testing
+2025-10-10 22:59:23,752 | INFO | CategorySyncService: Added 🔒 Security & Testing to both tables
+2025-10-10 22:59:23,753 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:59:34,350 | INFO | Added category: 🧰 Supporting Skills
+2025-10-10 22:59:34,351 | INFO | Added dropdown: category_name = 🧰 Supporting Skills
+2025-10-10 22:59:34,351 | INFO | CategorySyncService: Added 🧰 Supporting Skills to both tables
+2025-10-10 22:59:34,352 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:59:53,856 | INFO | Added category: 📊 Data Science
+2025-10-10 22:59:53,857 | INFO | Added dropdown: category_name = 📊 Data Science
+2025-10-10 22:59:53,858 | INFO | CategorySyncService: Added 📊 Data Science to both tables
+2025-10-10 22:59:53,858 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:00:10,146 | INFO | Added category: 🧱 Infrastructure & DevOps
+2025-10-10 23:00:10,147 | INFO | Added dropdown: category_name = 🧱 Infrastructure & DevOps
+2025-10-10 23:00:10,148 | INFO | CategorySyncService: Added 🧱 Infrastructure & DevOps to both tables
+2025-10-10 23:00:10,148 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:00:22,229 | INFO | Added category: 🧪 Interface & Experimentation
+2025-10-10 23:00:22,230 | INFO | Added dropdown: category_name = 🧪 Interface & Experimentation
+2025-10-10 23:00:22,230 | INFO | CategorySyncService: Added 🧪 Interface & Experimentation to both tables
+2025-10-10 23:00:22,231 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:00:33,325 | INFO | Added category: 📉 Statistical Analysis
+2025-10-10 23:00:33,327 | INFO | Added dropdown: category_name = 📉 Statistical Analysis
+2025-10-10 23:00:33,327 | INFO | CategorySyncService: Added 📉 Statistical Analysis to both tables
+2025-10-10 23:00:33,328 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:01:12,678 | INFO | Added category: 💬 Natural Language Processing
+2025-10-10 23:01:12,679 | INFO | Added dropdown: category_name = 💬 Natural Language Processing
+2025-10-10 23:01:12,680 | INFO | CategorySyncService: Added 💬 Natural Language Processing to both tables
+2025-10-10 23:01:12,680 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:01:30,348 | INFO | Added category: ⏱️ Time Series Analysis
+2025-10-10 23:01:30,349 | INFO | Added dropdown: category_name = ⏱️ Time Series Analysis
+2025-10-10 23:01:30,349 | INFO | CategorySyncService: Added ⏱️ Time Series Analysis to both tables
+2025-10-10 23:01:30,350 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:01:45,152 | INFO | Added category: 🌐 Web Scraping
+2025-10-10 23:01:45,153 | INFO | Added dropdown: category_name = 🌐 Web Scraping
+2025-10-10 23:01:45,153 | INFO | CategorySyncService: Added 🌐 Web Scraping to both tables
+2025-10-10 23:01:45,154 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:02:05,458 | INFO | Added category: 🎯 Terminal UI / Developer Experience (DX)
+2025-10-10 23:02:05,460 | INFO | Added dropdown: category_name = 🎯 Terminal UI / Developer Experience (DX)
+2025-10-10 23:02:05,460 | INFO | CategorySyncService: Added 🎯 Terminal UI / Developer Experience (DX) to both tables
+2025-10-10 23:02:05,461 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:03:00,928 | INFO | Added category: 🧠 Core Libraries of Python
+2025-10-10 23:03:00,929 | INFO | Added dropdown: category_name = 🧠 Core Libraries of Python
+2025-10-10 23:03:00,929 | INFO | CategorySyncService: Added 🧠 Core Libraries of Python to both tables
+2025-10-10 23:03:00,930 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:04:22,747 | INFO | Added category: 🧑🏻‍💻 Programmer Language
+2025-10-10 23:04:22,749 | INFO | Added dropdown: category_name = 🧑🏻‍💻 Programmer Language
+2025-10-10 23:04:22,749 | INFO | CategorySyncService: Added 🧑🏻‍💻 Programmer Language to both tables
+2025-10-10 23:04:22,750 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:07:10,223 | INFO | Added technology: 💜 React (ID: 47)
+2025-10-10 23:07:10,225 | INFO | Added dropdown: technology = 💜 React
+2025-10-10 23:07:10,225 | INFO | TechnologySyncService: Added 💜 React to both tech_stack and dropdowns
+2025-10-10 23:07:10,226 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:07:28,883 | INFO | Added technology: ⚡ JavaScript (ES6+) (ID: 48)
+2025-10-10 23:07:28,883 | INFO | Added dropdown: technology = ⚡ JavaScript (ES6+)
+2025-10-10 23:07:28,883 | INFO | TechnologySyncService: Added ⚡ JavaScript (ES6+) to both tech_stack and dropdowns
+2025-10-10 23:07:28,884 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:07:52,894 | INFO | Added technology: 🌈 Tailwind CSS (ID: 49)
+2025-10-10 23:07:52,895 | INFO | Added dropdown: technology = 🌈 Tailwind CSS
+2025-10-10 23:07:52,895 | INFO | TechnologySyncService: Added 🌈 Tailwind CSS to both tech_stack and dropdowns
+2025-10-10 23:07:52,895 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:08:22,894 | INFO | Added technology: 🎨 CSS (ID: 50)
+2025-10-10 23:08:22,896 | INFO | Added dropdown: technology = 🎨 CSS
+2025-10-10 23:08:22,896 | INFO | TechnologySyncService: Added 🎨 CSS to both tech_stack and dropdowns
+2025-10-10 23:08:22,896 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:08:33,790 | INFO | Added technology: 📚 HTML (ID: 51)
+2025-10-10 23:08:33,791 | INFO | Added dropdown: technology = 📚 HTML
+2025-10-10 23:08:33,792 | INFO | TechnologySyncService: Added 📚 HTML to both tech_stack and dropdowns
+2025-10-10 23:08:33,792 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:09:10,913 | INFO | Added technology: 🐍 Django (ID: 52)
+2025-10-10 23:09:10,915 | INFO | Added dropdown: technology = 🐍 Django
+2025-10-10 23:09:10,915 | INFO | TechnologySyncService: Added 🐍 Django to both tech_stack and dropdowns
+2025-10-10 23:09:10,915 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:09:37,408 | INFO | CachedQueryService: Fetched 6 tech stack entries with metrics (cached)
+2025-10-10 23:10:45,731 | INFO | CachedQueryService: Fetched 6 tech stack entries with metrics (cached)
+2025-10-10 23:13:19,045 | INFO | CachedQueryService: Fetched 6 tech stack entries with metrics (cached)
+2025-10-10 23:15:54,425 | INFO | CachedQueryService: Fetched 6 tech stack entries with metrics (cached)
+2025-10-10 23:17:42,839 | INFO | SQLite database initialized successfully
+2025-10-10 23:17:42,839 | INFO | SQLite database initialized successfully
+2025-10-10 23:17:42,845 | INFO | CachedQueryService: Fetched 6 tech stack entries with metrics (cached)
+2025-10-10 23:17:43,332 | INFO | SQLite database initialized successfully
+2025-10-10 23:19:36,082 | INFO | SQLite database initialized successfully
+2025-10-10 23:19:36,090 | INFO | CachedQueryService: Fetched 6 tech stack entries with metrics (cached)
+2025-10-10 23:20:52,741 | INFO | CachedQueryService: Fetched 6 tech stack entries with metrics (cached)
+2025-10-10 23:22:31,402 | INFO | Added technology: 🌰 Redis (ID: 53)
+2025-10-10 23:22:31,403 | INFO | Added dropdown: technology = 🌰 Redis
+2025-10-10 23:22:31,403 | INFO | TechnologySyncService: Added 🌰 Redis to both tech_stack and dropdowns
+2025-10-10 23:22:31,403 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:22:46,650 | INFO | Added technology: 🌿 Celery (ID: 54)
+2025-10-10 23:22:46,650 | INFO | Added dropdown: technology = 🌿 Celery
+2025-10-10 23:22:46,650 | INFO | TechnologySyncService: Added 🌿 Celery to both tech_stack and dropdowns
+2025-10-10 23:22:46,651 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:24:48,152 | INFO | Added technology: 📘 Node.js (ID: 55)
+2025-10-10 23:24:48,154 | INFO | Added dropdown: technology = 📘 Node.js
+2025-10-10 23:24:48,154 | INFO | TechnologySyncService: Added 📘 Node.js to both tech_stack and dropdowns
+2025-10-10 23:24:48,154 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:25:25,280 | INFO | Added technology: ⚡ FastAPI (ID: 56)
+2025-10-10 23:25:25,281 | INFO | Added dropdown: technology = ⚡ FastAPI
+2025-10-10 23:25:25,281 | INFO | TechnologySyncService: Added ⚡ FastAPI to both tech_stack and dropdowns
+2025-10-10 23:25:25,282 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:25:53,805 | INFO | Added technology: 🤗 Hugging Face (model hub & NLP integration) (ID: 57)
+2025-10-10 23:25:53,806 | INFO | Added dropdown: technology = 🤗 Hugging Face (model hub & NLP integration)
+2025-10-10 23:25:53,806 | INFO | TechnologySyncService: Added 🤗 Hugging Face (model hub & NLP integration) to both tech_stack and dropdowns
+2025-10-10 23:25:53,806 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:26:43,252 | INFO | Added technology: 🧠 OpenAI API / LangChain (LLM-powered APIs) (ID: 58)
+2025-10-10 23:26:43,253 | INFO | Added dropdown: technology = 🧠 OpenAI API / LangChain (LLM-powered APIs)
+2025-10-10 23:26:43,253 | INFO | TechnologySyncService: Added 🧠 OpenAI API / LangChain (LLM-powered APIs) to both tech_stack and dropdowns
+2025-10-10 23:26:43,254 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:27:11,793 | INFO | Added technology: ☁️ AWS (ID: 59)
+2025-10-10 23:27:11,794 | INFO | Added dropdown: technology = ☁️ AWS
+2025-10-10 23:27:11,794 | INFO | TechnologySyncService: Added ☁️ AWS to both tech_stack and dropdowns
+2025-10-10 23:27:11,794 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:27:34,024 | INFO | Added technology: ☁️ Azure AI (deployment & pipelines) (ID: 60)
+2025-10-10 23:27:34,025 | INFO | Added dropdown: technology = ☁️ Azure AI (deployment & pipelines)
+2025-10-10 23:27:34,025 | INFO | TechnologySyncService: Added ☁️ Azure AI (deployment & pipelines) to both tech_stack and dropdowns
+2025-10-10 23:27:34,026 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:27:52,882 | INFO | Added technology: 👾 GitHub Actions (ID: 61)
+2025-10-10 23:27:52,883 | INFO | Added dropdown: technology = 👾 GitHub Actions
+2025-10-10 23:27:52,883 | INFO | TechnologySyncService: Added 👾 GitHub Actions to both tech_stack and dropdowns
+2025-10-10 23:27:52,883 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:29:28,319 | INFO | Added technology: 👑 Streamlit (ID: 62)
+2025-10-10 23:29:28,321 | INFO | Added dropdown: technology = 👑 Streamlit
+2025-10-10 23:29:28,321 | INFO | TechnologySyncService: Added 👑 Streamlit to both tech_stack and dropdowns
+2025-10-10 23:29:28,322 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:30:13,301 | INFO | Added technology: ✅ Seaborn (ID: 63)
+2025-10-10 23:30:13,303 | INFO | Added dropdown: technology = ✅ Seaborn
+2025-10-10 23:30:13,303 | INFO | TechnologySyncService: Added ✅ Seaborn to both tech_stack and dropdowns
+2025-10-10 23:30:13,304 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:30:31,998 | INFO | Added technology: 📉 Plotly (ID: 64)
+2025-10-10 23:30:31,999 | INFO | Added dropdown: technology = 📉 Plotly
+2025-10-10 23:30:31,999 | INFO | TechnologySyncService: Added 📉 Plotly to both tech_stack and dropdowns
+2025-10-10 23:30:32,000 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:31:17,190 | INFO | Added technology: 📊 Matplotlib (ID: 65)
+2025-10-10 23:31:17,190 | INFO | Added dropdown: technology = 📊 Matplotlib
+2025-10-10 23:31:17,191 | INFO | TechnologySyncService: Added 📊 Matplotlib to both tech_stack and dropdowns
+2025-10-10 23:31:17,191 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:31:57,901 | INFO | Added technology: ⚙️ CUDA (ID: 66)
+2025-10-10 23:31:57,902 | INFO | Added dropdown: technology = ⚙️ CUDA
+2025-10-10 23:31:57,902 | INFO | TechnologySyncService: Added ⚙️ CUDA to both tech_stack and dropdowns
+2025-10-10 23:31:57,902 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:32:13,239 | INFO | CachedQueryService: Fetched 20 tech stack entries with metrics (cached)
+2025-10-10 23:33:14,357 | INFO | CachedQueryService: Fetched 20 tech stack entries with metrics (cached)
+2025-10-10 23:37:28,368 | INFO | Added technology: 🧠 TensorFlow (ID: 67)
+2025-10-10 23:37:28,369 | INFO | Added dropdown: technology = 🧠 TensorFlow
+2025-10-10 23:37:28,369 | INFO | TechnologySyncService: Added 🧠 TensorFlow to both tech_stack and dropdowns
+2025-10-10 23:37:28,370 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:38:07,260 | INFO | Added technology: 🌲 XGBoost (ID: 68)
+2025-10-10 23:38:07,261 | INFO | Added dropdown: technology = 🌲 XGBoost
+2025-10-10 23:38:07,261 | INFO | TechnologySyncService: Added 🌲 XGBoost to both tech_stack and dropdowns
+2025-10-10 23:38:07,262 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 23:38:35,841 | INFO | CachedQueryService: Fetched 22 tech stack entries with metrics (cached)
+2025-10-10 23:40:51,198 | INFO | SQLite database initialized successfully
+2025-10-10 23:40:51,202 | INFO | CachedQueryService: Fetched 22 tech stack entries with metrics (cached)

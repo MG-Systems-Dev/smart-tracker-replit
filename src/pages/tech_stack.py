@@ -85,7 +85,7 @@ def show_tech_stack_crud_page():
             st.markdown(f"#### {category}")
             st.caption(f"{len(techs)} technologies • {sum(t.get('logged_hours', 0) for t in techs):.1f} hours logged")
             
-            # Display technology cards in a grid
+            # Display technology cards in expandable sections
             for tech in sorted(techs, key=lambda x: x.get('logged_hours', 0), reverse=True):
                 tech_name = tech['name']
                 goal_hours = tech.get('goal_hours', 50)
@@ -108,59 +108,50 @@ def show_tech_stack_crud_page():
                     progress_color = "#FF4500"
                     status_emoji = "🔴"
                 
-                # Technology card
-                st.markdown(f"""
-                <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 1.5rem; border-radius: 12px; border: 2px solid {progress_color}; margin-bottom: 1.5rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                        <h3 style="color: #FFD700; margin: 0;">{status_emoji} {tech_name}</h3>
-                        <span style="color: {progress_color}; font-size: 1.2rem; font-weight: bold;">{progress_pct:.1f}%</span>
-                    </div>
-                    <p style="color: #C0C0C0; margin: 0.5rem 0; font-size: 0.9rem;">📅 Added: {date_added}</p>
-                </div>
-                """, unsafe_allow_html=True)
-                
-                # Metrics row
-                col_a, col_b, col_c, col_d = st.columns(4)
-                
-                with col_a:
-                    st.metric("🎯 Goal", f"{goal_hours:.0f}h")
-                with col_b:
-                    st.metric("⏱️ Logged", f"{logged_hours:.1f}h")
-                with col_c:
-                    st.metric("📝 Sessions", session_count)
-                with col_d:
-                    hours_remaining = max(0, goal_hours - logged_hours)
-                    st.metric("⏳ Remaining", f"{hours_remaining:.1f}h")
-                
-                # Practice vs Studying breakdown for this tech
-                tech_sessions = db.get_all_sessions()
-                tech_filtered = [s for s in tech_sessions if s.get('technology') == tech_name]
-                
-                if tech_filtered:
-                    studying_h = sum(s.get('hours_spent', 0) for s in tech_filtered if s.get('session_type') == 'Studying')
-                    practice_h = sum(s.get('hours_spent', 0) for s in tech_filtered if s.get('session_type') == 'Practice')
-                    total_typed = studying_h + practice_h
+                # Technology card in expander (closed by default)
+                with st.expander(f"{status_emoji} {tech_name} - {logged_hours:.1f}h / {goal_hours:.0f}h ({progress_pct:.1f}%)", expanded=False):
+                    st.caption(f"📅 Added: {date_added}")
                     
-                    if total_typed > 0:
-                        studying_pct = (studying_h / total_typed * 100)
-                        practice_pct = (practice_h / total_typed * 100)
+                    # Metrics row
+                    col_a, col_b, col_c, col_d = st.columns(4)
+                    
+                    with col_a:
+                        st.metric("🎯 Goal", f"{goal_hours:.0f}h")
+                    with col_b:
+                        st.metric("⏱️ Logged", f"{logged_hours:.1f}h")
+                    with col_c:
+                        st.metric("📝 Sessions", session_count)
+                    with col_d:
+                        hours_remaining = max(0, goal_hours - logged_hours)
+                        st.metric("⏳ Remaining", f"{hours_remaining:.1f}h")
+                    
+                    # Practice vs Studying breakdown for this tech
+                    tech_sessions = db.get_all_sessions()
+                    tech_filtered = [s for s in tech_sessions if s.get('technology') == tech_name]
+                    
+                    if tech_filtered:
+                        studying_h = sum(s.get('hours_spent', 0) for s in tech_filtered if s.get('session_type') == 'Studying')
+                        practice_h = sum(s.get('hours_spent', 0) for s in tech_filtered if s.get('session_type') == 'Practice')
+                        total_typed = studying_h + practice_h
                         
-                        st.caption(f"📊 **Type Split:** 📚 Studying {studying_h:.1f}h ({studying_pct:.0f}%) • 💪 Practice {practice_h:.1f}h ({practice_pct:.0f}%)")
-                
-                # Progress bar
-                st.progress(min(progress_pct / 100, 1.0))
-                
-                # Status message
-                if progress_pct >= 100:
-                    st.success("🎉 Goal completed! Great work!")
-                elif progress_pct >= 75:
-                    st.info(f"🚀 Almost there! {hours_remaining:.1f} hours to go")
-                elif progress_pct > 0:
-                    st.warning(f"💪 Keep going! {hours_remaining:.1f} hours remaining")
-                else:
-                    st.caption("🆕 No sessions logged yet - time to start learning!")
-                
-                st.markdown("---")
+                        if total_typed > 0:
+                            studying_pct = (studying_h / total_typed * 100)
+                            practice_pct = (practice_h / total_typed * 100)
+                            
+                            st.caption(f"📊 **Type Split:** 📚 Studying {studying_h:.1f}h ({studying_pct:.0f}%) • 💪 Practice {practice_h:.1f}h ({practice_pct:.0f}%)")
+                    
+                    # Progress bar
+                    st.progress(min(progress_pct / 100, 1.0))
+                    
+                    # Status message
+                    if progress_pct >= 100:
+                        st.success("🎉 Goal completed! Great work!")
+                    elif progress_pct >= 75:
+                        st.info(f"🚀 Almost there! {hours_remaining:.1f} hours to go")
+                    elif progress_pct > 0:
+                        st.warning(f"💪 Keep going! {hours_remaining:.1f} hours remaining")
+                    else:
+                        st.caption("🆕 No sessions logged yet - time to start learning!")
             
             st.markdown("")  # Add spacing between categories
         

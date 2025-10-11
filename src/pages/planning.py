@@ -90,7 +90,7 @@ def show_planning_page():
         category_goal = sum(t['goal_hours'] for t in techs)
         category_progress = (category_logged / category_goal * 100) if category_goal > 0 else 0
         
-        with st.expander(f"{category} ({len(techs)} technologies - {category_progress:.0f}% complete)", expanded=True):
+        with st.expander(f"{category} ({len(techs)} technologies - {category_progress:.0f}% complete)", expanded=False):
             st.markdown(f"**Category Progress:** {category_logged:.1f}h / {category_goal:.1f}h")
             st.progress(min(category_progress / 100, 1.0))
             
