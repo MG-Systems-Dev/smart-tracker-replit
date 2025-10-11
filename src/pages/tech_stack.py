@@ -4,6 +4,7 @@ Read-only display showing technology cards grouped by category with progress met
 """
 
 import streamlit as st
+from datetime import datetime, timedelta
 from src.database.operations import DatabaseStorage
 from src.services.cached_queries import CachedQueryService
 
@@ -67,6 +68,36 @@ def show_tech_stack_crud_page():
         with col5:
             st.metric("Avg Progress", f"{avg_progress:.1f}%", help="Average completion across all technologies")
         
+        # Focus Analysis (most/least active)
+        st.markdown("---")
+        st.markdown("### 🎯 Focus Insights")
+        
+        techs_with_hours = [(t['name'], t.get('logged_hours', 0)) for t in tech_stack if t.get('logged_hours', 0) > 0]
+        
+        if techs_with_hours:
+            techs_with_hours.sort(key=lambda x: x[1], reverse=True)
+            most_practiced = techs_with_hours[0]
+            least_practiced = techs_with_hours[-1] if len(techs_with_hours) > 1 else most_practiced
+            total_focus_hours = sum(t[1] for t in techs_with_hours)
+            
+            focus_col1, focus_col2, focus_col3 = st.columns(3)
+            
+            with focus_col1:
+                focus_pct = (most_practiced[1] / total_focus_hours * 100) if total_focus_hours > 0 else 0
+                st.metric("🔥 Most Practiced", most_practiced[0], f"{focus_pct:.1f}% of total", help=f"{most_practiced[1]:.1f} hours logged")
+            
+            with focus_col2:
+                if len(techs_with_hours) > 1:
+                    focus_pct_least = (least_practiced[1] / total_focus_hours * 100) if total_focus_hours > 0 else 0
+                    st.metric("💤 Needs Attention", least_practiced[0], f"{focus_pct_least:.1f}% of total", help=f"{least_practiced[1]:.1f} hours logged")
+                else:
+                    st.metric("💤 Needs Attention", "N/A", help="Add more technologies")
+            
+            with focus_col3:
+                balance_score = 100 - ((most_practiced[1] - least_practiced[1]) / total_focus_hours * 100) if total_focus_hours > 0 else 100
+                balance_score = max(0, min(100, balance_score))
+                st.metric("⚖️ Balance Score", f"{balance_score:.0f}%", help="How evenly distributed your focus is (100% = perfect balance)")
+        
         st.markdown("---")
         
         # Group technologies by category
@@ -125,9 +156,60 @@ def show_tech_stack_crud_page():
                         hours_remaining = max(0, goal_hours - logged_hours)
                         st.metric("⏳ Remaining", f"{hours_remaining:.1f}h")
                     
-                    # Practice vs Studying breakdown for this tech
+                    # Get sessions for this technology
                     tech_sessions = db.get_all_sessions()
                     tech_filtered = [s for s in tech_sessions if s.get('technology') == tech_name]
+                    
+                    # Calculate velocity and trends
+                    if tech_filtered:
+                        now = datetime.now()
+                        last_7_days = now - timedelta(days=7)
+                        last_30_days = now - timedelta(days=30)
+                        
+                        # Parse session dates and calculate velocity
+                        sessions_7d = []
+                        sessions_30d = []
+                        
+                        for s in tech_filtered:
+                            session_date_str = s.get('session_date', '')
+                            if session_date_str:
+                                try:
+                                    session_date = datetime.strptime(session_date_str.split()[0], '%Y-%m-%d')
+                                    if session_date >= last_7_days:
+                                        sessions_7d.append(s)
+                                    if session_date >= last_30_days:
+                                        sessions_30d.append(s)
+                                except:
+                                    pass
+                        
+                        hours_7d = sum(s.get('hours_spent', 0) for s in sessions_7d)
+                        hours_30d = sum(s.get('hours_spent', 0) for s in sessions_30d)
+                        
+                        velocity_weekly = hours_7d
+                        velocity_monthly = hours_30d / 4 if hours_30d > 0 else 0
+                        
+                        # Determine trend
+                        trend_emoji = ""
+                        if hours_7d > velocity_monthly:
+                            trend_emoji = "📈"
+                        elif hours_7d < velocity_monthly and velocity_monthly > 0:
+                            trend_emoji = "📉"
+                        else:
+                            trend_emoji = "➡️"
+                        
+                        # Display velocity metrics
+                        st.markdown("---")
+                        vel_col1, vel_col2, vel_col3 = st.columns(3)
+                        
+                        with vel_col1:
+                            st.metric("⚡ Weekly Velocity", f"{velocity_weekly:.1f}h", help="Hours logged in last 7 days")
+                        with vel_col2:
+                            st.metric("📊 Avg Weekly", f"{velocity_monthly:.1f}h", help="Average weekly hours (last 30 days)")
+                        with vel_col3:
+                            st.metric("📈 Trend", trend_emoji, help="Activity trend indicator")
+                    
+                    # Practice vs Studying breakdown for this tech
+                    tech_filtered = [s for s in tech_filtered if s.get('technology') == tech_name]
                     
                     if tech_filtered:
                         studying_h = sum(s.get('hours_spent', 0) for s in tech_filtered if s.get('session_type') == 'Studying')

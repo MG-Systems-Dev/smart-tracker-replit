@@ -456,3 +456,30 @@
 2025-10-10 23:38:35,841 | INFO | CachedQueryService: Fetched 22 tech stack entries with metrics (cached)
 2025-10-10 23:40:51,198 | INFO | SQLite database initialized successfully
 2025-10-10 23:40:51,202 | INFO | CachedQueryService: Fetched 22 tech stack entries with metrics (cached)
+2025-10-11 00:14:24,590 | INFO | SQLite database initialized successfully
+2025-10-11 00:14:24,599 | INFO | CachedQueryService: Fetched 22 tech stack entries with metrics (cached)
+2025-10-11 00:19:15,582 | INFO | Added technology: 📊 MLflow / Weights & Biases (ID: 69)
+2025-10-11 00:19:15,584 | INFO | Added dropdown: technology = 📊 MLflow / Weights & Biases
+2025-10-11 00:19:15,584 | INFO | TechnologySyncService: Added 📊 MLflow / Weights & Biases to both tech_stack and dropdowns
+2025-10-11 00:19:15,584 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:19:42,452 | INFO | Added technology: 🪶 PyTorch (ID: 70)
+2025-10-11 00:19:42,453 | INFO | Added dropdown: technology = 🪶 PyTorch
+2025-10-11 00:19:42,453 | INFO | TechnologySyncService: Added 🪶 PyTorch to both tech_stack and dropdowns
+2025-10-11 00:19:42,453 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:19:59,023 | INFO | Added technology: 😎 Scikit-Learn (ID: 71)
+2025-10-11 00:19:59,024 | INFO | Added dropdown: technology = 😎 Scikit-Learn
+2025-10-11 00:19:59,024 | INFO | TechnologySyncService: Added 😎 Scikit-Learn to both tech_stack and dropdowns
+2025-10-11 00:19:59,024 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:21:00,716 | INFO | CachedQueryService: Fetched 25 tech stack entries with metrics (cached)
+2025-10-11 00:23:27,106 | INFO | Added technology: 🏴‍☠️ Apache Airflow (ID: 72)
+2025-10-11 00:23:27,110 | INFO | Added dropdown: technology = 🏴‍☠️ Apache Airflow
+2025-10-11 00:23:27,110 | INFO | TechnologySyncService: Added 🏴‍☠️ Apache Airflow to both tech_stack and dropdowns
+2025-10-11 00:23:27,111 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:24:46,223 | INFO | Added technology: 🐘 PostgreSQL (ID: 73)
+2025-10-11 00:24:46,225 | INFO | Added dropdown: technology = 🐘 PostgreSQL
+2025-10-11 00:24:46,225 | INFO | TechnologySyncService: Added 🐘 PostgreSQL to both tech_stack and dropdowns
+2025-10-11 00:24:46,225 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:25:14,054 | INFO | Added technology: 🧱 T-SQL (primary) (ID: 74)
+2025-10-11 00:25:14,055 | INFO | Added dropdown: technology = 🧱 T-SQL (primary)
+2025-10-11 00:25:14,055 | INFO | TechnologySyncService: Added 🧱 T-SQL (primary) to both tech_stack and dropdowns
+2025-10-11 00:25:14,055 | INFO | CachedQueryService: Cache invalidated
