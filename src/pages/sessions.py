@@ -5,8 +5,219 @@ Provides filtering, sorting, and detailed session analytics.
 
 import streamlit as st
 import pandas as pd
+from datetime import datetime
 from src.database.operations import DatabaseStorage
 from src.services import CachedQueryService
+from src.utils.dropdowns import DropdownManager
+
+def show_edit_session_form(db: DatabaseStorage, session_id: int):
+    """Display edit form for a specific session."""
+    
+    st.markdown("""
+    <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 1.5rem; border-radius: 15px; margin-bottom: 2rem; border: 2px solid #FFD700;">
+        <h1 style="color: #FFD700; margin: 0; text-align: center;">✏️ Edit Session</h1>
+        <p style="color: #C0C0C0; text-align: center; margin: 0.5rem 0 0 0;">Update Learning Session Details</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Back button
+    if st.button("← Back to Sessions"):
+        st.session_state.editing_session_id = None
+        # Clear edit state
+        for key in ['session_type_edit', 'difficulty_edit', 'status_edit']:
+            if key in st.session_state:
+                del st.session_state[key]
+        st.rerun()
+    
+    # Get session data
+    session = db.get_session_by_id(session_id)
+    
+    if not session:
+        st.error(f"Session ID {session_id} not found!")
+        if st.button("← Return to Sessions"):
+            st.session_state.editing_session_id = None
+            st.rerun()
+        return
+    
+    st.markdown("---")
+    
+    dropdown_manager = DropdownManager(db)
+    
+    # Pre-populate session state with current values BEFORE rendering widgets
+    if f"session_type_edit" not in st.session_state:
+        st.session_state[f"session_type_edit"] = session.get('session_type', 'Studying')
+    if f"difficulty_edit" not in st.session_state:
+        st.session_state[f"difficulty_edit"] = session.get('difficulty', 'Beginner')
+    if f"status_edit" not in st.session_state:
+        st.session_state[f"status_edit"] = session.get('status', 'In Progress')
+    
+    # Category selection OUTSIDE form for reactivity
+    st.markdown("### 📝 Edit Session Details")
+    st.markdown("**📂 Category Name**")
+    all_categories = db.get_all_categories()
+    
+    current_category = session.get('category_name', '')
+    category_index = all_categories.index(current_category) if current_category in all_categories else 0
+    
+    selected_category = st.selectbox(
+        "category_dropdown_edit",
+        options=all_categories,
+        index=category_index,
+        key="category_edit_outside",
+        label_visibility="collapsed",
+        help="Select the category"
+    )
+    
+    with st.form("edit_session_form"):
+        # Basic fields
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            session_date_str = session.get('session_date', '')
+            try:
+                session_date = datetime.strptime(session_date_str.split()[0], '%Y-%m-%d').date()
+            except:
+                from datetime import date
+                session_date = date.today()
+            
+            session_date = st.date_input("📅 Session Date", value=session_date)
+        
+        with col2:
+            session_type = dropdown_manager.render_independent_dropdown('session_type', key_suffix="edit")
+        
+        st.markdown("---")
+        
+        # Technology
+        st.markdown("**🔧 Technology**")
+        all_techs_data = db.get_all_tech_stack()
+        
+        if selected_category:
+            filtered_techs = [tech['name'] for tech in all_techs_data if tech.get('category') == selected_category]
+        else:
+            filtered_techs = [tech['name'] for tech in all_techs_data]
+        
+        current_tech = session.get('technology', '')
+        tech_index = filtered_techs.index(current_tech) if current_tech in filtered_techs else 0
+        
+        technology = st.selectbox(
+            "technology_dropdown_edit",
+            options=filtered_techs,
+            index=tech_index,
+            label_visibility="collapsed"
+        )
+        
+        # Work Item - Show ALL work items (cascading from technology)
+        st.markdown("**📋 Work Item**")
+        all_work_items = []
+        if technology:
+            all_work_items = db.get_work_items_by_technology(technology)
+        
+        current_work_item = session.get('work_item', '')
+        
+        if all_work_items:
+            work_item_options = [""] + sorted(list(set(all_work_items)))
+            work_item_index = work_item_options.index(current_work_item) if current_work_item in work_item_options else 0
+            
+            work_item = st.selectbox(
+                "work_item_dropdown_edit",
+                options=work_item_options,
+                index=work_item_index,
+                label_visibility="collapsed",
+                help="Work items for selected technology"
+            )
+        else:
+            work_item = st.text_input("Work Item (custom)", value=current_work_item, label_visibility="collapsed", placeholder="No work items found - enter custom")
+        
+        # Skill/Topic - FILTERED by selected work item
+        st.markdown("**🎯 Skill / Topic**")
+        
+        filtered_skills = []
+        if work_item and work_item.strip():
+            filtered_skills = db.get_skills_by_work_item(work_item)
+        
+        current_skill = session.get('skill_topic', '')
+        
+        if filtered_skills:
+            skill_options = [""] + sorted(list(set(filtered_skills)))
+            skill_index = skill_options.index(current_skill) if current_skill in skill_options else 0
+            
+            skill_topic = st.selectbox(
+                "skill_dropdown_edit",
+                options=skill_options,
+                index=skill_index,
+                label_visibility="collapsed",
+                help="Skills for selected work item"
+            )
+        else:
+            skill_topic = st.text_input("Skill/Topic (custom)", value=current_skill, label_visibility="collapsed", placeholder="No skills found - enter custom")
+        
+        # Additional Context
+        st.markdown("---")
+        st.markdown("#### 📊 Additional Context")
+        
+        col3, col4 = st.columns(2)
+        
+        with col3:
+            category_source = st.text_input("📚 Category Source", value=session.get('category_source', ''))
+            difficulty = dropdown_manager.render_independent_dropdown('difficulty', key_suffix="edit")
+        
+        with col4:
+            hours_spent = st.number_input("⏱️ Hours Spent", min_value=0.0, max_value=12.0, value=float(session.get('hours_spent', 1.0)), step=0.25)
+            status = dropdown_manager.render_independent_dropdown('status', key_suffix="edit")
+        
+        # Optional fields
+        st.markdown("---")
+        tags = st.text_area("🏷️ Tags", value=session.get('tags', ''), placeholder="Enter tags separated by commas...")
+        notes = st.text_area("📝 Notes", value=session.get('notes', ''), placeholder="Detailed notes about this session...")
+        
+        # Submit buttons
+        col_save, col_cancel = st.columns(2)
+        
+        with col_save:
+            submitted = st.form_submit_button("💾 Save Changes", type="primary")
+        
+        with col_cancel:
+            cancelled = st.form_submit_button("❌ Cancel")
+        
+        if cancelled:
+            st.session_state.editing_session_id = None
+            # Clear edit state
+            for key in ['session_type_edit', 'difficulty_edit', 'status_edit']:
+                if key in st.session_state:
+                    del st.session_state[key]
+            st.rerun()
+        
+        if submitted:
+            # Update session data
+            session_data = {
+                'session_date': str(session_date),
+                'session_type': session_type,
+                'category_name': selected_category,
+                'technology': technology,
+                'work_item': work_item,
+                'skill_topic': skill_topic,
+                'category_source': category_source,
+                'difficulty': difficulty,
+                'status': status,
+                'hours_spent': hours_spent,
+                'tags': tags,
+                'notes': notes
+            }
+            
+            success = db.update_session(session_id, session_data)
+            
+            if success:
+                # Clear edit state
+                st.session_state.editing_session_id = None
+                for key in ['session_type_edit', 'difficulty_edit', 'status_edit']:
+                    if key in st.session_state:
+                        del st.session_state[key]
+                
+                CachedQueryService.invalidate_cache()
+                st.success("✅ Session updated successfully!")
+                st.rerun()
+            else:
+                st.error("❌ Failed to update session")
 
 def show_sessions_page():
     """Display the Personal Development Dashboard / Sessions page."""
@@ -28,6 +239,11 @@ def show_sessions_page():
         st.session_state.db = DatabaseStorage()
     
     db = st.session_state.db
+    
+    # Check if we're editing a session
+    if 'editing_session_id' in st.session_state and st.session_state.editing_session_id:
+        show_edit_session_form(db, st.session_state.editing_session_id)
+        return
     
     # Load all sessions from database
     all_sessions = db.get_all_sessions()
@@ -150,9 +366,13 @@ def show_sessions_page():
                         st.write(f"**Notes:** {session['notes']}")
                 
                 with col_actions:
+                    if st.button("✏️ Edit", key=f"edit_{session['session_id']}", type="primary"):
+                        st.session_state.editing_session_id = session['session_id']
+                        st.rerun()
+                    
                     if st.button("🗑️ Delete", key=f"delete_{session['session_id']}"):
                         db.delete_session(session['session_id'])
-                        CachedQueryService.invalidate_cache()  # Refresh dashboard
+                        CachedQueryService.invalidate_cache()
                         st.success("Session deleted!")
                         st.rerun()
         

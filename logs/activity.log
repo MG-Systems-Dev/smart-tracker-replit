@@ -483,3 +483,1002 @@
 2025-10-11 00:25:14,055 | INFO | Added dropdown: technology = 🧱 T-SQL (primary)
 2025-10-11 00:25:14,055 | INFO | TechnologySyncService: Added 🧱 T-SQL (primary) to both tech_stack and dropdowns
 2025-10-11 00:25:14,055 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:35:55,792 | INFO | CachedQueryService: Fetched 28 tech stack entries with metrics (cached)
+2025-10-11 00:37:25,947 | INFO | CachedQueryService: Fetched 28 tech stack entries with metrics (cached)
+2025-10-11 00:39:14,332 | INFO | Added technology: 📁 System & Path Ops → os, sys, pathlib (ID: 75)
+2025-10-11 00:39:14,337 | INFO | Added dropdown: technology = 📁 System & Path Ops → os, sys, pathlib
+2025-10-11 00:39:14,337 | INFO | TechnologySyncService: Added 📁 System & Path Ops → os, sys, pathlib to both tech_stack and dropdowns
+2025-10-11 00:39:14,337 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:39:52,530 | INFO | Added technology: ↔ OpenPyXL (ID: 76)
+2025-10-11 00:39:52,532 | INFO | Added dropdown: technology = ↔ OpenPyXL
+2025-10-11 00:39:52,532 | INFO | TechnologySyncService: Added ↔ OpenPyXL to both tech_stack and dropdowns
+2025-10-11 00:39:52,532 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:40:18,107 | INFO | Added technology: 🪶 Xlwings (ID: 77)
+2025-10-11 00:40:18,108 | INFO | Added dropdown: technology = 🪶 Xlwings
+2025-10-11 00:40:18,108 | INFO | TechnologySyncService: Added 🪶 Xlwings to both tech_stack and dropdowns
+2025-10-11 00:40:18,109 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:43:04,949 | INFO | Added technology: 🧩 Selenium / Playwright (ID: 78)
+2025-10-11 00:43:04,951 | INFO | Added dropdown: technology = 🧩 Selenium / Playwright
+2025-10-11 00:43:04,951 | INFO | TechnologySyncService: Added 🧩 Selenium / Playwright to both tech_stack and dropdowns
+2025-10-11 00:43:04,951 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:43:22,734 | INFO | Added technology: 🪄 Cron Jobs + Airflow (ID: 79)
+2025-10-11 00:43:22,735 | INFO | Added dropdown: technology = 🪄 Cron Jobs + Airflow
+2025-10-11 00:43:22,735 | INFO | TechnologySyncService: Added 🪄 Cron Jobs + Airflow to both tech_stack and dropdowns
+2025-10-11 00:43:22,735 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:44:07,047 | INFO | Added technology: 🐍 Python (automation scripting) (ID: 80)
+2025-10-11 00:44:07,048 | INFO | Added dropdown: technology = 🐍 Python (automation scripting)
+2025-10-11 00:44:07,048 | INFO | TechnologySyncService: Added 🐍 Python (automation scripting) to both tech_stack and dropdowns
+2025-10-11 00:44:07,049 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:45:03,838 | INFO | Added technology: ⚙️ Concurrency & Async → asyncio, threading (ID: 81)
+2025-10-11 00:45:03,842 | INFO | Added dropdown: technology = ⚙️ Concurrency & Async → asyncio, threading
+2025-10-11 00:45:03,842 | INFO | TechnologySyncService: Added ⚙️ Concurrency & Async → asyncio, threading to both tech_stack and dropdowns
+2025-10-11 00:45:03,842 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:45:42,599 | INFO | Added technology: 👾 GitHub Actions (CI/CD automation) (ID: 82)
+2025-10-11 00:45:42,600 | INFO | Added dropdown: technology = 👾 GitHub Actions (CI/CD automation)
+2025-10-11 00:45:42,601 | INFO | TechnologySyncService: Added 👾 GitHub Actions (CI/CD automation) to both tech_stack and dropdowns
+2025-10-11 00:45:42,601 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:46:14,604 | INFO | Added technology: 🧠 Parallel & Performance → multiprocessing, cProfile (ID: 83)
+2025-10-11 00:46:14,604 | INFO | Added dropdown: technology = 🧠 Parallel & Performance → multiprocessing, cProfile
+2025-10-11 00:46:14,604 | INFO | TechnologySyncService: Added 🧠 Parallel & Performance → multiprocessing, cProfile to both tech_stack and dropdowns
+2025-10-11 00:46:14,605 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:46:33,297 | INFO | Added technology: 📕 File & Serialization → json, pickle, csv (ID: 84)
+2025-10-11 00:46:33,298 | INFO | Added dropdown: technology = 📕 File & Serialization → json, pickle, csv
+2025-10-11 00:46:33,298 | INFO | TechnologySyncService: Added 📕 File & Serialization → json, pickle, csv to both tech_stack and dropdowns
+2025-10-11 00:46:33,299 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:47:46,927 | INFO | Added technology: 🔐 OAuth 2.0 + Web App Security (ID: 85)
+2025-10-11 00:47:46,928 | INFO | Added dropdown: technology = 🔐 OAuth 2.0 + Web App Security
+2025-10-11 00:47:46,928 | INFO | TechnologySyncService: Added 🔐 OAuth 2.0 + Web App Security to both tech_stack and dropdowns
+2025-10-11 00:47:46,928 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:48:05,618 | INFO | Added technology: 🧪 Testing (ID: 86)
+2025-10-11 00:48:05,621 | INFO | Added dropdown: technology = 🧪 Testing
+2025-10-11 00:48:05,621 | INFO | TechnologySyncService: Added 🧪 Testing to both tech_stack and dropdowns
+2025-10-11 00:48:05,622 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:48:32,576 | INFO | Added technology: ✏️ Testing & Debugging → unittest, doctest, pdb (ID: 87)
+2025-10-11 00:48:32,577 | INFO | Added dropdown: technology = ✏️ Testing & Debugging → unittest, doctest, pdb
+2025-10-11 00:48:32,577 | INFO | TechnologySyncService: Added ✏️ Testing & Debugging → unittest, doctest, pdb to both tech_stack and dropdowns
+2025-10-11 00:48:32,578 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:48:54,072 | INFO | Added technology: 📜 Logging & Instrumentation → logging, timeit (ID: 88)
+2025-10-11 00:48:54,074 | INFO | Added dropdown: technology = 📜 Logging & Instrumentation → logging, timeit
+2025-10-11 00:48:54,074 | INFO | TechnologySyncService: Added 📜 Logging & Instrumentation → logging, timeit to both tech_stack and dropdowns
+2025-10-11 00:48:54,075 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 00:49:31,440 | INFO | CachedQueryService: Fetched 42 tech stack entries with metrics (cached)
+2025-10-11 00:54:40,886 | INFO | SQLite database initialized successfully
+2025-10-11 00:54:40,891 | INFO | CachedQueryService: Fetched 42 tech stack entries with metrics (cached)
+2025-10-11 00:55:15,141 | INFO | SQLite database initialized successfully
+2025-10-11 00:56:14,340 | INFO | SQLite database initialized successfully
+2025-10-11 00:56:14,347 | INFO | CachedQueryService: Fetched 42 tech stack entries with metrics (cached)
+2025-10-11 00:58:58,465 | INFO | SQLite database initialized successfully
+2025-10-11 00:58:58,470 | INFO | CachedQueryService: Fetched 42 tech stack entries with metrics (cached)
+2025-10-11 00:59:29,284 | INFO | SQLite database initialized successfully
+2025-10-11 00:59:29,290 | INFO | CachedQueryService: Fetched 42 tech stack entries with metrics (cached)
+2025-10-11 01:02:39,850 | INFO | SQLite database initialized successfully
+2025-10-11 01:02:39,857 | INFO | CachedQueryService: Fetched 42 tech stack entries with metrics (cached)
+2025-10-11 01:07:57,066 | INFO | SQLite database initialized successfully
+2025-10-11 01:07:57,074 | INFO | CachedQueryService: Fetched 42 tech stack entries with metrics (cached)
+2025-10-11 01:10:08,686 | INFO | Added technology: ⭕ REST + GraphQL APIs (ID: 89)
+2025-10-11 01:10:08,689 | INFO | Added dropdown: technology = ⭕ REST + GraphQL APIs
+2025-10-11 01:10:08,689 | INFO | TechnologySyncService: Added ⭕ REST + GraphQL APIs to both tech_stack and dropdowns
+2025-10-11 01:10:08,690 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:10:38,083 | INFO | Added technology: 🗂️ Jira + Agile Collaboration (ID: 90)
+2025-10-11 01:10:38,084 | INFO | Added dropdown: technology = 🗂️ Jira + Agile Collaboration
+2025-10-11 01:10:38,084 | INFO | TechnologySyncService: Added 🗂️ Jira + Agile Collaboration to both tech_stack and dropdowns
+2025-10-11 01:10:38,085 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:11:07,980 | INFO | Added technology: 😈 Git (version control) (ID: 91)
+2025-10-11 01:11:07,983 | INFO | Added dropdown: technology = 😈 Git (version control)
+2025-10-11 01:11:07,984 | INFO | TechnologySyncService: Added 😈 Git (version control) to both tech_stack and dropdowns
+2025-10-11 01:11:07,993 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:11:47,075 | INFO | Updated technology ID 91: 😈 Git (version control)
+2025-10-11 01:11:47,076 | INFO | Updated technology ID 91: 😈 Git (version control)
+2025-10-11 01:11:47,076 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:12:29,227 | INFO | Added technology: 🧩 Typing & Abstract Design → typing, abcGit (version control) (ID: 92)
+2025-10-11 01:12:29,228 | INFO | Added dropdown: technology = 🧩 Typing & Abstract Design → typing, abcGit (version control)
+2025-10-11 01:12:29,228 | INFO | TechnologySyncService: Added 🧩 Typing & Abstract Design → typing, abcGit (version control) to both tech_stack and dropdowns
+2025-10-11 01:12:29,229 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:13:07,972 | INFO | Added technology: 🐍 Python (ID: 93)
+2025-10-11 01:13:07,973 | INFO | Added dropdown: technology = 🐍 Python
+2025-10-11 01:13:07,973 | INFO | TechnologySyncService: Added 🐍 Python to both tech_stack and dropdowns
+2025-10-11 01:13:07,973 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:14:30,538 | INFO | Added technology: ⚙️ Dask (ID: 94)
+2025-10-11 01:14:30,539 | INFO | Added dropdown: technology = ⚙️ Dask
+2025-10-11 01:14:30,539 | INFO | TechnologySyncService: Added ⚙️ Dask to both tech_stack and dropdowns
+2025-10-11 01:14:30,540 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:14:51,097 | INFO | Updated technology ID 94: ⚙️ Dask
+2025-10-11 01:14:51,097 | INFO | Updated technology ID 94: ⚙️ Dask
+2025-10-11 01:14:51,098 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:22:23,435 | INFO | Added technology: ⚡ Polars (ID: 95)
+2025-10-11 01:22:23,436 | INFO | Added dropdown: technology = ⚡ Polars
+2025-10-11 01:22:23,436 | INFO | TechnologySyncService: Added ⚡ Polars to both tech_stack and dropdowns
+2025-10-11 01:22:23,436 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:23:05,517 | INFO | Added technology: 🐼 Pandas (ID: 96)
+2025-10-11 01:23:05,518 | INFO | Added dropdown: technology = 🐼 Pandas
+2025-10-11 01:23:05,518 | INFO | TechnologySyncService: Added 🐼 Pandas to both tech_stack and dropdowns
+2025-10-11 01:23:05,519 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:23:55,198 | INFO | Added technology: 📘 SciPy (ID: 97)
+2025-10-11 01:23:55,199 | INFO | Added dropdown: technology = 📘 SciPy
+2025-10-11 01:23:55,199 | INFO | TechnologySyncService: Added 📘 SciPy to both tech_stack and dropdowns
+2025-10-11 01:23:55,200 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:24:27,919 | INFO | Added technology: 🔢 NumPy (ID: 98)
+2025-10-11 01:24:27,920 | INFO | Added dropdown: technology = 🔢 NumPy
+2025-10-11 01:24:27,920 | INFO | TechnologySyncService: Added 🔢 NumPy to both tech_stack and dropdowns
+2025-10-11 01:24:27,920 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:25:08,345 | INFO | Added technology: 🐳 Docker (ID: 99)
+2025-10-11 01:25:08,347 | INFO | Added dropdown: technology = 🐳 Docker
+2025-10-11 01:25:08,348 | INFO | TechnologySyncService: Added 🐳 Docker to both tech_stack and dropdowns
+2025-10-11 01:25:08,348 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:25:32,064 | INFO | Added technology: 🕸️ Nginx (ID: 100)
+2025-10-11 01:25:32,065 | INFO | Added dropdown: technology = 🕸️ Nginx
+2025-10-11 01:25:32,065 | INFO | TechnologySyncService: Added 🕸️ Nginx to both tech_stack and dropdowns
+2025-10-11 01:25:32,066 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:25:52,107 | INFO | Added technology: 📦 Packaging & Environments → venv, setuptools, argparse (ID: 101)
+2025-10-11 01:25:52,108 | INFO | Added dropdown: technology = 📦 Packaging & Environments → venv, setuptools, argparse
+2025-10-11 01:25:52,108 | INFO | TechnologySyncService: Added 📦 Packaging & Environments → venv, setuptools, argparse to both tech_stack and dropdowns
+2025-10-11 01:25:52,108 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:27:18,710 | INFO | Added technology: 💡 PySide6 / Qt (ID: 102)
+2025-10-11 01:27:18,711 | INFO | Added dropdown: technology = 💡 PySide6 / Qt
+2025-10-11 01:27:18,711 | INFO | TechnologySyncService: Added 💡 PySide6 / Qt to both tech_stack and dropdowns
+2025-10-11 01:27:18,711 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:28:24,813 | INFO | Added technology: 📓 Jupyter Notebooks (ID: 103)
+2025-10-11 01:28:24,814 | INFO | Added dropdown: technology = 📓 Jupyter Notebooks
+2025-10-11 01:28:24,814 | INFO | TechnologySyncService: Added 📓 Jupyter Notebooks to both tech_stack and dropdowns
+2025-10-11 01:28:24,814 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:28:54,128 | INFO | Added technology: 📊 Statsmodels (ID: 104)
+2025-10-11 01:28:54,129 | INFO | Added dropdown: technology = 📊 Statsmodels
+2025-10-11 01:28:54,129 | INFO | TechnologySyncService: Added 📊 Statsmodels to both tech_stack and dropdowns
+2025-10-11 01:28:54,130 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:29:33,280 | INFO | Added technology: 🧠 spaCy (ID: 105)
+2025-10-11 01:29:33,281 | INFO | Added dropdown: technology = 🧠 spaCy
+2025-10-11 01:29:33,281 | INFO | TechnologySyncService: Added 🧠 spaCy to both tech_stack and dropdowns
+2025-10-11 01:29:33,282 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:30:28,177 | INFO | Added technology: 🔮 Prophet (ID: 106)
+2025-10-11 01:30:28,179 | INFO | Added dropdown: technology = 🔮 Prophet
+2025-10-11 01:30:28,179 | INFO | TechnologySyncService: Added 🔮 Prophet to both tech_stack and dropdowns
+2025-10-11 01:30:28,180 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:31:01,128 | INFO | Added technology: 💫 Darts (ID: 107)
+2025-10-11 01:31:01,130 | INFO | Added dropdown: technology = 💫 Darts
+2025-10-11 01:31:01,130 | INFO | TechnologySyncService: Added 💫 Darts to both tech_stack and dropdowns
+2025-10-11 01:31:01,130 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:31:24,512 | INFO | Updated technology ID 107: 💫 Darts
+2025-10-11 01:31:24,513 | INFO | Updated technology ID 107: 💫 Darts
+2025-10-11 01:31:24,513 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:32:09,029 | INFO | Added technology: 🌐 Networking & HTTP → requests, struct (ID: 108)
+2025-10-11 01:32:09,030 | INFO | Added dropdown: technology = 🌐 Networking & HTTP → requests, struct
+2025-10-11 01:32:09,030 | INFO | TechnologySyncService: Added 🌐 Networking & HTTP → requests, struct to both tech_stack and dropdowns
+2025-10-11 01:32:09,030 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:34:47,327 | INFO | SQLite database initialized successfully
+2025-10-11 01:34:47,335 | INFO | CachedQueryService: Fetched 62 tech stack entries with metrics (cached)
+2025-10-11 01:38:03,630 | INFO | SQLite database initialized successfully
+2025-10-11 01:38:03,637 | INFO | CachedQueryService: Fetched 62 tech stack entries with metrics (cached)
+2025-10-11 01:39:40,335 | INFO | Added technology: 🦋 BeautifulSoup (ID: 109)
+2025-10-11 01:39:40,336 | INFO | Added dropdown: technology = 🦋 BeautifulSoup
+2025-10-11 01:39:40,336 | INFO | TechnologySyncService: Added 🦋 BeautifulSoup to both tech_stack and dropdowns
+2025-10-11 01:39:40,337 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:40:17,428 | INFO | Added technology: 🕷️ Scrapy (ID: 110)
+2025-10-11 01:40:17,430 | INFO | Added dropdown: technology = 🕷️ Scrapy
+2025-10-11 01:40:17,430 | INFO | TechnologySyncService: Added 🕷️ Scrapy to both tech_stack and dropdowns
+2025-10-11 01:40:17,430 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:41:08,819 | INFO | Added technology: 📊 Textual (ID: 111)
+2025-10-11 01:41:08,820 | INFO | Added dropdown: technology = 📊 Textual
+2025-10-11 01:41:08,820 | INFO | TechnologySyncService: Added 📊 Textual to both tech_stack and dropdowns
+2025-10-11 01:41:08,820 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:41:33,155 | INFO | Added technology: 💎 Rich (ID: 112)
+2025-10-11 01:41:33,156 | INFO | Added dropdown: technology = 💎 Rich
+2025-10-11 01:41:33,156 | INFO | TechnologySyncService: Added 💎 Rich to both tech_stack and dropdowns
+2025-10-11 01:41:33,156 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:43:40,082 | INFO | Added technology: ⚙️ Functional & Operator Tools → operator, heapq, bisect (ID: 113)
+2025-10-11 01:43:40,083 | INFO | Added dropdown: technology = ⚙️ Functional & Operator Tools → operator, heapq, bisect
+2025-10-11 01:43:40,083 | INFO | TechnologySyncService: Added ⚙️ Functional & Operator Tools → operator, heapq, bisect to both tech_stack and dropdowns
+2025-10-11 01:43:40,084 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:43:57,071 | INFO | Added technology: 🔢 Regex & Unicode → re, unicodedata (ID: 114)
+2025-10-11 01:43:57,072 | INFO | Added dropdown: technology = 🔢 Regex & Unicode → re, unicodedata
+2025-10-11 01:43:57,072 | INFO | TechnologySyncService: Added 🔢 Regex & Unicode → re, unicodedata to both tech_stack and dropdowns
+2025-10-11 01:43:57,072 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:44:32,490 | INFO | Added technology: 🧩 Data & Collections → collections, itertools, functools (ID: 115)
+2025-10-11 01:44:32,492 | INFO | Added dropdown: technology = 🧩 Data & Collections → collections, itertools, functools
+2025-10-11 01:44:32,492 | INFO | TechnologySyncService: Added 🧩 Data & Collections → collections, itertools, functools to both tech_stack and dropdowns
+2025-10-11 01:44:32,492 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:44:56,293 | INFO | Added technology: 📚 Low-Level Arrays → array (ID: 116)
+2025-10-11 01:44:56,294 | INFO | Added dropdown: technology = 📚 Low-Level Arrays → array
+2025-10-11 01:44:56,294 | INFO | TechnologySyncService: Added 📚 Low-Level Arrays → array to both tech_stack and dropdowns
+2025-10-11 01:44:56,294 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:45:13,790 | INFO | Added technology: 📦 Data Structures & Models → dataclasses, attrs, enum (ID: 117)
+2025-10-11 01:45:13,791 | INFO | Added dropdown: technology = 📦 Data Structures & Models → dataclasses, attrs, enum
+2025-10-11 01:45:13,791 | INFO | TechnologySyncService: Added 📦 Data Structures & Models → dataclasses, attrs, enum to both tech_stack and dropdowns
+2025-10-11 01:45:13,792 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:51:01,621 | INFO | Added work item: Basics For Beginner → 🐍 Python
+2025-10-11 01:51:01,623 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:52:23,612 | INFO | Added skill: Variables & Data types → Basics For Beginner
+2025-10-11 01:52:23,613 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:55:04,111 | INFO | Added session ID 13: 🐍 Python - 
+2025-10-11 01:55:04,112 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 01:55:04,112 | INFO | Added session ID 13: 🐍 Python - 0.5h
+2025-10-11 01:55:35,894 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 01:58:52,364 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 02:13:33,563 | INFO | Added work item: Operators → 🐍 Python
+2025-10-11 02:13:33,564 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 02:13:55,677 | INFO | Added work item: Data Types → 🐍 Python
+2025-10-11 02:13:55,677 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 02:15:47,589 | INFO | Added work item: User Input & Control Flow → 🐍 Python
+2025-10-11 02:15:47,590 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 02:16:17,206 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 02:21:13,907 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 02:22:43,997 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 02:22:53,799 | INFO | Deleted session ID 13
+2025-10-11 02:22:53,799 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 02:25:55,566 | INFO | Added session ID 14: 🐍 Python - 
+2025-10-11 02:25:55,568 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 02:25:55,569 | INFO | Added session ID 14: 🐍 Python - 0.5h
+2025-10-11 10:14:30,103 | INFO | SQLite database initialized successfully
+2025-10-11 10:14:30,111 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 10:17:01,399 | INFO | SQLite database initialized successfully
+2025-10-11 10:17:01,407 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 10:17:44,714 | INFO | Updated session ID 14
+2025-10-11 10:17:44,715 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:20:29,163 | INFO | SQLite database initialized successfully
+2025-10-11 10:20:29,171 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 10:20:48,656 | INFO | Updated session ID 14
+2025-10-11 10:20:48,657 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:21:36,977 | INFO | SQLite database initialized successfully
+2025-10-11 10:24:05,970 | INFO | Added skill: assignment, arithmetic, comparison, boolean → Operators
+2025-10-11 10:24:05,972 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:25:06,399 | INFO | Added skill: user input and control flow → User Input & Control Flow
+2025-10-11 10:25:06,400 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:25:57,399 | INFO | Added work item: List & Tuples → 🐍 Python
+2025-10-11 10:25:57,400 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:26:41,501 | INFO | Added skill: working with list and tuples → List & Tuples
+2025-10-11 10:26:41,502 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:27:29,861 | INFO | Deleted skill: Variables & Data types → Basics For Beginner
+2025-10-11 10:27:29,862 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:27:32,788 | INFO | Deleted skill: working with list and tuples → List & Tuples
+2025-10-11 10:27:32,788 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:27:38,226 | INFO | Deleted skill: assignment, arithmetic, comparison, boolean → Operators
+2025-10-11 10:27:38,226 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:27:41,221 | INFO | Deleted skill: user input and control flow → User Input & Control Flow
+2025-10-11 10:27:41,221 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:27:44,780 | INFO | Deleted work item: Basics For Beginner → 🐍 Python
+2025-10-11 10:27:44,780 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:27:48,169 | INFO | Deleted work item: Data Types → 🐍 Python
+2025-10-11 10:27:48,169 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:27:51,496 | INFO | Deleted work item: List & Tuples → 🐍 Python
+2025-10-11 10:27:51,496 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:27:54,857 | INFO | Deleted work item: Operators → 🐍 Python
+2025-10-11 10:27:54,857 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:27:57,551 | INFO | Deleted work item: User Input & Control Flow → 🐍 Python
+2025-10-11 10:27:57,552 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:28:07,370 | INFO | Deleted session ID 14
+2025-10-11 10:28:07,371 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:31:10,566 | INFO | SQLite database initialized successfully
+2025-10-11 10:31:10,579 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 10:33:12,362 | INFO | SQLite database initialized successfully
+2025-10-11 10:33:12,370 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 10:35:27,265 | INFO | SQLite database initialized successfully
+2025-10-11 10:35:27,273 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 10:41:28,168 | INFO | SQLite database initialized successfully
+2025-10-11 10:41:28,176 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 10:42:45,038 | INFO | Added work item: Variables → 🐍 Python
+2025-10-11 10:42:45,039 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:42:56,620 | INFO | Added work item: Data types → 🐍 Python
+2025-10-11 10:42:56,621 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:43:06,904 | INFO | Added work item: List → 🐍 Python
+2025-10-11 10:43:06,904 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:43:24,853 | INFO | Added work item: If Statements → 🐍 Python
+2025-10-11 10:43:24,853 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:43:36,405 | INFO | Added work item: User inputs → 🐍 Python
+2025-10-11 10:43:36,406 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:44:44,748 | INFO | SQLite database initialized successfully
+2025-10-11 10:44:44,755 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 10:45:20,994 | INFO | Added work item: While Loops → 🐍 Python
+2025-10-11 10:45:20,995 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:45:55,597 | INFO | Added work item: Functions → 🐍 Python
+2025-10-11 10:45:55,597 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:46:12,380 | INFO | Added work item: Classes → 🐍 Python
+2025-10-11 10:46:12,380 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:46:21,800 | INFO | Added work item: Files → 🐍 Python
+2025-10-11 10:46:21,801 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:46:28,676 | INFO | Added work item: Exceptions → 🐍 Python
+2025-10-11 10:46:28,676 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:46:45,593 | INFO | Added work item: Testing → 🐍 Python
+2025-10-11 10:46:45,594 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:48:27,258 | INFO | SQLite database initialized successfully
+2025-10-11 10:48:27,264 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 10:50:45,675 | INFO | SQLite database initialized successfully
+2025-10-11 10:50:45,684 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 10:53:00,106 | INFO | Added skill: Working with Variables → Variables
+2025-10-11 10:53:00,107 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:53:16,715 | INFO | Added skill: Expresions → Variables
+2025-10-11 10:53:16,715 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:53:35,946 | INFO | Added skill: Statements → Variables
+2025-10-11 10:53:35,946 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:54:24,215 | INFO | Added skill: Operators → Data types
+2025-10-11 10:54:24,216 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:54:50,625 | INFO | Added skill: assignment → Data types
+2025-10-11 10:54:50,626 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:54:55,390 | WARNING | Skill assignment already exists for Data types
+2025-10-11 10:55:07,423 | INFO | Deleted skill: Operators → Data types
+2025-10-11 10:55:07,423 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:55:11,238 | INFO | Deleted skill: assignment → Data types
+2025-10-11 10:55:11,238 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:55:31,648 | INFO | Added work item: Operators → 🐍 Python
+2025-10-11 10:55:31,648 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:55:55,271 | INFO | Added skill: arithmetic → Operators
+2025-10-11 10:55:55,272 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:56:19,937 | INFO | Added skill: boolean → Operators
+2025-10-11 10:56:19,938 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:56:38,536 | INFO | Added skill: comparison → Operators
+2025-10-11 10:56:38,537 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:57:08,006 | INFO | Added skill: ternary operators → Operators
+2025-10-11 10:57:08,007 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:58:11,327 | INFO | Added skill: Float → Data types
+2025-10-11 10:58:11,327 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:58:18,311 | INFO | Added skill: string → Data types
+2025-10-11 10:58:18,313 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:58:34,801 | INFO | Added skill: integer → Data types
+2025-10-11 10:58:34,801 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:58:43,337 | INFO | Added skill: boolean → Data types
+2025-10-11 10:58:43,338 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 10:59:15,265 | INFO | Added skill: Control flow → User inputs
+2025-10-11 10:59:15,265 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:00:10,224 | INFO | Added skill: changing → List
+2025-10-11 11:00:10,224 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:00:14,874 | INFO | Added skill: Adding → List
+2025-10-11 11:00:14,874 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:00:25,008 | INFO | Added skill: Remove → List
+2025-10-11 11:00:25,009 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:00:46,914 | INFO | Added skill: Organizing → List
+2025-10-11 11:00:46,915 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:01:08,690 | INFO | Added skill: Number → Data types
+2025-10-11 11:01:08,691 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:01:49,214 | INFO | Added skill: Loops → List
+2025-10-11 11:01:49,216 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:01:58,755 | INFO | Deleted skill: changing → List
+2025-10-11 11:01:58,755 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:02:06,190 | INFO | Added skill: Changing → List
+2025-10-11 11:02:06,190 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:02:17,920 | INFO | Deleted skill: boolean → Data types
+2025-10-11 11:02:17,921 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:02:25,979 | INFO | Added skill: Boolean → Data types
+2025-10-11 11:02:25,979 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:02:34,163 | INFO | Deleted skill: integer → Data types
+2025-10-11 11:02:34,164 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:02:43,890 | INFO | Added skill: Interger → Data types
+2025-10-11 11:02:43,890 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:02:49,408 | INFO | Deleted skill: string → Data types
+2025-10-11 11:02:49,409 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:02:53,371 | INFO | Added skill: String → Data types
+2025-10-11 11:02:53,371 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:03:03,475 | INFO | Deleted skill: boolean → Operators
+2025-10-11 11:03:03,475 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:03:11,992 | INFO | Deleted skill: arithmetic → Operators
+2025-10-11 11:03:11,992 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:03:29,098 | INFO | Added skill: Arithmetic → Operators
+2025-10-11 11:03:29,099 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:03:34,534 | INFO | Deleted skill: comparison → Operators
+2025-10-11 11:03:34,534 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:03:45,643 | INFO | Added skill: Comparison → Operators
+2025-10-11 11:03:45,644 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:04:01,953 | INFO | Deleted skill: ternary operators → Operators
+2025-10-11 11:04:01,953 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:04:03,864 | INFO | Added skill: Ternary operators → Operators
+2025-10-11 11:04:03,864 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:04:56,860 | INFO | Added skill: Conditional test → If Statements
+2025-10-11 11:04:56,861 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:05:12,963 | INFO | Added skill: If with list → If Statements
+2025-10-11 11:05:12,964 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:05:41,228 | INFO | Added skill: Styling your if → If Statements
+2025-10-11 11:05:41,229 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:06:00,481 | INFO | Added work item: Dictionaries → 🐍 Python
+2025-10-11 11:06:00,482 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:06:33,878 | INFO | Added skill: Working with Dictionaries → Dictionaries
+2025-10-11 11:06:33,878 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:07:03,525 | INFO | Added skill: Looping through a Dictionary → Dictionaries
+2025-10-11 11:07:03,526 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:07:14,802 | INFO | Added skill: Nesting → Dictionaries
+2025-10-11 11:07:14,803 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:08:05,055 | INFO | Added skill: Working with Input → User inputs
+2025-10-11 11:08:05,057 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:08:26,342 | INFO | Added skill: Working with While loops → While Loops
+2025-10-11 11:08:26,349 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:08:53,153 | INFO | Added skill: Using While loops with list → While Loops
+2025-10-11 11:08:53,154 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:08:59,333 | INFO | Added skill: Using While loops with Dictionaries → While Loops
+2025-10-11 11:08:59,334 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:14:01,154 | INFO | Added skill: Defining Functions → Functions
+2025-10-11 11:14:01,155 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:14:18,757 | INFO | Added skill: Passing arguments → Functions
+2025-10-11 11:14:18,758 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:14:22,088 | WARNING | Skill Passing arguments already exists for Functions
+2025-10-11 11:14:35,732 | INFO | Added skill: Return Value → Functions
+2025-10-11 11:14:35,732 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:14:55,842 | INFO | Added skill: Passing a List → Functions
+2025-10-11 11:14:55,842 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:15:33,603 | INFO | Added skill: Passing an arbitrary number of argument → Functions
+2025-10-11 11:15:33,603 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:16:10,208 | INFO | Added skill: Storing your functions in modules → Functions
+2025-10-11 11:16:10,209 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:17:42,684 | INFO | Added skill: Styling your functions → Functions
+2025-10-11 11:17:42,685 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:19:13,055 | INFO | Added skill: Creating using Classes → Classes
+2025-10-11 11:19:13,057 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:20:21,212 | INFO | Deleted skill: Creating using Classes → Classes
+2025-10-11 11:20:21,214 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:20:31,336 | INFO | Added skill: Creating and using a Classes → Classes
+2025-10-11 11:20:31,337 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:23:43,558 | INFO | Added skill: Working with a class and  Instances → Classes
+2025-10-11 11:23:43,560 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:23:54,076 | INFO | Added skill: Inheritance → Classes
+2025-10-11 11:23:54,076 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:24:38,331 | INFO | Added skill: Importing Classes → Classes
+2025-10-11 11:24:38,331 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:25:01,464 | INFO | Added skill: Python Standard Libraries → Classes
+2025-10-11 11:25:01,464 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:25:27,531 | INFO | Added skill: Reading a File → Files
+2025-10-11 11:25:27,532 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:25:54,773 | INFO | Added skill: Writing a file → Files
+2025-10-11 11:25:54,773 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:26:14,686 | INFO | Added skill: Storing data (json,csv) → Files
+2025-10-11 11:26:14,686 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:26:27,948 | INFO | Added skill: Working with exceptions → Exceptions
+2025-10-11 11:26:27,948 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:26:59,698 | INFO | Added skill: Testing A Function → Testing
+2025-10-11 11:26:59,698 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:27:08,752 | INFO | Added skill: Testing a Class → Testing
+2025-10-11 11:27:08,752 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:27:58,856 | INFO | Added skill: Variables Name → Variables
+2025-10-11 11:27:58,857 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:28:04,681 | INFO | Added skill: Variables Values → Variables
+2025-10-11 11:28:04,681 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:28:14,247 | INFO | Added skill: Console → Variables
+2025-10-11 11:28:14,248 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:28:27,331 | INFO | Added skill: Updating Variables → Variables
+2025-10-11 11:28:27,331 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:28:35,374 | INFO | Added skill: Expressions → Variables
+2025-10-11 11:28:35,375 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:28:47,734 | INFO | Added skill: Numbers → Variables
+2025-10-11 11:28:47,734 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:29:03,628 | INFO | Added skill: True and False → Variables
+2025-10-11 11:29:03,629 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:29:14,853 | INFO | Added skill: Negative values → Variables
+2025-10-11 11:29:14,854 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:29:41,135 | INFO | Added skill: Equality Operator → Variables
+2025-10-11 11:29:41,136 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:29:52,898 | INFO | Added skill: Inequality Operator → Variables
+2025-10-11 11:29:52,898 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:30:30,129 | INFO | Deleted skill: Negative values → Variables
+2025-10-11 11:30:30,130 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:30:37,050 | INFO | Deleted skill: Equality Operator → Variables
+2025-10-11 11:30:37,051 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:30:41,971 | INFO | Deleted skill: Expressions → Variables
+2025-10-11 11:30:41,971 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:30:46,395 | INFO | Deleted skill: Inequality Operator → Variables
+2025-10-11 11:30:46,395 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:30:55,026 | INFO | Deleted skill: Numbers → Variables
+2025-10-11 11:30:55,027 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:31:07,722 | INFO | Deleted skill: True and False → Variables
+2025-10-11 11:31:07,722 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:31:39,465 | INFO | Added skill: True and False → Operators
+2025-10-11 11:31:39,466 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:31:49,281 | INFO | Deleted skill: Ternary operators → Operators
+2025-10-11 11:31:49,282 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:32:00,554 | INFO | Added skill: Temporary Operators → Operators
+2025-10-11 11:32:00,555 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:32:27,164 | INFO | Added skill: Negative values → Operators
+2025-10-11 11:32:27,165 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:32:49,365 | INFO | Added skill: Equality Operator → Operators
+2025-10-11 11:32:49,365 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:33:00,346 | INFO | Added skill: Inequality Operator → Operators
+2025-10-11 11:33:00,346 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:34:54,778 | INFO | Added skill: Type Comparison → Operators
+2025-10-11 11:34:54,779 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:35:59,913 | INFO | Added skill: Conditions → If Statements
+2025-10-11 11:35:59,913 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:36:07,258 | INFO | Added skill: Code block → If Statements
+2025-10-11 11:36:07,258 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:36:20,000 | INFO | Added skill: Using conditons → If Statements
+2025-10-11 11:36:20,000 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:36:54,666 | INFO | Added skill: Else → If Statements
+2025-10-11 11:36:54,666 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:37:04,678 | INFO | Added skill: Elif → If Statements
+2025-10-11 11:37:04,679 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:37:17,793 | INFO | Added skill: And → If Statements
+2025-10-11 11:37:17,794 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:37:23,699 | INFO | Added skill: Or → If Statements
+2025-10-11 11:37:23,699 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:38:18,168 | INFO | Added skill: Assignment Operator → While Loops
+2025-10-11 11:38:18,169 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:38:59,320 | INFO | Added skill: Using the while Break → While Loops
+2025-10-11 11:38:59,321 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:39:08,225 | INFO | Added skill: Using the while Continue → While Loops
+2025-10-11 11:39:08,225 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:39:41,140 | INFO | Added skill: Using the for loop → While Loops
+2025-10-11 11:39:41,140 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:40:08,146 | INFO | Added skill: Avoiding infinite loops → While Loops
+2025-10-11 11:40:08,147 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:40:09,730 | WARNING | Skill Avoiding infinite loops already exists for While Loops
+2025-10-11 11:40:54,014 | INFO | Added skill: Grouping → List
+2025-10-11 11:40:54,015 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:41:08,654 | INFO | Added skill: Append → List
+2025-10-11 11:41:08,654 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:41:13,450 | INFO | Added skill: Insert → List
+2025-10-11 11:41:13,450 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:42:25,373 | INFO | Added skill: Length and Conditions → List
+2025-10-11 11:42:25,373 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:42:49,278 | INFO | Added skill: Finding Extreme data → List
+2025-10-11 11:42:49,279 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:42:59,472 | INFO | Added skill: Sorting list → List
+2025-10-11 11:42:59,472 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:46:11,493 | INFO | SQLite database initialized successfully
+2025-10-11 11:46:11,504 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 11:46:57,346 | INFO | Added session ID 15: 🐍 Python - Float
+2025-10-11 11:46:57,347 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:46:57,348 | INFO | Added session ID 15: 🐍 Python - 1.0h
+2025-10-11 11:48:01,196 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 11:48:14,032 | INFO | Deleted session ID 15
+2025-10-11 11:48:14,033 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:48:58,217 | INFO | Added skill: Using list → List
+2025-10-11 11:48:58,218 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:49:13,972 | INFO | Added skill: Join → List
+2025-10-11 11:49:13,972 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:49:28,781 | INFO | Added skill: Cointing elements → List
+2025-10-11 11:49:28,781 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:49:36,284 | INFO | Added skill: Counting elements → List
+2025-10-11 11:49:36,284 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:50:08,614 | INFO | Added skill: Spliting Strings → Data types
+2025-10-11 11:50:08,615 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:50:23,121 | INFO | Added skill: Updating Strings → Data types
+2025-10-11 11:50:23,121 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:50:36,443 | INFO | Added skill: Using Strings → Data types
+2025-10-11 11:50:36,444 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:51:21,380 | INFO | Added skill: Reusing code with functions → Functions
+2025-10-11 11:51:21,380 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:51:35,238 | INFO | Added skill: Creating Parameters → Functions
+2025-10-11 11:51:35,238 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:51:54,352 | INFO | Added skill: Multiple parameters → Functions
+2025-10-11 11:51:54,352 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:52:15,471 | INFO | Added skill: Naming Functions → Functions
+2025-10-11 11:52:15,471 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:52:35,917 | INFO | Added skill: Local Scope → Functions
+2025-10-11 11:52:35,917 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:52:44,151 | INFO | Added skill: Global Scope → Functions
+2025-10-11 11:52:44,152 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:53:18,267 | INFO | Added skill: Nesting Conditional in funtions → Functions
+2025-10-11 11:53:18,267 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:53:45,417 | INFO | Added skill: Incorporating elif and else → Functions
+2025-10-11 11:53:45,417 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:54:10,797 | INFO | Added skill: List As Argument → Functions
+2025-10-11 11:54:10,797 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:54:21,450 | WARNING | Skill List As Argument already exists for Functions
+2025-10-11 11:54:51,151 | INFO | Added skill: Functions with While loops → Functions
+2025-10-11 11:54:51,151 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:55:06,781 | INFO | Added skill: Functions with For loops → Functions
+2025-10-11 11:55:06,781 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:55:10,503 | WARNING | Skill Functions with For loops already exists for Functions
+2025-10-11 11:55:24,640 | INFO | Added skill: Functions with For loops with list → Functions
+2025-10-11 11:55:24,640 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:56:21,179 | INFO | Added work item: Tuples → 🐍 Python
+2025-10-11 11:56:21,180 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:56:54,009 | INFO | Added skill: Creating and using tuples → Tuples
+2025-10-11 11:56:54,009 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:57:06,849 | INFO | Added skill: List of tuples → Tuples
+2025-10-11 11:57:06,849 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:57:22,417 | INFO | Added skill: tuples return → Tuples
+2025-10-11 11:57:22,417 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:58:11,290 | INFO | Added skill: Accessing and update values → Dictionaries
+2025-10-11 11:58:11,290 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:58:40,818 | INFO | Added skill: Adding a key -value pair → Dictionaries
+2025-10-11 11:58:40,819 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:59:08,031 | INFO | Added skill: Checking if Dictionary contains a key → Dictionaries
+2025-10-11 11:59:08,031 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:59:36,076 | INFO | Added skill: Removing a key value pair → Dictionaries
+2025-10-11 11:59:36,076 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 11:59:56,240 | INFO | Added skill: Creating sets → Dictionaries
+2025-10-11 11:59:56,240 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:00:08,658 | INFO | Added skill: Sets Basics → Dictionaries
+2025-10-11 12:00:08,659 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:00:18,558 | INFO | Added skill: Set Advance → Dictionaries
+2025-10-11 12:00:18,558 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:00:26,837 | INFO | Added skill: Remove sets → Dictionaries
+2025-10-11 12:00:26,838 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:00:54,890 | INFO | Added skill: Sets subsets → Dictionaries
+2025-10-11 12:00:54,890 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:01:01,971 | INFO | Added skill: Sets union → Dictionaries
+2025-10-11 12:01:01,971 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:01:09,175 | INFO | Added skill: Sets intersection → Dictionaries
+2025-10-11 12:01:09,175 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:01:22,007 | INFO | Added skill: Sets Difference → Dictionaries
+2025-10-11 12:01:22,007 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:01:56,671 | INFO | Added skill: List comprehensions → List
+2025-10-11 12:01:56,671 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:02:14,694 | INFO | Added skill: Functions and expressions → List
+2025-10-11 12:02:14,695 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:02:26,271 | INFO | Added skill: Filter → List
+2025-10-11 12:02:26,272 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:02:48,813 | INFO | Added skill: Negative index delations → List
+2025-10-11 12:02:48,813 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:03:08,282 | INFO | Added skill: Start: Stops → List
+2025-10-11 12:03:08,282 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:03:10,260 | WARNING | Skill Start: Stops already exists for List
+2025-10-11 12:03:49,685 | INFO | Added skill: Methods → Classes
+2025-10-11 12:03:49,685 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:04:10,680 | INFO | Added skill: Costructors → Classes
+2025-10-11 12:04:10,680 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:04:24,785 | INFO | Added skill: Cosntructors → Classes
+2025-10-11 12:04:24,785 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:04:30,030 | INFO | Added skill: Constructors → Classes
+2025-10-11 12:04:30,030 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:04:38,551 | INFO | Deleted skill: Cosntructors → Classes
+2025-10-11 12:04:38,552 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:04:43,070 | INFO | Deleted skill: Costructors → Classes
+2025-10-11 12:04:43,070 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:05:03,039 | INFO | Added skill: Understanding Classes → Classes
+2025-10-11 12:05:03,039 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:05:42,090 | INFO | Added work item: Object Oriented Programming → 🐍 Python
+2025-10-11 12:05:42,091 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:06:05,259 | INFO | Added skill: Basics OOP → Object Oriented Programming
+2025-10-11 12:06:05,260 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:06:19,061 | INFO | Added skill: Encapsulation → Object Oriented Programming
+2025-10-11 12:06:19,061 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:06:37,003 | INFO | Added skill: inheritance → Object Oriented Programming
+2025-10-11 12:06:37,003 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:06:45,814 | INFO | Added skill: inheritance with classes → Object Oriented Programming
+2025-10-11 12:06:45,814 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:06:57,617 | INFO | Added skill: Abstractions → Object Oriented Programming
+2025-10-11 12:06:57,617 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:07:23,686 | INFO | Added skill: Polymorphic  objects → Object Oriented Programming
+2025-10-11 12:07:23,686 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:07:46,091 | INFO | Added work item: Modules → 🐍 Python
+2025-10-11 12:07:46,091 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:08:10,548 | INFO | Added skill: Basics Modules → Modules
+2025-10-11 12:08:10,548 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:08:18,409 | INFO | Added skill: From → Modules
+2025-10-11 12:08:18,409 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:08:24,677 | INFO | Added skill: Alias → Modules
+2025-10-11 12:08:24,677 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:08:58,440 | INFO | Added skill: Basics Errors → Exceptions
+2025-10-11 12:08:58,441 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:09:21,743 | INFO | Added skill: Raising Exceptions → Exceptions
+2025-10-11 12:09:21,743 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:09:29,360 | INFO | Added skill: Handling  Exceptions → Exceptions
+2025-10-11 12:09:29,360 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:09:41,606 | INFO | Added skill: Errors & Exceptions → Exceptions
+2025-10-11 12:09:41,606 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:11:45,365 | INFO | Added skill: Advance loop control → While Loops
+2025-10-11 12:11:45,366 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:12:34,353 | INFO | Added skill: index → List
+2025-10-11 12:12:34,354 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:13:06,517 | INFO | Added skill: Minimun and Maximun → List
+2025-10-11 12:13:06,518 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:15:09,435 | INFO | Added work item: API → 🐍 Python
+2025-10-11 12:15:09,436 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:15:28,373 | INFO | Added skill: Basics API → API
+2025-10-11 12:15:28,374 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:15:39,171 | INFO | Added skill: Working with  API → API
+2025-10-11 12:15:39,172 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:15:56,844 | INFO | Added skill: Request  Basics API → API
+2025-10-11 12:15:56,844 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:16:05,936 | INFO | Added skill: Using Request  API → API
+2025-10-11 12:16:05,936 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:17:23,309 | INFO | Added skill: Intro to environment Variables → API
+2025-10-11 12:17:23,309 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:17:30,180 | INFO | Added skill: .env → API
+2025-10-11 12:17:30,180 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:17:38,190 | INFO | Added skill: Different ways → API
+2025-10-11 12:17:38,190 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:17:56,579 | INFO | Added skill: Error & Default Values → API
+2025-10-11 12:17:56,579 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:19:21,290 | INFO | Added skill: Basics Header & Body → API
+2025-10-11 12:19:21,291 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:19:36,811 | INFO | Added skill: Query Parameters → API
+2025-10-11 12:19:36,811 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:19:49,366 | INFO | Added skill: Status Code → API
+2025-10-11 12:19:49,366 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:20:07,836 | INFO | Added skill: Accessing json → API
+2025-10-11 12:20:07,836 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:20:32,533 | INFO | Added skill: Environment Variables → API
+2025-10-11 12:20:32,533 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:21:04,640 | INFO | Added skill: Working with private API → API
+2025-10-11 12:21:04,640 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:21:11,745 | INFO | Added skill: Advance Working with private API → API
+2025-10-11 12:21:11,745 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:23:41,765 | INFO | Added session ID 16: 🐍 Python - Updating Variables
+2025-10-11 12:23:41,767 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:23:41,767 | INFO | Added session ID 16: 🐍 Python - 0.5h
+2025-10-11 12:24:50,192 | INFO | Added skill: Working with operators → Operators
+2025-10-11 12:24:50,193 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:26:06,767 | INFO | Added session ID 17: 💫 Darts - 
+2025-10-11 12:26:06,768 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:26:06,768 | INFO | Added session ID 17: 💫 Darts - 0.5h
+2025-10-11 12:26:53,025 | INFO | Deleted session ID 17
+2025-10-11 12:26:53,026 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:30:42,243 | INFO | Added session ID 18: 🐍 Python - Working with operators
+2025-10-11 12:30:42,245 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:30:42,245 | INFO | Added session ID 18: 🐍 Python - 0.5h
+2025-10-11 12:31:22,524 | INFO | Updated session ID 18
+2025-10-11 12:31:22,525 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:32:34,258 | INFO | Added skill: Working with Data Types → Data types
+2025-10-11 12:32:34,258 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:34:00,555 | INFO | Added session ID 19: 🐍 Python - Working with Data Types
+2025-10-11 12:34:00,556 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:34:00,557 | INFO | Added session ID 19: 🐍 Python - 0.5h
+2025-10-11 12:35:12,468 | INFO | Added session ID 20: 🐍 Python - Working with Input
+2025-10-11 12:35:12,469 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:35:12,469 | INFO | Added session ID 20: 🐍 Python - 0.5h
+2025-10-11 12:37:44,046 | INFO | Added session ID 21: 🐍 Python - Using list
+2025-10-11 12:37:44,048 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:37:44,049 | INFO | Added session ID 21: 🐍 Python - 0.5h
+2025-10-11 12:37:58,989 | INFO | Added session ID 22: 🐍 Python - Creating and using tuples
+2025-10-11 12:37:58,989 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:37:58,989 | INFO | Added session ID 22: 🐍 Python - 0.5h
+2025-10-11 12:39:04,655 | INFO | Added session ID 23: 🐍 Python - Working with Dictionaries
+2025-10-11 12:39:04,656 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:39:04,657 | INFO | Added session ID 23: 🐍 Python - 1.5h
+2025-10-11 12:40:32,639 | INFO | Added session ID 24: 🐍 Python - Working with While loops
+2025-10-11 12:40:32,639 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:40:32,639 | INFO | Added session ID 24: 🐍 Python - 1.0h
+2025-10-11 12:40:47,691 | INFO | Updated session ID 20
+2025-10-11 12:40:47,691 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:41:25,460 | INFO | Updated session ID 18
+2025-10-11 12:41:25,461 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:42:02,092 | INFO | Updated session ID 19
+2025-10-11 12:42:02,093 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:42:28,464 | INFO | Updated session ID 19
+2025-10-11 12:42:28,465 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:42:51,660 | INFO | Updated session ID 20
+2025-10-11 12:42:51,660 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:43:19,364 | INFO | Updated session ID 21
+2025-10-11 12:43:19,364 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:43:32,453 | INFO | Updated session ID 22
+2025-10-11 12:43:32,453 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:43:47,141 | INFO | Updated session ID 23
+2025-10-11 12:43:47,144 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:44:09,409 | INFO | Updated session ID 24
+2025-10-11 12:44:09,410 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:44:19,157 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 12:48:22,145 | INFO | Added session ID 25: 🐍 Python - Defining Functions
+2025-10-11 12:48:22,145 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:48:22,146 | INFO | Added session ID 25: 🐍 Python - 1.0h
+2025-10-11 12:49:51,748 | INFO | Added session ID 26: 🐍 Python - Defining Functions
+2025-10-11 12:49:51,750 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:49:51,750 | INFO | Added session ID 26: 🐍 Python - 1.0h
+2025-10-11 12:50:12,123 | INFO | Deleted session ID 25
+2025-10-11 12:50:12,123 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:50:25,005 | INFO | Updated session ID 26
+2025-10-11 12:50:25,007 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:51:13,959 | INFO | Added skill: Recursion → Functions
+2025-10-11 12:51:13,960 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:52:36,173 | INFO | Added session ID 27: 🐍 Python - Recursion
+2025-10-11 12:52:36,174 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 12:52:36,174 | INFO | Added session ID 27: 🐍 Python - 1.0h
+2025-10-11 12:58:14,230 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:04:35,065 | INFO | Added session ID 28: 🐍 Python - Working with Variables
+2025-10-11 13:04:35,067 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:04:35,067 | INFO | Added session ID 28: 🐍 Python - 4.5h
+2025-10-11 13:05:49,861 | INFO | Added session ID 29: 🐍 Python - Conditions
+2025-10-11 13:05:49,863 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:05:49,864 | INFO | Added session ID 29: 🐍 Python - 4.5h
+2025-10-11 13:06:11,454 | INFO | Updated session ID 28
+2025-10-11 13:06:11,456 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:07:26,518 | INFO | Added session ID 30: 🐍 Python - Defining Functions
+2025-10-11 13:07:26,521 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:07:26,521 | INFO | Added session ID 30: 🐍 Python - 4.5h
+2025-10-11 13:08:08,369 | INFO | Added session ID 31: 🐍 Python - Working with While loops
+2025-10-11 13:08:08,370 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:08:08,370 | INFO | Added session ID 31: 🐍 Python - 4.5h
+2025-10-11 13:10:29,697 | INFO | SQLite database initialized successfully
+2025-10-11 13:12:10,811 | INFO | SQLite database initialized successfully
+2025-10-11 13:12:10,821 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:12:49,129 | INFO | Added session ID 32: 🐍 Python - String
+2025-10-11 13:12:49,129 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:12:49,129 | INFO | Added session ID 32: 🐍 Python - 3.8h
+2025-10-11 13:13:26,773 | INFO | Added session ID 33: 🐍 Python - Reading a File
+2025-10-11 13:13:26,773 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:13:26,773 | INFO | Added session ID 33: 🐍 Python - 3.8h
+2025-10-11 13:14:12,291 | INFO | Added session ID 34: 🐍 Python - Using list
+2025-10-11 13:14:12,292 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:14:12,292 | INFO | Added session ID 34: 🐍 Python - 3.8h
+2025-10-11 13:14:52,620 | INFO | Added session ID 35: 🐍 Python - Working with Dictionaries
+2025-10-11 13:14:52,621 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:14:52,621 | INFO | Added session ID 35: 🐍 Python - 3.8h
+2025-10-11 13:15:46,701 | INFO | Added session ID 36: 🐍 Python - Creating and using tuples
+2025-10-11 13:15:46,702 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:15:46,702 | INFO | Added session ID 36: 🐍 Python - 3.8h
+2025-10-11 13:16:17,500 | INFO | SQLite database initialized successfully
+2025-10-11 13:16:17,510 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:16:35,497 | INFO | Updated session ID 31
+2025-10-11 13:16:35,498 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:17:34,291 | INFO | Updated session ID 32
+2025-10-11 13:17:34,292 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:20:08,170 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:22:01,475 | INFO | Added session ID 37: 🐍 Python - Working with  API
+2025-10-11 13:22:01,476 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:22:01,477 | INFO | Added session ID 37: 🐍 Python - 3.0h
+2025-10-11 13:22:12,086 | INFO | Added session ID 38: 🐍 Python - Working with  API
+2025-10-11 13:22:12,087 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:22:12,087 | INFO | Added session ID 38: 🐍 Python - 3.0h
+2025-10-11 13:22:23,715 | INFO | Added session ID 39: 🐍 Python - Working with  API
+2025-10-11 13:22:23,716 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:22:23,716 | INFO | Added session ID 39: 🐍 Python - 3.0h
+2025-10-11 13:22:43,066 | INFO | Added session ID 40: 🐍 Python - Working with  API
+2025-10-11 13:22:43,067 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:22:43,067 | INFO | Added session ID 40: 🐍 Python - 3.0h
+2025-10-11 13:22:48,848 | INFO | Added session ID 41: 🐍 Python - Working with  API
+2025-10-11 13:22:48,848 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:22:48,848 | INFO | Added session ID 41: 🐍 Python - 3.0h
+2025-10-11 13:22:53,069 | INFO | Added session ID 42: 🐍 Python - Working with  API
+2025-10-11 13:22:53,069 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:22:53,070 | INFO | Added session ID 42: 🐍 Python - 3.0h
+2025-10-11 13:22:59,704 | INFO | SQLite database initialized successfully
+2025-10-11 13:22:59,712 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:24:12,854 | INFO | Added session ID 43: 🐍 Python - Basics OOP
+2025-10-11 13:24:12,854 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:24:12,855 | INFO | Added session ID 43: 🐍 Python - 3.0h
+2025-10-11 13:24:20,052 | INFO | Added session ID 44: 🐍 Python - Basics OOP
+2025-10-11 13:24:20,053 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:24:20,053 | INFO | Added session ID 44: 🐍 Python - 3.0h
+2025-10-11 13:24:28,044 | INFO | Added session ID 45: 🐍 Python - Basics OOP
+2025-10-11 13:24:28,045 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:24:28,045 | INFO | Added session ID 45: 🐍 Python - 3.0h
+2025-10-11 13:24:29,465 | INFO | Added session ID 46: 🐍 Python - Basics OOP
+2025-10-11 13:24:29,465 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:24:29,466 | INFO | Added session ID 46: 🐍 Python - 3.0h
+2025-10-11 13:24:31,290 | INFO | Added session ID 47: 🐍 Python - Basics OOP
+2025-10-11 13:24:31,291 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:24:31,291 | INFO | Added session ID 47: 🐍 Python - 3.0h
+2025-10-11 13:24:35,032 | INFO | SQLite database initialized successfully
+2025-10-11 13:24:35,039 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:24:49,992 | INFO | Updated session ID 44
+2025-10-11 13:24:49,992 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:25:16,718 | INFO | Added work item: Python Databases → ↔ OpenPyXL
+2025-10-11 13:25:16,718 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:25:30,697 | INFO | Deleted work item: Python Databases → ↔ OpenPyXL
+2025-10-11 13:25:30,698 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:25:37,812 | INFO | Added work item: Python Databases → 🐍 Python
+2025-10-11 13:25:37,813 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:25:54,211 | INFO | Added skill: Working with Db → Python Databases
+2025-10-11 13:25:54,211 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:26:58,777 | INFO | SQLite database initialized successfully
+2025-10-11 13:26:58,785 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:27:08,727 | INFO | Deleted session ID 45
+2025-10-11 13:27:08,728 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:27:12,265 | INFO | Deleted session ID 46
+2025-10-11 13:27:12,265 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:27:14,688 | INFO | Deleted session ID 47
+2025-10-11 13:27:14,688 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:27:17,818 | INFO | Deleted session ID 43
+2025-10-11 13:27:17,819 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:27:39,288 | INFO | Updated session ID 44
+2025-10-11 13:27:39,289 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:27:49,686 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:28:48,829 | INFO | Added session ID 48: 🐍 Python - Working with Db
+2025-10-11 13:28:48,830 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:28:48,830 | INFO | Added session ID 48: 🐍 Python - 3.0h
+2025-10-11 13:28:53,410 | INFO | Added session ID 49: 🐍 Python - Working with Db
+2025-10-11 13:28:53,410 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:28:53,411 | INFO | Added session ID 49: 🐍 Python - 3.0h
+2025-10-11 13:29:02,342 | INFO | Added session ID 50: 🐍 Python - Working with Db
+2025-10-11 13:29:02,343 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:29:02,343 | INFO | Added session ID 50: 🐍 Python - 3.0h
+2025-10-11 13:29:06,833 | INFO | Added session ID 51: 🐍 Python - Working with Db
+2025-10-11 13:29:06,834 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:29:06,834 | INFO | Added session ID 51: 🐍 Python - 3.0h
+2025-10-11 13:29:10,545 | INFO | SQLite database initialized successfully
+2025-10-11 13:29:10,550 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:30:17,293 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:35:29,078 | INFO | Added session ID 52: 🐍 Python - Variables Name
+2025-10-11 13:35:29,079 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:35:29,080 | INFO | Added session ID 52: 🐍 Python - 0.25h
+2025-10-11 13:35:35,247 | INFO | Added session ID 53: 🐍 Python - Variables Values
+2025-10-11 13:35:35,247 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:35:35,247 | INFO | Added session ID 53: 🐍 Python - 0.25h
+2025-10-11 13:35:46,629 | INFO | Added session ID 54: 🐍 Python - Console
+2025-10-11 13:35:46,629 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:35:46,629 | INFO | Added session ID 54: 🐍 Python - 0.25h
+2025-10-11 13:36:04,153 | INFO | Added session ID 55: 🐍 Python - Updating Variables
+2025-10-11 13:36:04,153 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:36:04,153 | INFO | Added session ID 55: 🐍 Python - 0.25h
+2025-10-11 13:36:09,944 | INFO | Added session ID 56: 🐍 Python - Expresions
+2025-10-11 13:36:09,944 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:36:09,945 | INFO | Added session ID 56: 🐍 Python - 0.25h
+2025-10-11 13:36:21,015 | INFO | Added session ID 57: 🐍 Python - Working with Variables
+2025-10-11 13:36:21,015 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:36:21,016 | INFO | Added session ID 57: 🐍 Python - 0.25h
+2025-10-11 13:37:09,421 | INFO | SQLite database initialized successfully
+2025-10-11 13:37:09,427 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:39:11,522 | INFO | Added work item: Python Projects → 🐍 Python
+2025-10-11 13:39:11,522 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:39:26,732 | INFO | Added work item: Python Mini Projects → 🐍 Python
+2025-10-11 13:39:26,732 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:39:35,102 | INFO | Added work item: Python Drills → 🐍 Python
+2025-10-11 13:39:35,103 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:40:00,702 | INFO | Added skill: DMRB → Python Projects
+2025-10-11 13:40:00,702 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:40:50,656 | INFO | Added skill: Streamlit portfolio → Python Projects
+2025-10-11 13:40:50,656 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:41:01,413 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:41:39,801 | INFO | SQLite database initialized successfully
+2025-10-11 13:43:42,980 | INFO | Added session ID 58: 🐍 Python - DMRB
+2025-10-11 13:43:42,981 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:43:42,981 | INFO | Added session ID 58: 🐍 Python - 5.0h
+2025-10-11 13:43:53,830 | INFO | Added session ID 59: 🐍 Python - DMRB
+2025-10-11 13:43:53,830 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:43:53,831 | INFO | Added session ID 59: 🐍 Python - 6.25h
+2025-10-11 13:44:03,425 | INFO | Added session ID 60: 🐍 Python - DMRB
+2025-10-11 13:44:03,426 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:44:03,426 | INFO | Added session ID 60: 🐍 Python - 6.25h
+2025-10-11 13:44:19,346 | INFO | Added session ID 61: 🐍 Python - DMRB
+2025-10-11 13:44:19,347 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:44:19,347 | INFO | Added session ID 61: 🐍 Python - 3.75h
+2025-10-11 13:44:24,895 | INFO | SQLite database initialized successfully
+2025-10-11 13:44:24,903 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:44:46,053 | INFO | Added session ID 62: 🐍 Python - DMRB
+2025-10-11 13:44:46,053 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:44:46,053 | INFO | Added session ID 62: 🐍 Python - 3.75h
+2025-10-11 13:44:53,536 | INFO | Added session ID 63: 🐍 Python - DMRB
+2025-10-11 13:44:53,537 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:44:53,537 | INFO | Added session ID 63: 🐍 Python - 4.25h
+2025-10-11 13:45:01,936 | INFO | Added session ID 64: 🐍 Python - DMRB
+2025-10-11 13:45:01,937 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:45:01,937 | INFO | Added session ID 64: 🐍 Python - 3.75h
+2025-10-11 13:45:05,865 | INFO | Added session ID 65: 🐍 Python - DMRB
+2025-10-11 13:45:05,865 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:45:05,865 | INFO | Added session ID 65: 🐍 Python - 3.75h
+2025-10-11 13:45:13,178 | INFO | Added session ID 66: 🐍 Python - DMRB
+2025-10-11 13:45:13,178 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:45:13,178 | INFO | Added session ID 66: 🐍 Python - 5.25h
+2025-10-11 13:45:19,096 | INFO | Added session ID 67: 🐍 Python - DMRB
+2025-10-11 13:45:19,097 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:45:19,097 | INFO | Added session ID 67: 🐍 Python - 5.25h
+2025-10-11 13:45:24,123 | INFO | Added session ID 68: 🐍 Python - DMRB
+2025-10-11 13:45:24,124 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:45:24,124 | INFO | Added session ID 68: 🐍 Python - 5.25h
+2025-10-11 13:45:30,355 | INFO | Added session ID 69: 🐍 Python - DMRB
+2025-10-11 13:45:30,356 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:45:30,356 | INFO | Added session ID 69: 🐍 Python - 5.25h
+2025-10-11 13:45:38,032 | INFO | Added session ID 70: 🐍 Python - DMRB
+2025-10-11 13:45:38,032 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:45:38,033 | INFO | Added session ID 70: 🐍 Python - 4.0h
+2025-10-11 13:45:43,149 | INFO | SQLite database initialized successfully
+2025-10-11 13:45:43,156 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:47:00,226 | INFO | Added session ID 71: 🐍 Python - DMRB
+2025-10-11 13:47:00,226 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:47:00,227 | INFO | Added session ID 71: 🐍 Python - 7.25h
+2025-10-11 13:47:11,352 | INFO | Added session ID 72: 🐍 Python - DMRB
+2025-10-11 13:47:11,352 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:47:11,353 | INFO | Added session ID 72: 🐍 Python - 8.25h
+2025-10-11 13:47:15,998 | INFO | Added session ID 73: 🐍 Python - DMRB
+2025-10-11 13:47:15,998 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:47:15,998 | INFO | Added session ID 73: 🐍 Python - 8.25h
+2025-10-11 13:47:25,021 | INFO | Added session ID 74: 🐍 Python - DMRB
+2025-10-11 13:47:25,022 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:47:25,022 | INFO | Added session ID 74: 🐍 Python - 6.0h
+2025-10-11 13:47:30,835 | INFO | Added session ID 75: 🐍 Python - DMRB
+2025-10-11 13:47:30,836 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:47:30,836 | INFO | Added session ID 75: 🐍 Python - 6.0h
+2025-10-11 13:47:34,504 | INFO | Added session ID 76: 🐍 Python - DMRB
+2025-10-11 13:47:34,504 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:47:34,504 | INFO | Added session ID 76: 🐍 Python - 6.0h
+2025-10-11 13:47:41,504 | INFO | Added session ID 77: 🐍 Python - DMRB
+2025-10-11 13:47:41,505 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:47:41,505 | INFO | Added session ID 77: 🐍 Python - 6.0h
+2025-10-11 13:48:13,849 | INFO | Updated session ID 74
+2025-10-11 13:48:13,849 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:49:13,049 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:49:59,287 | INFO | Updated session ID 58
+2025-10-11 13:49:59,288 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:50:12,361 | INFO | Updated session ID 59
+2025-10-11 13:50:12,362 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:50:24,743 | INFO | Updated session ID 77
+2025-10-11 13:50:24,744 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:50:34,389 | INFO | Updated session ID 76
+2025-10-11 13:50:34,390 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:50:57,036 | INFO | Updated session ID 75
+2025-10-11 13:50:57,037 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:51:12,631 | INFO | Updated session ID 73
+2025-10-11 13:51:12,631 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:51:30,154 | INFO | Updated session ID 74
+2025-10-11 13:51:30,157 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:51:49,381 | INFO | Updated session ID 72
+2025-10-11 13:51:49,382 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:52:08,823 | INFO | Updated session ID 71
+2025-10-11 13:52:08,824 | INFO | CachedQueryService: Cache invalidated
+2025-10-11 13:52:44,698 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:53:45,527 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)
+2025-10-11 13:55:05,938 | INFO | CachedQueryService: Fetched 71 tech stack entries with metrics (cached)

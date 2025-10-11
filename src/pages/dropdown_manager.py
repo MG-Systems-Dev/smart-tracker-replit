@@ -356,16 +356,34 @@ def show_dropdown_manager_page():
         
         # Add new work item
         st.markdown("##### ➕ Add Work Item")
+        
+        # Category selection OUTSIDE form for cascading
+        all_categories = db.get_all_categories()
+        selected_category_work = st.selectbox(
+            "Filter by Category",
+            options=["All Categories"] + all_categories,
+            key="category_filter_work_item"
+        )
+        
         with st.form("add_work_item_form"):
             col1, col2 = st.columns(2)
             
             with col1:
-                # Select parent technology
-                all_techs = [tech['name'] for tech in db.get_all_tech_stack()]
-                if all_techs:
-                    parent_tech = st.selectbox("Technology", options=all_techs)
+                # Select parent technology - filtered by category
+                all_techs_data = db.get_all_tech_stack()
+                
+                if selected_category_work != "All Categories":
+                    filtered_techs = [tech['name'] for tech in all_techs_data if tech.get('category') == selected_category_work]
                 else:
-                    st.warning("⚠️ Add technologies first in the Manage Technologies tab")
+                    filtered_techs = [tech['name'] for tech in all_techs_data]
+                
+                if filtered_techs:
+                    parent_tech = st.selectbox("Technology", options=filtered_techs)
+                else:
+                    if selected_category_work != "All Categories":
+                        st.warning(f"⚠️ No technologies in '{selected_category_work}'")
+                    else:
+                        st.warning("⚠️ Add technologies first in the Manage Technologies tab")
                     parent_tech = None
             
             with col2:
@@ -428,19 +446,59 @@ def show_dropdown_manager_page():
         
         # Add new skill
         st.markdown("##### ➕ Add Skill")
+        
+        # Cascading filters OUTSIDE form
+        col_cat, col_tech = st.columns(2)
+        
+        with col_cat:
+            selected_category_skill = st.selectbox(
+                "Filter by Category",
+                options=["All Categories"] + all_categories,
+                key="category_filter_skill"
+            )
+        
+        with col_tech:
+            # Filter technologies by category
+            all_techs_data = db.get_all_tech_stack()
+            if selected_category_skill != "All Categories":
+                filtered_techs_skill = [tech['name'] for tech in all_techs_data if tech.get('category') == selected_category_skill]
+            else:
+                filtered_techs_skill = [tech['name'] for tech in all_techs_data]
+            
+            if filtered_techs_skill:
+                selected_tech_skill = st.selectbox(
+                    "Filter by Technology",
+                    options=["All Technologies"] + filtered_techs_skill,
+                    key="tech_filter_skill"
+                )
+            else:
+                st.warning("⚠️ No technologies available")
+                selected_tech_skill = None
+        
         with st.form("add_skill_form"):
             col1, col2 = st.columns(2)
             
             with col1:
-                # Select parent work item from manually defined ones
+                # Select parent work item - filtered by selected technology
                 all_work_items_list = db.get_all_work_items()
-                if all_work_items_list:
-                    work_item_options = [f"{item['name']} ({item['technology']})" for item in all_work_items_list]
+                
+                if selected_tech_skill and selected_tech_skill != "All Technologies":
+                    # Filter work items by selected technology
+                    filtered_work_items = [item for item in all_work_items_list if item['technology'] == selected_tech_skill]
+                else:
+                    # Show all work items
+                    filtered_work_items = all_work_items_list
+                
+                if filtered_work_items:
+                    work_item_options = [f"{item['name']} ({item['technology']})" for item in filtered_work_items]
                     selected_work_item = st.selectbox("Work Item", options=work_item_options)
                     # Extract just the work item name (before parentheses)
                     parent_work_item = selected_work_item.split(" (")[0] if selected_work_item else None
                 else:
-                    st.warning("⚠️ Add work items first above")
+                    if selected_tech_skill and selected_tech_skill != "All Technologies":
+                        st.warning(f"⚠️ No work items for '{selected_tech_skill}'. Add one in the Work Items section above.")
+                    else:
+                        st.warning("⚠️ Add work items first above")
                     parent_work_item = None
             
             with col2:

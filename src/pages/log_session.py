@@ -37,6 +37,89 @@ def show_log_session_page():
     # Session Entry Form
     st.markdown("### 📝 Session Entry")
     
+    # Cascading selections OUTSIDE form for reactivity
+    st.markdown("#### 🎯 Learning Details")
+    
+    # Category
+    st.markdown("**📂 Category Name**")
+    all_categories = db.get_all_categories()
+    if all_categories:
+        selected_category = st.selectbox(
+            "category_dropdown",
+            options=all_categories,
+            key=f"category_outside_form",
+            label_visibility="collapsed",
+            help="Select the category - this will filter technologies below"
+        )
+    else:
+        st.warning("⚠️ No categories available. Add them in Dropdown Manager first.")
+        selected_category = ''
+    
+    # Technology - filtered by category
+    st.markdown("**🔧 Technology**")
+    all_techs_data = db.get_all_tech_stack()
+    
+    if selected_category:
+        filtered_techs = [tech['name'] for tech in all_techs_data if tech.get('category') == selected_category]
+    else:
+        filtered_techs = [tech['name'] for tech in all_techs_data]
+    
+    if filtered_techs:
+        selected_technology = st.selectbox(
+            "technology_dropdown",
+            options=filtered_techs,
+            key=f"technology_outside_form",
+            label_visibility="collapsed",
+            help=f"Technologies in '{selected_category}'" if selected_category else "All technologies"
+        )
+    else:
+        st.warning("⚠️ No technologies available.")
+        selected_technology = ''
+    
+    # Work Item - show all
+    st.markdown("**📋 Work Item**")
+    all_work_items = []
+    all_techs_list = [tech['name'] for tech in db.get_all_tech_stack()]
+    for tech in all_techs_list:
+        all_work_items.extend(db.get_work_items_by_technology(tech))
+    all_work_items = sorted(list(set(all_work_items)))
+    
+    if all_work_items:
+        selected_work_item = st.selectbox(
+            "work_item_dropdown",
+            options=[""] + all_work_items,
+            key=f"work_item_outside_form",
+            label_visibility="collapsed",
+            help="Select a work item to filter skills"
+        )
+    else:
+        selected_work_item = ''
+    
+    # Skill - filtered by work item
+    st.markdown("**🎯 Skill / Topic**")
+    if selected_work_item:
+        filtered_skills = db.get_skills_by_work_item(selected_work_item)
+        filtered_skills = sorted(list(set(filtered_skills)))
+    else:
+        all_skills = []
+        for tech in all_techs_list:
+            work_items_for_tech = db.get_work_items_by_technology(tech)
+            for wi in work_items_for_tech:
+                all_skills.extend(db.get_skills_by_work_item(wi))
+        filtered_skills = sorted(list(set(all_skills)))
+    
+    if filtered_skills:
+        selected_skill = st.selectbox(
+            "skill_dropdown",
+            options=[""] + filtered_skills,
+            key=f"skill_outside_form",
+            label_visibility="collapsed",
+            help="Select a skill/topic (filtered by work item)" if selected_work_item else "All skills"
+        )
+    else:
+        st.info("💡 No skills found. Enter a custom skill in the form below.")
+        selected_skill = ''
+    
     with st.form("session_entry_form"):
         # Basic fields
         col1, col2 = st.columns(2)
@@ -47,11 +130,15 @@ def show_log_session_page():
         with col2:
             session_type = dropdown_manager.render_independent_dropdown('session_type', key_suffix="entry")
         
-        # Simplified dropdowns - NO parent filtering, auto-paired in background
         st.markdown("---")
-        st.markdown("#### 🎯 Learning Details")
         
-        selected_values = dropdown_manager.render_simplified_form(key_suffix="entry")
+        # Store selected values
+        selected_values = {
+            'category_name': selected_category,
+            'technology': selected_technology,
+            'work_item': selected_work_item,
+            'skill_topic': selected_skill
+        }
         
         # Independent context fields
         st.markdown("---")
@@ -91,7 +178,7 @@ def show_log_session_page():
                 session_data = {
                     'session_date': str(session_date),
                     'session_type': session_type,
-                    'category_name': selected_values.get('category_name', ''),
+                    'category_name': selected_category,
                     'technology': selected_values.get('technology', ''),
                     'work_item': selected_values.get('work_item', ''),
                     'skill_topic': selected_values.get('skill_topic', ''),

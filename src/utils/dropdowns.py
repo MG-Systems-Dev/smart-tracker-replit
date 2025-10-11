@@ -236,28 +236,59 @@ class DropdownManager:
                 st.info(f"No {field_config['label'].lower()} available. Add from parent dropdown.")
                 return ""
     
-    def render_simplified_form(self, key_suffix: str = "") -> Dict[str, str]:
+    def render_simplified_form(self, key_suffix: str = "", selected_category: str = "") -> Dict[str, str]:
         """
         Render simplified form - ALL options shown, NO parent filtering.
         Relationships are auto-paired in the background from database lookups.
+        
+        Args:
+            key_suffix: Unique suffix for widget keys
+            selected_category: Pre-selected category (from outside form for reactivity)
         """
         
         selected_values = {}
         
-        # Technology - Show ALL technologies (no category filter)
+        # Store the category passed from outside the form
+        selected_values['category_name'] = selected_category
+        
+        # Technology - Show ALL, optionally filtered by selected category
         st.markdown("**🔧 Technology**")
-        all_techs = [tech['name'] for tech in self.db.get_all_tech_stack()]
-        if all_techs:
+        
+        all_techs_data = self.db.get_all_tech_stack()
+        
+        if selected_category:
+            # Filter by selected category
+            filtered_techs = [tech['name'] for tech in all_techs_data if tech.get('category') == selected_category]
+        else:
+            # Show ALL technologies if no category selected
+            filtered_techs = [tech['name'] for tech in all_techs_data]
+        
+        if filtered_techs:
+            # Add index parameter to reset when category changes
+            default_index = 0
+            # Check if previously selected tech is still in filtered list
+            prev_tech_key = f"prev_tech_{key_suffix}"
+            if prev_tech_key in st.session_state and st.session_state[prev_tech_key] in filtered_techs:
+                try:
+                    default_index = filtered_techs.index(st.session_state[prev_tech_key])
+                except ValueError:
+                    default_index = 0
+            
             technology = st.selectbox(
                 "technology_dropdown",
-                options=all_techs,
+                options=filtered_techs,
+                index=default_index,
                 key=f"technology_simple_{key_suffix}",
                 label_visibility="collapsed",
-                help="Select the technology you worked on"
+                help=f"Technologies in '{selected_category}'" if selected_category else "All technologies (select category to filter)"
             )
             selected_values['technology'] = technology
+            st.session_state[prev_tech_key] = technology
         else:
-            st.warning("⚠️ No technologies available. Add them in Dropdown Manager first.")
+            if selected_category:
+                st.warning(f"⚠️ No technologies found for '{selected_category}'. Add them in Dropdown Manager first.")
+            else:
+                st.warning("⚠️ No technologies available. Add them in Dropdown Manager first.")
             selected_values['technology'] = ''
         
         # Work Item - Show ALL work items (no technology filter) 
@@ -317,17 +348,6 @@ class DropdownManager:
                 placeholder="Enter skill/topic name..."
             )
             selected_values['skill_topic'] = custom_skill if custom_skill else ''
-        
-        # Auto-pair category from selected technology
-        technology = selected_values.get('technology')
-        if technology and isinstance(technology, str):
-            tech_data = self.db.get_tech_by_name(technology)
-            if tech_data:
-                selected_values['category_name'] = tech_data.get('category', '')
-            else:
-                selected_values['category_name'] = ''
-        else:
-            selected_values['category_name'] = ''
         
         return selected_values
     
