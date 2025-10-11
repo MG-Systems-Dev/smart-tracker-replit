@@ -243,3 +243,18 @@
 2025-10-10 01:55:37,782 | INFO | Deleted skill: hey → firt 8 fingers
 2025-10-10 01:55:37,783 | INFO | CachedQueryService: Cache invalidated
 2025-10-10 01:55:46,669 | INFO | CachedQueryService: Fetched 0 tech stack entries with metrics (cached)
+2025-10-10 22:49:12,177 | INFO | SQLite database initialized successfully
+2025-10-10 22:49:12,184 | INFO | CachedQueryService: Fetched 2 tech stack entries with metrics (cached)
+2025-10-10 22:49:38,996 | INFO | Deleted session ID 12
+2025-10-10 22:49:38,997 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:49:41,673 | INFO | Deleted session ID 11
+2025-10-10 22:49:41,673 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:49:43,941 | INFO | CachedQueryService: Fetched 2 tech stack entries with metrics (cached)
+2025-10-10 22:50:14,549 | INFO | Deleted technology ID 46
+2025-10-10 22:50:14,549 | INFO | TechnologySyncService: Deleted Python from both tables
+2025-10-10 22:50:19,268 | INFO | Deleted technology ID 45
+2025-10-10 22:50:19,269 | INFO | TechnologySyncService: Deleted Test Tech from both tables
+2025-10-10 22:50:36,547 | INFO | Deleted category: Test Category
+2025-10-10 22:50:36,549 | INFO | CategorySyncService: Deleted Test Category, migrated 0 techs and 0 sessions
+2025-10-10 22:50:36,550 | INFO | CachedQueryService: Cache invalidated
+2025-10-10 22:50:41,682 | INFO | CachedQueryService: Fetched 0 tech stack entries with metrics (cached)
