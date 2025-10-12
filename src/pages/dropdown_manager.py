@@ -530,28 +530,53 @@ def show_dropdown_manager_page():
         else:
             st.caption(f"Total: {len(all_skills)} manually defined skills")
             
-            # Group by work item
-            by_work_item = {}
+            # Get all work items to get ALL technology mappings (handles shared work items)
+            all_work_items = db.get_all_work_items()
+            
+            # Build mapping of work_item -> list of technologies
+            work_item_to_techs = {}
+            for item in all_work_items:
+                name = item['name']
+                tech = item['technology']
+                if name not in work_item_to_techs:
+                    work_item_to_techs[name] = []
+                work_item_to_techs[name].append(tech)
+            
+            # Group by technology -> work item
+            by_tech = {}
             for skill in all_skills:
                 work_item = skill['work_item']
-                if work_item not in by_work_item:
-                    by_work_item[work_item] = []
-                by_work_item[work_item].append(skill)
+                techs = work_item_to_techs.get(work_item, ['Unknown'])
+                
+                # Add this skill to ALL technologies that use this work item
+                for tech in techs:
+                    if tech not in by_tech:
+                        by_tech[tech] = {}
+                    if work_item not in by_tech[tech]:
+                        by_tech[tech][work_item] = []
+                    by_tech[tech][work_item].append(skill)
             
-            for work_item, skills in sorted(by_work_item.items()):
-                with st.expander(f"**{work_item}** ({len(skills)} skills)", expanded=False):
-                    for skill in sorted(skills, key=lambda x: x['name']):
-                        col1, col2 = st.columns([4, 1])
-                        with col1:
-                            st.markdown(f"**{skill['name']}**")
-                        with col2:
-                            if st.button("🗑️", key=f"del_skill_{skill['name']}_{work_item}", help="Delete this skill"):
-                                if db.delete_skill(skill['name'], work_item):
-                                    st.success(f"Deleted: {skill['name']}")
-                                    CachedQueryService.invalidate_cache()
-                                    st.rerun()
-                                else:
-                                    st.error("Failed to delete")
+            # Display grouped by technology
+            for tech, work_items_dict in sorted(by_tech.items()):
+                total_skills = sum(len(skills) for skills in work_items_dict.values())
+                
+                with st.expander(f"🔧 **{tech}** ({len(work_items_dict)} work items, {total_skills} skills)", expanded=False):
+                    for work_item, skills in sorted(work_items_dict.items()):
+                        with st.expander(f"📋 **{work_item}** ({len(skills)} skills)", expanded=False):
+                            for skill in sorted(skills, key=lambda x: x['name']):
+                                col1, col2 = st.columns([4, 1])
+                                with col1:
+                                    st.markdown(f"**{skill['name']}**")
+                                with col2:
+                                    # Make key unique with tech to handle shared work items
+                                    unique_key = f"del_skill_{skill['name']}_{work_item}_{tech}"
+                                    if st.button("🗑️", key=unique_key, help="Delete this skill"):
+                                        if db.delete_skill(skill['name'], work_item):
+                                            st.success(f"Deleted: {skill['name']}")
+                                            CachedQueryService.invalidate_cache()
+                                            st.rerun()
+                                        else:
+                                            st.error("Failed to delete")
     
     # ==================== TAB 4: CATEGORY SOURCES ====================
     with tabs[3]:

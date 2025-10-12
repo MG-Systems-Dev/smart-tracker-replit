@@ -2545,3 +2545,1286 @@
 2025-10-12 13:29:09,956 | INFO | CachedQueryService: Fetched 72 tech stack entries with metrics (cached)
 2025-10-12 13:31:29,815 | INFO | SQLite database initialized successfully
 2025-10-12 13:31:29,826 | INFO | CachedQueryService: Fetched 72 tech stack entries with metrics (cached)
+2025-10-12 13:32:54,524 | INFO | SQLite database initialized successfully
+2025-10-12 13:32:54,533 | INFO | CachedQueryService: Fetched 72 tech stack entries with metrics (cached)
+2025-10-12 13:33:49,712 | INFO | Updated session ID 217
+2025-10-12 13:33:49,714 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:34:05,428 | INFO | Updated session ID 214
+2025-10-12 13:34:05,429 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:34:20,129 | INFO | Updated session ID 211
+2025-10-12 13:34:20,130 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:34:41,003 | INFO | Updated session ID 208
+2025-10-12 13:34:41,003 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:34:55,783 | INFO | Updated session ID 205
+2025-10-12 13:34:55,783 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:35:11,762 | INFO | Updated session ID 201
+2025-10-12 13:35:11,762 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:35:31,907 | INFO | Updated session ID 198
+2025-10-12 13:35:31,907 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:36:34,981 | INFO | Updated session ID 194
+2025-10-12 13:36:34,982 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:36:48,510 | INFO | Updated session ID 192
+2025-10-12 13:36:48,511 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:37:03,292 | INFO | Updated session ID 189
+2025-10-12 13:37:03,293 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:37:17,605 | INFO | Updated session ID 186
+2025-10-12 13:37:17,605 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:37:36,124 | INFO | Updated session ID 183
+2025-10-12 13:37:36,125 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:37:51,161 | INFO | Updated session ID 180
+2025-10-12 13:37:51,162 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:38:19,557 | INFO | Updated session ID 177
+2025-10-12 13:38:19,558 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:38:41,129 | INFO | Updated session ID 171
+2025-10-12 13:38:41,130 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:39:14,295 | INFO | Updated session ID 168
+2025-10-12 13:39:14,296 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:39:29,660 | INFO | Updated session ID 166
+2025-10-12 13:39:29,660 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:39:46,718 | INFO | Updated session ID 164
+2025-10-12 13:39:46,719 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:40:03,143 | INFO | Updated session ID 162
+2025-10-12 13:40:03,144 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:40:29,356 | INFO | Updated session ID 102
+2025-10-12 13:40:29,357 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:41:03,907 | INFO | Updated session ID 159
+2025-10-12 13:41:03,908 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:41:22,447 | INFO | Updated session ID 157
+2025-10-12 13:41:22,448 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:41:43,249 | INFO | Updated session ID 155
+2025-10-12 13:41:43,250 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:42:04,178 | INFO | Updated session ID 153
+2025-10-12 13:42:04,179 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:42:42,633 | INFO | Updated session ID 139
+2025-10-12 13:42:42,633 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:43:04,229 | INFO | Updated session ID 134
+2025-10-12 13:43:04,230 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:43:29,772 | INFO | Updated session ID 147
+2025-10-12 13:43:29,772 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:47:05,619 | INFO | Added session ID 241: ⚡ JavaScript (ES6+) - Portfolio
+2025-10-12 13:47:05,622 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:47:05,622 | INFO | Added session ID 241: ⚡ JavaScript (ES6+) - 1.0h
+2025-10-12 13:47:27,523 | INFO | Added session ID 242: ⚡ JavaScript (ES6+) - Portfolio
+2025-10-12 13:47:27,524 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:47:27,524 | INFO | Added session ID 242: ⚡ JavaScript (ES6+) - 2.0h
+2025-10-12 13:47:32,497 | INFO | Added session ID 243: ⚡ JavaScript (ES6+) - Portfolio
+2025-10-12 13:47:32,498 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:47:32,498 | INFO | Added session ID 243: ⚡ JavaScript (ES6+) - 2.0h
+2025-10-12 13:47:38,708 | INFO | Added session ID 244: ⚡ JavaScript (ES6+) - Portfolio
+2025-10-12 13:47:38,708 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:47:38,708 | INFO | Added session ID 244: ⚡ JavaScript (ES6+) - 2.0h
+2025-10-12 13:48:11,085 | INFO | Added session ID 245: 🌈 Tailwind CSS - Portfolio
+2025-10-12 13:48:11,086 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:48:11,086 | INFO | Added session ID 245: 🌈 Tailwind CSS - 2.0h
+2025-10-12 13:52:38,424 | INFO | Added session ID 246: 🌈 Tailwind CSS - Portfolio
+2025-10-12 13:52:38,425 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:52:38,425 | INFO | Added session ID 246: 🌈 Tailwind CSS - 2.0h
+2025-10-12 13:52:43,365 | INFO | Added session ID 247: 🌈 Tailwind CSS - Portfolio
+2025-10-12 13:52:43,365 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:52:43,366 | INFO | Added session ID 247: 🌈 Tailwind CSS - 2.0h
+2025-10-12 13:52:47,181 | INFO | Added session ID 248: 🌈 Tailwind CSS - Portfolio
+2025-10-12 13:52:47,181 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:52:47,182 | INFO | Added session ID 248: 🌈 Tailwind CSS - 2.0h
+2025-10-12 13:52:54,281 | INFO | Added session ID 249: 🌈 Tailwind CSS - Portfolio
+2025-10-12 13:52:54,281 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:52:54,281 | INFO | Added session ID 249: 🌈 Tailwind CSS - 2.0h
+2025-10-12 13:53:01,576 | INFO | Added session ID 250: 🌈 Tailwind CSS - Portfolio
+2025-10-12 13:53:01,577 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:53:01,577 | INFO | Added session ID 250: 🌈 Tailwind CSS - 2.0h
+2025-10-12 13:53:09,864 | INFO | Added session ID 251: 🎨 CSS - 
+2025-10-12 13:53:09,865 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:53:09,866 | INFO | Added session ID 251: 🎨 CSS - 2.0h
+2025-10-12 13:53:15,625 | INFO | Added session ID 252: 🎨 CSS - 
+2025-10-12 13:53:15,625 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:53:15,626 | INFO | Added session ID 252: 🎨 CSS - 2.0h
+2025-10-12 13:53:20,235 | INFO | Added session ID 253: 🎨 CSS - 
+2025-10-12 13:53:20,235 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:53:20,235 | INFO | Added session ID 253: 🎨 CSS - 2.0h
+2025-10-12 13:53:27,504 | INFO | Added session ID 254: 🎨 CSS - 
+2025-10-12 13:53:27,504 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:53:27,504 | INFO | Added session ID 254: 🎨 CSS - 2.0h
+2025-10-12 13:53:32,511 | INFO | Added session ID 255: 🎨 CSS - 
+2025-10-12 13:53:32,511 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:53:32,511 | INFO | Added session ID 255: 🎨 CSS - 2.0h
+2025-10-12 13:54:16,187 | INFO | Deleted session ID 255
+2025-10-12 13:54:16,188 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:54:21,698 | INFO | Deleted session ID 254
+2025-10-12 13:54:21,698 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:54:26,381 | INFO | Deleted session ID 253
+2025-10-12 13:54:26,381 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:54:33,569 | INFO | Deleted session ID 252
+2025-10-12 13:54:33,569 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:54:38,266 | INFO | Deleted session ID 251
+2025-10-12 13:54:38,266 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:55:04,982 | INFO | Added session ID 256: 🎨 CSS - Portfolio
+2025-10-12 13:55:04,983 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:55:04,983 | INFO | Added session ID 256: 🎨 CSS - 2.0h
+2025-10-12 13:55:09,192 | INFO | Added session ID 257: 🎨 CSS - Portfolio
+2025-10-12 13:55:09,192 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:55:09,192 | INFO | Added session ID 257: 🎨 CSS - 2.0h
+2025-10-12 13:55:15,197 | INFO | Added session ID 258: 🎨 CSS - Portfolio
+2025-10-12 13:55:15,197 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:55:15,197 | INFO | Added session ID 258: 🎨 CSS - 2.0h
+2025-10-12 13:55:20,178 | INFO | Added session ID 259: 🎨 CSS - Portfolio
+2025-10-12 13:55:20,178 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:55:20,179 | INFO | Added session ID 259: 🎨 CSS - 2.0h
+2025-10-12 13:55:29,114 | INFO | Added session ID 260: 🎨 CSS - Portfolio
+2025-10-12 13:55:29,114 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:55:29,115 | INFO | Added session ID 260: 🎨 CSS - 2.0h
+2025-10-12 13:55:37,397 | INFO | Added session ID 261: 🎨 CSS - Portfolio
+2025-10-12 13:55:37,397 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:55:37,398 | INFO | Added session ID 261: 🎨 CSS - 2.0h
+2025-10-12 13:55:49,858 | INFO | Added session ID 262: 💜 React - Portfolio
+2025-10-12 13:55:49,858 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:55:49,858 | INFO | Added session ID 262: 💜 React - 2.0h
+2025-10-12 13:55:54,757 | INFO | Added session ID 263: 💜 React - Portfolio
+2025-10-12 13:55:54,757 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:55:54,757 | INFO | Added session ID 263: 💜 React - 2.0h
+2025-10-12 13:55:59,747 | INFO | Added session ID 264: 💜 React - Portfolio
+2025-10-12 13:55:59,747 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:55:59,748 | INFO | Added session ID 264: 💜 React - 2.0h
+2025-10-12 13:56:04,631 | INFO | Added session ID 265: 💜 React - Portfolio
+2025-10-12 13:56:04,632 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:56:04,632 | INFO | Added session ID 265: 💜 React - 2.0h
+2025-10-12 13:56:10,993 | INFO | Added session ID 266: 💜 React - Portfolio
+2025-10-12 13:56:10,994 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:56:10,994 | INFO | Added session ID 266: 💜 React - 2.0h
+2025-10-12 13:56:33,046 | INFO | Added session ID 267: 📚 HTML - Portfolio
+2025-10-12 13:56:33,047 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:56:33,047 | INFO | Added session ID 267: 📚 HTML - 2.0h
+2025-10-12 13:56:46,458 | INFO | Added session ID 268: 📚 HTML - Portfolio
+2025-10-12 13:56:46,459 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:56:46,459 | INFO | Added session ID 268: 📚 HTML - 2.0h
+2025-10-12 13:56:51,173 | INFO | Added session ID 269: 📚 HTML - Portfolio
+2025-10-12 13:56:51,173 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:56:51,174 | INFO | Added session ID 269: 📚 HTML - 2.0h
+2025-10-12 13:58:50,167 | INFO | Added category source: Ai Populated Drills
+2025-10-12 13:58:50,168 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 13:58:57,483 | INFO | SQLite database initialized successfully
+2025-10-12 13:58:57,493 | INFO | CachedQueryService: Fetched 72 tech stack entries with metrics (cached)
+2025-10-12 14:00:43,328 | INFO | Added session ID 270: 🐍 Python - Working with Variables
+2025-10-12 14:00:43,330 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:00:43,330 | INFO | Added session ID 270: 🐍 Python - 3.0h
+2025-10-12 14:00:56,670 | INFO | Added session ID 271: 🐍 Python - Variables Values
+2025-10-12 14:00:56,670 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:00:56,671 | INFO | Added session ID 271: 🐍 Python - 3.0h
+2025-10-12 14:01:09,282 | INFO | Added session ID 272: 🐍 Python - Variables Name
+2025-10-12 14:01:09,282 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:01:09,283 | INFO | Added session ID 272: 🐍 Python - 3.0h
+2025-10-12 14:01:17,066 | INFO | Added session ID 273: 🐍 Python - Updating Variables
+2025-10-12 14:01:17,066 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:01:17,067 | INFO | Added session ID 273: 🐍 Python - 3.0h
+2025-10-12 14:01:25,626 | INFO | Added session ID 274: 🐍 Python - Statements
+2025-10-12 14:01:25,626 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:01:25,626 | INFO | Added session ID 274: 🐍 Python - 3.0h
+2025-10-12 14:01:51,451 | INFO | Added session ID 275: 🐍 Python - Expresions
+2025-10-12 14:01:51,452 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:01:51,452 | INFO | Added session ID 275: 🐍 Python - 3.0h
+2025-10-12 14:01:59,445 | INFO | Added session ID 276: 🐍 Python - Console
+2025-10-12 14:01:59,446 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:01:59,446 | INFO | Added session ID 276: 🐍 Python - 3.0h
+2025-10-12 14:02:28,922 | INFO | Added session ID 277: 🐍 Python - Boolean
+2025-10-12 14:02:28,923 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:02:28,923 | INFO | Added session ID 277: 🐍 Python - 3.0h
+2025-10-12 14:02:34,704 | INFO | Added session ID 278: 🐍 Python - Float
+2025-10-12 14:02:34,704 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:02:34,704 | INFO | Added session ID 278: 🐍 Python - 3.0h
+2025-10-12 14:02:40,601 | INFO | Added session ID 279: 🐍 Python - Interger
+2025-10-12 14:02:40,601 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:02:40,602 | INFO | Added session ID 279: 🐍 Python - 3.0h
+2025-10-12 14:02:45,797 | INFO | Added session ID 280: 🐍 Python - Number
+2025-10-12 14:02:45,797 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:02:45,797 | INFO | Added session ID 280: 🐍 Python - 3.0h
+2025-10-12 14:02:50,567 | INFO | Added session ID 281: 🐍 Python - Spliting Strings
+2025-10-12 14:02:50,567 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:02:50,568 | INFO | Added session ID 281: 🐍 Python - 3.0h
+2025-10-12 14:02:56,575 | INFO | Added session ID 282: 🐍 Python - String
+2025-10-12 14:02:56,575 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:02:56,576 | INFO | Added session ID 282: 🐍 Python - 3.0h
+2025-10-12 14:03:04,930 | INFO | Added session ID 283: 🐍 Python - Updating Strings
+2025-10-12 14:03:04,930 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:03:04,930 | INFO | Added session ID 283: 🐍 Python - 3.0h
+2025-10-12 14:03:54,570 | INFO | Updated session ID 279
+2025-10-12 14:03:54,571 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:04:08,283 | INFO | Updated session ID 280
+2025-10-12 14:04:08,284 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:04:22,067 | INFO | Updated session ID 281
+2025-10-12 14:04:22,068 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:05:00,466 | INFO | Updated session ID 282
+2025-10-12 14:05:00,466 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:05:49,512 | INFO | Updated session ID 283
+2025-10-12 14:05:49,513 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:06:20,651 | INFO | Added session ID 284: 🐍 Python - Working with Data Types
+2025-10-12 14:06:20,652 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:06:20,652 | INFO | Added session ID 284: 🐍 Python - 3.0h
+2025-10-12 14:07:05,654 | INFO | Added session ID 285: 🐍 Python - And
+2025-10-12 14:07:05,655 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:07:05,655 | INFO | Added session ID 285: 🐍 Python - 3.0h
+2025-10-12 14:07:13,423 | INFO | Added session ID 286: 🐍 Python - Code block
+2025-10-12 14:07:13,423 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:07:13,424 | INFO | Added session ID 286: 🐍 Python - 3.0h
+2025-10-12 14:07:26,122 | INFO | Added session ID 287: 🐍 Python - Conditional test
+2025-10-12 14:07:26,122 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:07:26,122 | INFO | Added session ID 287: 🐍 Python - 3.0h
+2025-10-12 14:07:50,100 | INFO | Added session ID 288: 🐍 Python - Conditions
+2025-10-12 14:07:50,101 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:07:50,101 | INFO | Added session ID 288: 🐍 Python - 3.0h
+2025-10-12 14:07:57,581 | INFO | Added session ID 289: 🐍 Python - Elif
+2025-10-12 14:07:57,582 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:07:57,582 | INFO | Added session ID 289: 🐍 Python - 3.0h
+2025-10-12 14:08:39,085 | INFO | Added session ID 290: 🐍 Python - Else
+2025-10-12 14:08:39,086 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:08:39,086 | INFO | Added session ID 290: 🐍 Python - 3.0h
+2025-10-12 14:10:17,745 | INFO | Updated technology ID 93: 🐍 Python
+2025-10-12 14:10:17,746 | INFO | Updated technology ID 93: 🐍 Python
+2025-10-12 14:10:17,746 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:11:37,653 | INFO | Added session ID 291: 🐍 Python - If with list
+2025-10-12 14:11:37,655 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:11:37,655 | INFO | Added session ID 291: 🐍 Python - 3.0h
+2025-10-12 14:12:04,638 | INFO | Added session ID 292: 🐍 Python - Or
+2025-10-12 14:12:04,638 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:12:04,638 | INFO | Added session ID 292: 🐍 Python - 3.0h
+2025-10-12 14:12:38,065 | INFO | Added session ID 293: 🐍 Python - Styling your if
+2025-10-12 14:12:38,066 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:12:38,066 | INFO | Added session ID 293: 🐍 Python - 3.0h
+2025-10-12 14:12:53,087 | INFO | Added session ID 294: 🐍 Python - Using conditons
+2025-10-12 14:12:53,087 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:12:53,088 | INFO | Added session ID 294: 🐍 Python - 3.0h
+2025-10-12 14:14:57,274 | INFO | Added session ID 295: 🐍 Python - Working with While loops
+2025-10-12 14:14:57,274 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:14:57,275 | INFO | Added session ID 295: 🐍 Python - 3.0h
+2025-10-12 14:15:08,216 | INFO | Added session ID 296: 🐍 Python - Using the while Continue
+2025-10-12 14:15:08,216 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:15:08,216 | INFO | Added session ID 296: 🐍 Python - 3.0h
+2025-10-12 14:15:41,804 | INFO | Added session ID 297: 🐍 Python - Using the while Break
+2025-10-12 14:15:41,805 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:15:41,805 | INFO | Added session ID 297: 🐍 Python - 3.0h
+2025-10-12 14:15:51,296 | INFO | Added session ID 298: 🐍 Python - Using the for loop
+2025-10-12 14:15:51,296 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:15:51,296 | INFO | Added session ID 298: 🐍 Python - 3.0h
+2025-10-12 14:15:59,343 | INFO | Added session ID 299: 🐍 Python - Using While loops with list
+2025-10-12 14:15:59,344 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:15:59,344 | INFO | Added session ID 299: 🐍 Python - 3.0h
+2025-10-12 14:16:11,395 | INFO | Added session ID 300: 🐍 Python - Using While loops with Dictionaries
+2025-10-12 14:16:11,396 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:16:11,396 | INFO | Added session ID 300: 🐍 Python - 3.0h
+2025-10-12 14:16:26,238 | INFO | Added session ID 301: 🐍 Python - Avoiding infinite loops
+2025-10-12 14:16:26,238 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:16:26,238 | INFO | Added session ID 301: 🐍 Python - 3.0h
+2025-10-12 14:16:35,784 | INFO | Added session ID 302: 🐍 Python - Assignment Operator
+2025-10-12 14:16:35,785 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:16:35,785 | INFO | Added session ID 302: 🐍 Python - 3.0h
+2025-10-12 14:16:45,229 | INFO | Added session ID 303: 🐍 Python - Advance loop control
+2025-10-12 14:16:45,229 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:16:45,229 | INFO | Added session ID 303: 🐍 Python - 3.0h
+2025-10-12 14:17:34,298 | INFO | Added session ID 304: 🐍 Python - Adding
+2025-10-12 14:17:34,299 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:17:34,299 | INFO | Added session ID 304: 🐍 Python - 3.0h
+2025-10-12 14:17:44,108 | INFO | Added session ID 305: 🐍 Python - Append
+2025-10-12 14:17:44,108 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:17:44,108 | INFO | Added session ID 305: 🐍 Python - 3.0h
+2025-10-12 14:18:01,677 | INFO | Added session ID 306: 🐍 Python - Changing
+2025-10-12 14:18:01,677 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:18:01,678 | INFO | Added session ID 306: 🐍 Python - 3.0h
+2025-10-12 14:18:10,387 | INFO | Added session ID 307: 🐍 Python - Cointing elements
+2025-10-12 14:18:10,387 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:18:10,388 | INFO | Added session ID 307: 🐍 Python - 3.0h
+2025-10-12 14:18:21,406 | INFO | Added session ID 308: 🐍 Python - Filter
+2025-10-12 14:18:21,406 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:18:21,407 | INFO | Added session ID 308: 🐍 Python - 3.0h
+2025-10-12 14:18:44,675 | INFO | Added session ID 309: 🐍 Python - Finding Extreme data
+2025-10-12 14:18:44,676 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:18:44,676 | INFO | Added session ID 309: 🐍 Python - 3.0h
+2025-10-12 14:19:12,541 | INFO | Added session ID 310: 🐍 Python - Functions and expressions
+2025-10-12 14:19:12,541 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:19:12,542 | INFO | Added session ID 310: 🐍 Python - 3.0h
+2025-10-12 14:19:27,506 | INFO | Added session ID 311: 🐍 Python - Grouping
+2025-10-12 14:19:27,506 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:19:27,507 | INFO | Added session ID 311: 🐍 Python - 3.0h
+2025-10-12 14:25:57,891 | INFO | Added category source: Python Crash Course
+2025-10-12 14:25:57,893 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:26:53,629 | INFO | Added session ID 312: 🐍 Python - Working with Variables
+2025-10-12 14:26:53,629 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:26:53,630 | INFO | Added session ID 312: 🐍 Python - 3.0h
+2025-10-12 14:26:58,167 | INFO | Added session ID 313: 🐍 Python - Working with Variables
+2025-10-12 14:26:58,167 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:26:58,168 | INFO | Added session ID 313: 🐍 Python - 3.0h
+2025-10-12 14:27:24,778 | INFO | Added session ID 314: 🐍 Python - Working with Data Types
+2025-10-12 14:27:24,779 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:27:24,779 | INFO | Added session ID 314: 🐍 Python - 3.0h
+2025-10-12 14:27:28,170 | INFO | Added session ID 315: 🐍 Python - Working with Data Types
+2025-10-12 14:27:28,170 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:27:28,170 | INFO | Added session ID 315: 🐍 Python - 3.0h
+2025-10-12 14:29:33,596 | INFO | Updated session ID 315
+2025-10-12 14:29:33,598 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:30:06,274 | INFO | Updated session ID 314
+2025-10-12 14:30:06,275 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:30:40,818 | INFO | Updated session ID 313
+2025-10-12 14:30:40,819 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:31:05,837 | INFO | Updated session ID 312
+2025-10-12 14:31:05,838 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:31:47,813 | INFO | Added session ID 316: 🐍 Python - Using list
+2025-10-12 14:31:47,814 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:31:47,814 | INFO | Added session ID 316: 🐍 Python - 3.0h
+2025-10-12 14:31:53,792 | INFO | Added session ID 317: 🐍 Python - Using list
+2025-10-12 14:31:53,793 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:31:53,793 | INFO | Added session ID 317: 🐍 Python - 3.0h
+2025-10-12 14:32:42,037 | INFO | Added session ID 318: 🐍 Python - Using list
+2025-10-12 14:32:42,038 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:32:42,038 | INFO | Added session ID 318: 🐍 Python - 3.0h
+2025-10-12 14:32:45,211 | INFO | Added session ID 319: 🐍 Python - Using list
+2025-10-12 14:32:45,212 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:32:45,212 | INFO | Added session ID 319: 🐍 Python - 3.0h
+2025-10-12 14:33:32,328 | INFO | Added session ID 320: 🐍 Python - Using conditons
+2025-10-12 14:33:32,328 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:33:32,329 | INFO | Added session ID 320: 🐍 Python - 3.0h
+2025-10-12 14:33:39,214 | INFO | Added session ID 321: 🐍 Python - Using conditons
+2025-10-12 14:33:39,215 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:33:39,215 | INFO | Added session ID 321: 🐍 Python - 3.0h
+2025-10-12 14:34:04,034 | INFO | Added session ID 322: 🐍 Python - Working with Input
+2025-10-12 14:34:04,034 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:34:04,035 | INFO | Added session ID 322: 🐍 Python - 3.0h
+2025-10-12 14:34:17,149 | INFO | Added session ID 323: 🐍 Python - Working with While loops
+2025-10-12 14:34:17,150 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:34:17,151 | INFO | Added session ID 323: 🐍 Python - 3.0h
+2025-10-12 14:35:00,723 | INFO | Added session ID 324: 🐍 Python - Defining Functions
+2025-10-12 14:35:00,725 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:35:00,726 | INFO | Added session ID 324: 🐍 Python - 3.0h
+2025-10-12 14:35:05,766 | INFO | Added session ID 325: 🐍 Python - Defining Functions
+2025-10-12 14:35:05,767 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:35:05,767 | INFO | Added session ID 325: 🐍 Python - 3.0h
+2025-10-12 14:35:33,091 | INFO | Added session ID 326: 🐍 Python - Understanding Classes
+2025-10-12 14:35:33,092 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:35:33,092 | INFO | Added session ID 326: 🐍 Python - 3.0h
+2025-10-12 14:35:42,290 | INFO | Added session ID 327: 🐍 Python - Working with a class and  Instances
+2025-10-12 14:35:42,290 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:35:42,290 | INFO | Added session ID 327: 🐍 Python - 3.0h
+2025-10-12 14:36:24,087 | INFO | Updated session ID 327
+2025-10-12 14:36:24,088 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:36:55,047 | INFO | Added session ID 328: 🐍 Python - Reading a File
+2025-10-12 14:36:55,048 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:36:55,048 | INFO | Added session ID 328: 🐍 Python - 3.0h
+2025-10-12 14:37:04,007 | INFO | Added session ID 329: 🐍 Python - Storing data (json,csv)
+2025-10-12 14:37:04,007 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:37:04,008 | INFO | Added session ID 329: 🐍 Python - 3.0h
+2025-10-12 14:37:11,174 | INFO | Added session ID 330: 🐍 Python - Writing a file
+2025-10-12 14:37:11,174 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:37:11,175 | INFO | Added session ID 330: 🐍 Python - 3.0h
+2025-10-12 14:37:40,307 | INFO | Added session ID 331: 🐍 Python - Working with exceptions
+2025-10-12 14:37:40,308 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:37:40,308 | INFO | Added session ID 331: 🐍 Python - 3.0h
+2025-10-12 14:38:40,554 | INFO | Added session ID 332: 🐍 Python - Testing A Function
+2025-10-12 14:38:40,554 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:38:40,555 | INFO | Added session ID 332: 🐍 Python - 1.75h
+2025-10-12 14:38:52,152 | INFO | Added session ID 333: 🐍 Python - Testing a Class
+2025-10-12 14:38:52,153 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:38:52,154 | INFO | Added session ID 333: 🐍 Python - 1.75h
+2025-10-12 14:40:05,831 | INFO | Updated session ID 28
+2025-10-12 14:40:05,832 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:41:27,327 | INFO | Updated session ID 333
+2025-10-12 14:41:27,329 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:42:39,657 | INFO | Added category source: Python 3 Programming Specialization
+2025-10-12 14:42:39,658 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:48:11,599 | INFO | SQLite database initialized successfully
+2025-10-12 14:48:11,615 | INFO | CachedQueryService: Fetched 72 tech stack entries with metrics (cached)
+2025-10-12 14:50:41,182 | INFO | Added session ID 334: 🐍 Python - Working with Variables
+2025-10-12 14:50:41,184 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:50:41,184 | INFO | Added session ID 334: 🐍 Python - 3.0h
+2025-10-12 14:51:51,140 | INFO | Added session ID 335: 🐍 Python - Working with Data Types
+2025-10-12 14:51:51,141 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:51:51,141 | INFO | Added session ID 335: 🐍 Python - 3.0h
+2025-10-12 14:52:12,067 | INFO | Added session ID 336: 🐍 Python - Working with While loops
+2025-10-12 14:52:12,068 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:52:12,068 | INFO | Added session ID 336: 🐍 Python - 3.0h
+2025-10-12 14:52:50,420 | INFO | Added session ID 337: 🐍 Python - Styling your if
+2025-10-12 14:52:50,421 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:52:50,421 | INFO | Added session ID 337: 🐍 Python - 3.0h
+2025-10-12 14:54:36,796 | INFO | Added session ID 338: 🐍 Python - Conditions
+2025-10-12 14:54:36,797 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:54:36,797 | INFO | Added session ID 338: 🐍 Python - 3.0h
+2025-10-12 14:54:48,002 | INFO | Added session ID 339: 🐍 Python - Elif
+2025-10-12 14:54:48,002 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:54:48,003 | INFO | Added session ID 339: 🐍 Python - 3.0h
+2025-10-12 14:55:55,181 | INFO | Added session ID 340: 🐍 Python - If with list
+2025-10-12 14:55:55,182 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:55:55,182 | INFO | Added session ID 340: 🐍 Python - 3.0h
+2025-10-12 14:56:23,303 | INFO | Added session ID 341: 🐍 Python - Else
+2025-10-12 14:56:23,304 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:56:23,304 | INFO | Added session ID 341: 🐍 Python - 3.0h
+2025-10-12 14:57:30,455 | WARNING | Work item Project already exists for 👑 Streamlit
+2025-10-12 14:58:01,685 | INFO | Added skill: Streamlit Pages → Project
+2025-10-12 14:58:01,685 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 14:58:11,279 | INFO | Added skill: Streamlit Cheat sheets → Project
+2025-10-12 14:58:11,279 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:00:29,433 | INFO | Added session ID 342: 👑 Streamlit - Streamlit Cheat sheets
+2025-10-12 15:00:29,434 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:00:29,434 | INFO | Added session ID 342: 👑 Streamlit - 3.0h
+2025-10-12 15:00:49,463 | INFO | Added session ID 343: 👑 Streamlit - Streamlit Cheat sheets
+2025-10-12 15:00:49,464 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:00:49,464 | INFO | Added session ID 343: 👑 Streamlit - 3.0h
+2025-10-12 15:00:53,311 | INFO | Added session ID 344: 👑 Streamlit - Streamlit Cheat sheets
+2025-10-12 15:00:53,312 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:00:53,312 | INFO | Added session ID 344: 👑 Streamlit - 3.0h
+2025-10-12 15:00:59,172 | INFO | Added session ID 345: 👑 Streamlit - Streamlit Cheat sheets
+2025-10-12 15:00:59,173 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:00:59,173 | INFO | Added session ID 345: 👑 Streamlit - 3.0h
+2025-10-12 15:01:03,578 | INFO | Added session ID 346: 👑 Streamlit - Streamlit Cheat sheets
+2025-10-12 15:01:03,578 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:01:03,579 | INFO | Added session ID 346: 👑 Streamlit - 3.0h
+2025-10-12 15:01:12,190 | INFO | Added session ID 347: 👑 Streamlit - Streamlit Cheat sheets
+2025-10-12 15:01:12,190 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:01:12,191 | INFO | Added session ID 347: 👑 Streamlit - 3.0h
+2025-10-12 15:01:18,448 | INFO | Added session ID 348: 👑 Streamlit - Streamlit Cheat sheets
+2025-10-12 15:01:18,448 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:01:18,448 | INFO | Added session ID 348: 👑 Streamlit - 3.0h
+2025-10-12 15:01:34,162 | INFO | Added session ID 349: 👑 Streamlit - Streamlit Cheat sheets
+2025-10-12 15:01:34,162 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:01:34,163 | INFO | Added session ID 349: 👑 Streamlit - 3.0h
+2025-10-12 15:02:47,485 | INFO | Added session ID 350: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:02:47,485 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:02:47,486 | INFO | Added session ID 350: 👑 Streamlit - 3.0h
+2025-10-12 15:02:53,604 | INFO | Added session ID 351: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:02:53,604 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:02:53,604 | INFO | Added session ID 351: 👑 Streamlit - 3.0h
+2025-10-12 15:02:58,888 | INFO | Added session ID 352: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:02:58,889 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:02:58,889 | INFO | Added session ID 352: 👑 Streamlit - 3.0h
+2025-10-12 15:03:07,201 | INFO | Added session ID 353: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:03:07,202 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:03:07,202 | INFO | Added session ID 353: 👑 Streamlit - 3.0h
+2025-10-12 15:04:04,624 | INFO | Updated session ID 353
+2025-10-12 15:04:04,625 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:04:43,568 | INFO | Updated session ID 352
+2025-10-12 15:04:43,569 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:04:55,973 | INFO | Updated session ID 353
+2025-10-12 15:04:55,974 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:05:26,502 | INFO | Updated session ID 351
+2025-10-12 15:05:26,503 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:05:51,587 | INFO | Updated session ID 350
+2025-10-12 15:05:51,588 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:06:04,694 | INFO | Updated session ID 349
+2025-10-12 15:06:04,695 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:07:39,041 | INFO | Updated session ID 348
+2025-10-12 15:07:39,042 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:07:52,736 | INFO | Updated session ID 347
+2025-10-12 15:07:52,737 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:08:13,453 | INFO | Updated session ID 346
+2025-10-12 15:08:13,454 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:08:30,633 | INFO | Updated session ID 345
+2025-10-12 15:08:30,634 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:08:43,140 | INFO | Updated session ID 344
+2025-10-12 15:08:43,141 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:08:56,260 | INFO | Updated session ID 343
+2025-10-12 15:08:56,260 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:09:20,526 | INFO | Updated session ID 342
+2025-10-12 15:09:20,526 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:10:02,191 | INFO | Added session ID 354: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:10:02,192 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:10:02,192 | INFO | Added session ID 354: 👑 Streamlit - 3.0h
+2025-10-12 15:10:15,059 | INFO | Added session ID 355: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:10:15,059 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:10:15,059 | INFO | Added session ID 355: 👑 Streamlit - 3.0h
+2025-10-12 15:10:35,363 | INFO | Added session ID 356: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:10:35,363 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:10:35,363 | INFO | Added session ID 356: 👑 Streamlit - 3.0h
+2025-10-12 15:10:41,180 | INFO | Added session ID 357: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:10:41,180 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:10:41,180 | INFO | Added session ID 357: 👑 Streamlit - 3.0h
+2025-10-12 15:10:46,748 | INFO | Added session ID 358: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:10:46,749 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:10:46,749 | INFO | Added session ID 358: 👑 Streamlit - 3.0h
+2025-10-12 15:10:51,420 | INFO | Added session ID 359: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:10:51,420 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:10:51,421 | INFO | Added session ID 359: 👑 Streamlit - 3.0h
+2025-10-12 15:10:55,228 | INFO | Added session ID 360: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:10:55,228 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:10:55,229 | INFO | Added session ID 360: 👑 Streamlit - 3.0h
+2025-10-12 15:11:00,154 | INFO | Added session ID 361: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:11:00,155 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:11:00,155 | INFO | Added session ID 361: 👑 Streamlit - 3.0h
+2025-10-12 15:11:04,016 | INFO | Added session ID 362: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:11:04,016 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:11:04,016 | INFO | Added session ID 362: 👑 Streamlit - 3.0h
+2025-10-12 15:11:08,829 | INFO | Added session ID 363: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:11:08,829 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:11:08,829 | INFO | Added session ID 363: 👑 Streamlit - 3.0h
+2025-10-12 15:11:12,136 | INFO | Added session ID 364: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:11:12,136 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:11:12,136 | INFO | Added session ID 364: 👑 Streamlit - 3.0h
+2025-10-12 15:11:26,762 | INFO | Added session ID 365: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:11:26,762 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:11:26,763 | INFO | Added session ID 365: 👑 Streamlit - 3.0h
+2025-10-12 15:11:30,160 | INFO | Added session ID 366: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:11:30,160 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:11:30,161 | INFO | Added session ID 366: 👑 Streamlit - 3.0h
+2025-10-12 15:11:34,189 | INFO | Added session ID 367: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:11:34,189 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:11:34,190 | INFO | Added session ID 367: 👑 Streamlit - 3.0h
+2025-10-12 15:11:39,197 | INFO | Added session ID 368: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:11:39,197 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:11:39,198 | INFO | Added session ID 368: 👑 Streamlit - 3.0h
+2025-10-12 15:11:43,242 | INFO | Added session ID 369: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:11:43,243 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:11:43,243 | INFO | Added session ID 369: 👑 Streamlit - 3.0h
+2025-10-12 15:11:47,923 | INFO | Added session ID 370: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:11:47,923 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:11:47,923 | INFO | Added session ID 370: 👑 Streamlit - 3.0h
+2025-10-12 15:11:51,122 | INFO | Added session ID 371: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:11:51,123 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:11:51,123 | INFO | Added session ID 371: 👑 Streamlit - 3.0h
+2025-10-12 15:11:54,474 | INFO | Added session ID 372: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:11:54,474 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:11:54,475 | INFO | Added session ID 372: 👑 Streamlit - 3.0h
+2025-10-12 15:11:58,176 | INFO | Added session ID 373: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:11:58,176 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:11:58,177 | INFO | Added session ID 373: 👑 Streamlit - 3.0h
+2025-10-12 15:12:01,949 | INFO | Added session ID 374: 👑 Streamlit - Streamlit Pages
+2025-10-12 15:12:01,950 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:12:01,950 | INFO | Added session ID 374: 👑 Streamlit - 3.0h
+2025-10-12 15:12:39,171 | INFO | Updated session ID 354
+2025-10-12 15:12:39,172 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:12:54,517 | INFO | Updated session ID 356
+2025-10-12 15:12:54,518 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:13:20,652 | INFO | Updated session ID 358
+2025-10-12 15:13:20,652 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:13:38,514 | INFO | Updated session ID 360
+2025-10-12 15:13:38,514 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:14:12,436 | INFO | Updated session ID 362
+2025-10-12 15:14:12,437 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:14:36,415 | INFO | Updated session ID 364
+2025-10-12 15:14:36,416 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:15:03,707 | INFO | Updated session ID 366
+2025-10-12 15:15:03,708 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:15:26,826 | INFO | Updated session ID 368
+2025-10-12 15:15:26,827 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:15:43,887 | INFO | Updated session ID 370
+2025-10-12 15:15:43,888 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:15:58,425 | INFO | Updated session ID 372
+2025-10-12 15:15:58,425 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:16:09,650 | INFO | Updated session ID 374
+2025-10-12 15:16:09,650 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:18:17,688 | INFO | Deleted session ID 57
+2025-10-12 15:18:17,689 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:18:23,349 | INFO | Deleted session ID 56
+2025-10-12 15:18:23,349 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:18:28,148 | INFO | Deleted session ID 55
+2025-10-12 15:18:28,148 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:18:32,456 | INFO | Deleted session ID 54
+2025-10-12 15:18:32,457 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:18:38,105 | INFO | Deleted session ID 53
+2025-10-12 15:18:38,105 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:18:43,022 | INFO | Deleted session ID 52
+2025-10-12 15:18:43,022 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:19:41,296 | INFO | Added session ID 375: 🐍 Python - Variables Name
+2025-10-12 15:19:41,297 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:19:41,297 | INFO | Added session ID 375: 🐍 Python - 0.25h
+2025-10-12 15:19:49,499 | INFO | Added session ID 376: 🐍 Python - Variables Values
+2025-10-12 15:19:49,499 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:19:49,499 | INFO | Added session ID 376: 🐍 Python - 0.25h
+2025-10-12 15:19:56,232 | INFO | Added session ID 377: 🐍 Python - Console
+2025-10-12 15:19:56,232 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:19:56,232 | INFO | Added session ID 377: 🐍 Python - 0.25h
+2025-10-12 15:21:04,778 | INFO | Updated session ID 377
+2025-10-12 15:21:04,779 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:21:23,533 | INFO | Updated session ID 376
+2025-10-12 15:21:23,534 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:21:35,069 | INFO | Updated session ID 377
+2025-10-12 15:21:35,070 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:21:47,485 | INFO | Updated session ID 375
+2025-10-12 15:21:47,485 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:22:26,950 | INFO | Added session ID 378: 🐍 Python - Updating Variables
+2025-10-12 15:22:26,951 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:22:26,951 | INFO | Added session ID 378: 🐍 Python - 0.25h
+2025-10-12 15:22:33,629 | INFO | Added session ID 379: 🐍 Python - Expresions
+2025-10-12 15:22:33,629 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:22:33,630 | INFO | Added session ID 379: 🐍 Python - 0.25h
+2025-10-12 15:22:50,967 | INFO | Added session ID 380: 🐍 Python - Number
+2025-10-12 15:22:50,968 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:22:50,968 | INFO | Added session ID 380: 🐍 Python - 0.25h
+2025-10-12 15:23:25,242 | INFO | Added session ID 381: 🐍 Python - Number
+2025-10-12 15:23:25,242 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:23:25,243 | INFO | Added session ID 381: 🐍 Python - 1.0h
+2025-10-12 15:23:43,598 | INFO | Added session ID 382: 🐍 Python - True and False
+2025-10-12 15:23:43,598 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:23:43,598 | INFO | Added session ID 382: 🐍 Python - 1.0h
+2025-10-12 15:23:51,841 | INFO | Added session ID 383: 🐍 Python - Negative values
+2025-10-12 15:23:51,841 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:23:51,841 | INFO | Added session ID 383: 🐍 Python - 1.0h
+2025-10-12 15:24:26,865 | INFO | Added session ID 384: 🐍 Python - Equality Operator
+2025-10-12 15:24:26,866 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:24:26,866 | INFO | Added session ID 384: 🐍 Python - 1.0h
+2025-10-12 15:24:37,343 | INFO | Added session ID 385: 🐍 Python - Inequality Operator
+2025-10-12 15:24:37,344 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:24:37,344 | INFO | Added session ID 385: 🐍 Python - 1.0h
+2025-10-12 15:24:59,471 | INFO | Added session ID 386: 🐍 Python - String
+2025-10-12 15:24:59,472 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:24:59,472 | INFO | Added session ID 386: 🐍 Python - 1.0h
+2025-10-12 15:26:10,157 | INFO | Added session ID 387: 🐍 Python - Comparison
+2025-10-12 15:26:10,158 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:26:10,158 | INFO | Added session ID 387: 🐍 Python - 1.0h
+2025-10-12 15:26:33,773 | INFO | Added session ID 388: 🐍 Python - Type Comparison
+2025-10-12 15:26:33,774 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:26:33,774 | INFO | Added session ID 388: 🐍 Python - 1.0h
+2025-10-12 15:27:14,318 | INFO | Added session ID 389: 🐍 Python - Type Comparison
+2025-10-12 15:27:14,319 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:27:14,319 | INFO | Added session ID 389: 🐍 Python - 1.0h
+2025-10-12 15:29:21,795 | INFO | Added session ID 390: 🐍 Python - Conditions
+2025-10-12 15:29:21,796 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:29:21,796 | INFO | Added session ID 390: 🐍 Python - 1.0h
+2025-10-12 15:29:32,810 | INFO | Added session ID 391: 🐍 Python - Code block
+2025-10-12 15:29:32,810 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:29:32,810 | INFO | Added session ID 391: 🐍 Python - 1.0h
+2025-10-12 15:29:45,050 | INFO | Added session ID 392: 🐍 Python - Conditions
+2025-10-12 15:29:45,051 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:29:45,051 | INFO | Added session ID 392: 🐍 Python - 1.0h
+2025-10-12 15:30:15,764 | INFO | Added session ID 393: 🐍 Python - Else
+2025-10-12 15:30:15,765 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:30:15,765 | INFO | Added session ID 393: 🐍 Python - 1.0h
+2025-10-12 15:30:22,426 | INFO | Added session ID 394: 🐍 Python - Elif
+2025-10-12 15:30:22,426 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:30:22,427 | INFO | Added session ID 394: 🐍 Python - 1.0h
+2025-10-12 15:30:27,331 | INFO | Added session ID 395: 🐍 Python - Else
+2025-10-12 15:30:27,331 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:30:27,332 | INFO | Added session ID 395: 🐍 Python - 1.0h
+2025-10-12 15:30:36,880 | INFO | Added session ID 396: 🐍 Python - If with list
+2025-10-12 15:30:36,881 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:30:36,881 | INFO | Added session ID 396: 🐍 Python - 1.0h
+2025-10-12 15:30:51,680 | INFO | Added session ID 397: 🐍 Python - Styling your if
+2025-10-12 15:30:51,680 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:30:51,680 | INFO | Added session ID 397: 🐍 Python - 1.0h
+2025-10-12 15:31:29,257 | INFO | Added session ID 398: 🐍 Python - Advance loop control
+2025-10-12 15:31:29,258 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:31:29,259 | INFO | Added session ID 398: 🐍 Python - 1.0h
+2025-10-12 15:31:34,261 | INFO | Added session ID 399: 🐍 Python - Assignment Operator
+2025-10-12 15:31:34,261 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:31:34,261 | INFO | Added session ID 399: 🐍 Python - 1.0h
+2025-10-12 15:31:39,450 | INFO | Added session ID 400: 🐍 Python - Avoiding infinite loops
+2025-10-12 15:31:39,451 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:31:39,451 | INFO | Added session ID 400: 🐍 Python - 1.0h
+2025-10-12 15:31:56,674 | INFO | Added session ID 401: 🐍 Python - Using While loops with Dictionaries
+2025-10-12 15:31:56,674 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:31:56,675 | INFO | Added session ID 401: 🐍 Python - 1.0h
+2025-10-12 15:32:02,024 | INFO | Added session ID 402: 🐍 Python - Using While loops with list
+2025-10-12 15:32:02,024 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:32:02,025 | INFO | Added session ID 402: 🐍 Python - 1.0h
+2025-10-12 15:32:08,019 | INFO | Added session ID 403: 🐍 Python - Using the for loop
+2025-10-12 15:32:08,020 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:32:08,020 | INFO | Added session ID 403: 🐍 Python - 1.0h
+2025-10-12 15:32:17,788 | INFO | Added session ID 404: 🐍 Python - Using the while Break
+2025-10-12 15:32:17,788 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:32:17,788 | INFO | Added session ID 404: 🐍 Python - 1.0h
+2025-10-12 15:34:50,952 | INFO | Added session ID 405: 🐍 Python - Using the while Continue
+2025-10-12 15:34:50,953 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:34:50,953 | INFO | Added session ID 405: 🐍 Python - 1.0h
+2025-10-12 15:35:01,569 | INFO | Added session ID 406: 🐍 Python - Working with While loops
+2025-10-12 15:35:01,570 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:35:01,570 | INFO | Added session ID 406: 🐍 Python - 1.0h
+2025-10-12 15:38:42,550 | INFO | Added session ID 407: 🐍 Python - Adding
+2025-10-12 15:38:42,550 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:38:42,551 | INFO | Added session ID 407: 🐍 Python - 1.0h
+2025-10-12 15:38:49,672 | INFO | Added session ID 408: 🐍 Python - Append
+2025-10-12 15:38:49,672 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:38:49,673 | INFO | Added session ID 408: 🐍 Python - 1.0h
+2025-10-12 15:40:05,636 | INFO | Added session ID 409: 🐍 Python - Changing
+2025-10-12 15:40:05,637 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:40:05,637 | INFO | Added session ID 409: 🐍 Python - 1.0h
+2025-10-12 15:40:12,309 | INFO | Added session ID 410: 🐍 Python - Cointing elements
+2025-10-12 15:40:12,309 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:40:12,309 | INFO | Added session ID 410: 🐍 Python - 1.0h
+2025-10-12 15:40:20,917 | INFO | Added session ID 411: 🐍 Python - Filter
+2025-10-12 15:40:20,917 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:40:20,918 | INFO | Added session ID 411: 🐍 Python - 1.0h
+2025-10-12 15:40:54,127 | INFO | Added session ID 412: 🐍 Python - Finding Extreme data
+2025-10-12 15:40:54,128 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:40:54,128 | INFO | Added session ID 412: 🐍 Python - 1.0h
+2025-10-12 15:41:26,880 | INFO | Added session ID 413: 🐍 Python - Functions and expressions
+2025-10-12 15:41:26,881 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:41:26,881 | INFO | Added session ID 413: 🐍 Python - 1.0h
+2025-10-12 15:41:33,725 | INFO | Added session ID 414: 🐍 Python - Grouping
+2025-10-12 15:41:33,725 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:41:33,725 | INFO | Added session ID 414: 🐍 Python - 1.0h
+2025-10-12 15:41:42,045 | INFO | Added session ID 415: 🐍 Python - Insert
+2025-10-12 15:41:42,046 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:41:42,047 | INFO | Added session ID 415: 🐍 Python - 1.0h
+2025-10-12 15:41:59,947 | INFO | Added session ID 416: 🐍 Python - Join
+2025-10-12 15:41:59,948 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:41:59,948 | INFO | Added session ID 416: 🐍 Python - 1.0h
+2025-10-12 15:42:57,240 | INFO | Added session ID 417: 🐍 Python - Length and Conditions
+2025-10-12 15:42:57,242 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:42:57,242 | INFO | Added session ID 417: 🐍 Python - 1.0h
+2025-10-12 15:43:06,043 | INFO | Added session ID 418: 🐍 Python - List comprehensions
+2025-10-12 15:43:06,043 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:43:06,044 | INFO | Added session ID 418: 🐍 Python - 1.0h
+2025-10-12 15:43:15,008 | INFO | Added session ID 419: 🐍 Python - Loops
+2025-10-12 15:43:15,009 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:43:15,009 | INFO | Added session ID 419: 🐍 Python - 1.0h
+2025-10-12 15:43:34,454 | INFO | Added session ID 420: 🐍 Python - Minimun and Maximun
+2025-10-12 15:43:34,455 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:43:34,455 | INFO | Added session ID 420: 🐍 Python - 1.0h
+2025-10-12 15:43:53,900 | INFO | Added session ID 421: 🐍 Python - Negative index delations
+2025-10-12 15:43:53,900 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:43:53,901 | INFO | Added session ID 421: 🐍 Python - 1.0h
+2025-10-12 15:44:00,270 | INFO | Added session ID 422: 🐍 Python - Organizing
+2025-10-12 15:44:00,270 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:44:00,271 | INFO | Added session ID 422: 🐍 Python - 1.0h
+2025-10-12 15:44:05,975 | INFO | Added session ID 423: 🐍 Python - Remove
+2025-10-12 15:44:05,975 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:44:05,975 | INFO | Added session ID 423: 🐍 Python - 1.0h
+2025-10-12 15:44:31,746 | INFO | Added session ID 424: 🐍 Python - Sorting list
+2025-10-12 15:44:31,747 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:44:31,747 | INFO | Added session ID 424: 🐍 Python - 1.0h
+2025-10-12 15:44:31,807 | INFO | Added session ID 425: 🐍 Python - Sorting list
+2025-10-12 15:44:31,807 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:44:31,807 | INFO | Added session ID 425: 🐍 Python - 1.0h
+2025-10-12 15:44:41,491 | INFO | Added session ID 426: 🐍 Python - Start: Stops
+2025-10-12 15:44:41,492 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:44:41,492 | INFO | Added session ID 426: 🐍 Python - 1.0h
+2025-10-12 15:44:53,513 | INFO | Added session ID 427: 🐍 Python - Using list
+2025-10-12 15:44:53,513 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:44:53,514 | INFO | Added session ID 427: 🐍 Python - 1.0h
+2025-10-12 15:45:01,492 | INFO | Added session ID 428: 🐍 Python - index
+2025-10-12 15:45:01,492 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:45:01,493 | INFO | Added session ID 428: 🐍 Python - 1.0h
+2025-10-12 15:45:32,833 | INFO | Deleted session ID 425
+2025-10-12 15:45:32,833 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:46:34,132 | INFO | Added session ID 429: 🐍 Python - Creating Parameters
+2025-10-12 15:46:34,132 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:46:34,133 | INFO | Added session ID 429: 🐍 Python - 1.0h
+2025-10-12 15:46:34,261 | INFO | Added session ID 430: 🐍 Python - Creating Parameters
+2025-10-12 15:46:34,261 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:46:34,261 | INFO | Added session ID 430: 🐍 Python - 1.0h
+2025-10-12 15:47:01,064 | INFO | Added session ID 431: 🐍 Python - Defining Functions
+2025-10-12 15:47:01,064 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:47:01,065 | INFO | Added session ID 431: 🐍 Python - 1.0h
+2025-10-12 15:47:05,548 | INFO | Added session ID 432: 🐍 Python - Functions with For loops
+2025-10-12 15:47:05,548 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:47:05,548 | INFO | Added session ID 432: 🐍 Python - 1.0h
+2025-10-12 15:47:10,160 | INFO | Added session ID 433: 🐍 Python - Functions with For loops with list
+2025-10-12 15:47:10,161 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:47:10,161 | INFO | Added session ID 433: 🐍 Python - 1.0h
+2025-10-12 15:47:14,850 | INFO | Added session ID 434: 🐍 Python - Functions with While loops
+2025-10-12 15:47:14,850 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:47:14,850 | INFO | Added session ID 434: 🐍 Python - 1.0h
+2025-10-12 15:47:25,353 | INFO | Added session ID 435: 🐍 Python - Global Scope
+2025-10-12 15:47:25,353 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:47:25,353 | INFO | Added session ID 435: 🐍 Python - 1.0h
+2025-10-12 15:47:35,626 | INFO | Added session ID 436: 🐍 Python - Incorporating elif and else
+2025-10-12 15:47:35,626 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:47:35,627 | INFO | Added session ID 436: 🐍 Python - 1.0h
+2025-10-12 15:48:01,728 | INFO | Added session ID 437: 🐍 Python - List As Argument
+2025-10-12 15:48:01,728 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:48:01,729 | INFO | Added session ID 437: 🐍 Python - 1.0h
+2025-10-12 15:48:19,532 | INFO | Added session ID 438: 🐍 Python - Local Scope
+2025-10-12 15:48:19,533 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:48:19,534 | INFO | Added session ID 438: 🐍 Python - 1.0h
+2025-10-12 15:48:37,648 | INFO | Added session ID 439: 🐍 Python - Multiple parameters
+2025-10-12 15:48:37,649 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:48:37,649 | INFO | Added session ID 439: 🐍 Python - 1.0h
+2025-10-12 15:48:44,258 | INFO | Added session ID 440: 🐍 Python - Naming Functions
+2025-10-12 15:48:44,258 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:48:44,258 | INFO | Added session ID 440: 🐍 Python - 1.0h
+2025-10-12 15:48:51,715 | INFO | Added session ID 441: 🐍 Python - Nesting Conditional in funtions
+2025-10-12 15:48:51,715 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:48:51,715 | INFO | Added session ID 441: 🐍 Python - 1.0h
+2025-10-12 15:49:09,455 | INFO | Added session ID 442: 🐍 Python - Passing a List
+2025-10-12 15:49:09,455 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:49:09,456 | INFO | Added session ID 442: 🐍 Python - 1.0h
+2025-10-12 15:49:34,536 | INFO | Added session ID 443: 🐍 Python - Passing an arbitrary number of argument
+2025-10-12 15:49:34,537 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:49:34,537 | INFO | Added session ID 443: 🐍 Python - 1.0h
+2025-10-12 15:50:17,657 | INFO | Added session ID 444: 🐍 Python - Passing arguments
+2025-10-12 15:50:17,658 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:50:17,658 | INFO | Added session ID 444: 🐍 Python - 1.0h
+2025-10-12 15:50:23,103 | INFO | Added session ID 445: 🐍 Python - Recursion
+2025-10-12 15:50:23,103 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:50:23,104 | INFO | Added session ID 445: 🐍 Python - 1.0h
+2025-10-12 15:50:35,945 | INFO | Added session ID 446: 🐍 Python - Return Value
+2025-10-12 15:50:35,945 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:50:35,946 | INFO | Added session ID 446: 🐍 Python - 1.0h
+2025-10-12 15:51:08,404 | INFO | Added session ID 447: 🐍 Python - Reusing code with functions
+2025-10-12 15:51:08,404 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:51:08,404 | INFO | Added session ID 447: 🐍 Python - 1.0h
+2025-10-12 15:51:16,448 | INFO | Added session ID 448: 🐍 Python - Storing your functions in modules
+2025-10-12 15:51:16,449 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:51:16,449 | INFO | Added session ID 448: 🐍 Python - 1.0h
+2025-10-12 15:51:27,369 | INFO | Added session ID 449: 🐍 Python - Styling your functions
+2025-10-12 15:51:27,370 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:51:27,370 | INFO | Added session ID 449: 🐍 Python - 1.0h
+2025-10-12 15:51:54,602 | INFO | Added session ID 450: 🐍 Python - Creating and using tuples
+2025-10-12 15:51:54,603 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:51:54,603 | INFO | Added session ID 450: 🐍 Python - 1.0h
+2025-10-12 15:52:03,062 | INFO | Added session ID 451: 🐍 Python - List of tuples
+2025-10-12 15:52:03,062 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:52:03,063 | INFO | Added session ID 451: 🐍 Python - 1.0h
+2025-10-12 15:52:07,663 | INFO | Added session ID 452: 🐍 Python - tuples return
+2025-10-12 15:52:07,663 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:52:07,663 | INFO | Added session ID 452: 🐍 Python - 1.0h
+2025-10-12 15:52:16,185 | INFO | Added session ID 453: 🐍 Python - Accessing and update values
+2025-10-12 15:52:16,186 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:52:16,186 | INFO | Added session ID 453: 🐍 Python - 1.0h
+2025-10-12 15:52:31,508 | INFO | Added session ID 454: 🐍 Python - Adding a key -value pair
+2025-10-12 15:52:31,508 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:52:31,509 | INFO | Added session ID 454: 🐍 Python - 1.0h
+2025-10-12 15:53:08,489 | INFO | Added session ID 455: 🐍 Python - Checking if Dictionary contains a key
+2025-10-12 15:53:08,490 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:53:08,490 | INFO | Added session ID 455: 🐍 Python - 1.0h
+2025-10-12 15:53:18,154 | INFO | Added session ID 456: 🐍 Python - Creating sets
+2025-10-12 15:53:18,154 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:53:18,155 | INFO | Added session ID 456: 🐍 Python - 1.0h
+2025-10-12 15:53:24,670 | INFO | Added session ID 457: 🐍 Python - Looping through a Dictionary
+2025-10-12 15:53:24,670 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:53:24,671 | INFO | Added session ID 457: 🐍 Python - 1.0h
+2025-10-12 15:53:30,676 | INFO | Added session ID 458: 🐍 Python - Nesting
+2025-10-12 15:53:30,677 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:53:30,677 | INFO | Added session ID 458: 🐍 Python - 1.0h
+2025-10-12 15:53:58,800 | INFO | Added session ID 459: 🐍 Python - Remove sets
+2025-10-12 15:53:58,801 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:53:58,801 | INFO | Added session ID 459: 🐍 Python - 1.0h
+2025-10-12 15:54:05,347 | INFO | Added session ID 460: 🐍 Python - Removing a key value pair
+2025-10-12 15:54:05,347 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:54:05,347 | INFO | Added session ID 460: 🐍 Python - 1.0h
+2025-10-12 15:54:13,933 | INFO | Added session ID 461: 🐍 Python - Set Advance
+2025-10-12 15:54:13,934 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:54:13,934 | INFO | Added session ID 461: 🐍 Python - 1.0h
+2025-10-12 15:54:22,314 | INFO | Added session ID 462: 🐍 Python - Sets Basics
+2025-10-12 15:54:22,314 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:54:22,314 | INFO | Added session ID 462: 🐍 Python - 1.0h
+2025-10-12 15:55:19,443 | INFO | Added session ID 463: 🐍 Python - Sets Difference
+2025-10-12 15:55:19,444 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:55:19,445 | INFO | Added session ID 463: 🐍 Python - 1.0h
+2025-10-12 15:55:24,484 | INFO | Added session ID 464: 🐍 Python - Sets intersection
+2025-10-12 15:55:24,484 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:55:24,485 | INFO | Added session ID 464: 🐍 Python - 1.0h
+2025-10-12 15:55:31,537 | INFO | Added session ID 465: 🐍 Python - Sets subsets
+2025-10-12 15:55:31,537 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:55:31,537 | INFO | Added session ID 465: 🐍 Python - 1.0h
+2025-10-12 15:55:37,421 | INFO | Added session ID 466: 🐍 Python - Sets union
+2025-10-12 15:55:37,422 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:55:37,422 | INFO | Added session ID 466: 🐍 Python - 1.0h
+2025-10-12 15:56:01,701 | INFO | Added session ID 467: 🐍 Python - Working with Dictionaries
+2025-10-12 15:56:01,702 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:56:01,702 | INFO | Added session ID 467: 🐍 Python - 1.0h
+2025-10-12 15:56:29,185 | INFO | Added session ID 468: 🐍 Python - Constructors
+2025-10-12 15:56:29,185 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:56:29,186 | INFO | Added session ID 468: 🐍 Python - 1.0h
+2025-10-12 15:56:35,349 | INFO | Added session ID 469: 🐍 Python - Creating and using a Classes
+2025-10-12 15:56:35,350 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:56:35,350 | INFO | Added session ID 469: 🐍 Python - 1.0h
+2025-10-12 15:56:39,697 | INFO | Added session ID 470: 🐍 Python - Importing Classes
+2025-10-12 15:56:39,697 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:56:39,697 | INFO | Added session ID 470: 🐍 Python - 1.0h
+2025-10-12 15:57:12,592 | INFO | Added session ID 471: 🐍 Python - Inheritance
+2025-10-12 15:57:12,593 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:57:12,593 | INFO | Added session ID 471: 🐍 Python - 1.0h
+2025-10-12 15:57:17,315 | INFO | Added session ID 472: 🐍 Python - Methods
+2025-10-12 15:57:17,315 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:57:17,315 | INFO | Added session ID 472: 🐍 Python - 1.0h
+2025-10-12 15:57:22,062 | INFO | Added session ID 473: 🐍 Python - Python Standard Libraries
+2025-10-12 15:57:22,062 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:57:22,062 | INFO | Added session ID 473: 🐍 Python - 1.0h
+2025-10-12 15:57:29,990 | INFO | Added session ID 474: 🐍 Python - Understanding Classes
+2025-10-12 15:57:29,990 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:57:29,991 | INFO | Added session ID 474: 🐍 Python - 1.0h
+2025-10-12 15:58:07,606 | INFO | Added session ID 475: 🐍 Python - Working with a class and  Instances
+2025-10-12 15:58:07,606 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:58:07,607 | INFO | Added session ID 475: 🐍 Python - 1.0h
+2025-10-12 15:58:43,217 | INFO | Added session ID 476: 🐍 Python - Abstractions
+2025-10-12 15:58:43,218 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:58:43,218 | INFO | Added session ID 476: 🐍 Python - 1.0h
+2025-10-12 15:58:47,834 | INFO | Added session ID 477: 🐍 Python - Basics OOP
+2025-10-12 15:58:47,835 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:58:47,835 | INFO | Added session ID 477: 🐍 Python - 1.0h
+2025-10-12 15:58:52,820 | INFO | Added session ID 478: 🐍 Python - Encapsulation
+2025-10-12 15:58:52,821 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:58:52,821 | INFO | Added session ID 478: 🐍 Python - 1.0h
+2025-10-12 15:59:00,554 | INFO | Added session ID 479: 🐍 Python - Polymorphic  objects
+2025-10-12 15:59:00,554 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:59:00,554 | INFO | Added session ID 479: 🐍 Python - 1.0h
+2025-10-12 15:59:10,289 | INFO | Added session ID 480: 🐍 Python - inheritance
+2025-10-12 15:59:10,290 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:59:10,290 | INFO | Added session ID 480: 🐍 Python - 1.0h
+2025-10-12 15:59:16,749 | INFO | Added session ID 481: 🐍 Python - inheritance with classes
+2025-10-12 15:59:16,750 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 15:59:16,750 | INFO | Added session ID 481: 🐍 Python - 1.0h
+2025-10-12 16:00:24,514 | INFO | Added session ID 482: 🐍 Python - Control flow
+2025-10-12 16:00:24,515 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:00:24,515 | INFO | Added session ID 482: 🐍 Python - 1.0h
+2025-10-12 16:00:31,497 | INFO | Added session ID 483: 🐍 Python - Working with Input
+2025-10-12 16:00:31,498 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:00:31,498 | INFO | Added session ID 483: 🐍 Python - 1.0h
+2025-10-12 16:00:54,810 | INFO | Added session ID 484: 🐍 Python - Testing A Function
+2025-10-12 16:00:54,810 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:00:54,810 | INFO | Added session ID 484: 🐍 Python - 1.0h
+2025-10-12 16:00:59,050 | INFO | Added session ID 485: 🐍 Python - Testing a Class
+2025-10-12 16:00:59,051 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:00:59,051 | INFO | Added session ID 485: 🐍 Python - 1.0h
+2025-10-12 16:01:40,580 | INFO | Added session ID 486: 🐍 Python - Working with Db
+2025-10-12 16:01:40,581 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:01:40,581 | INFO | Added session ID 486: 🐍 Python - 1.0h
+2025-10-12 16:02:05,363 | INFO | Added session ID 487: 🐍 Python - Alias
+2025-10-12 16:02:05,364 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:02:05,364 | INFO | Added session ID 487: 🐍 Python - 1.0h
+2025-10-12 16:02:09,501 | INFO | Added session ID 488: 🐍 Python - Basics Modules
+2025-10-12 16:02:09,501 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:02:09,502 | INFO | Added session ID 488: 🐍 Python - 1.0h
+2025-10-12 16:02:13,754 | INFO | Added session ID 489: 🐍 Python - From
+2025-10-12 16:02:13,754 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:02:13,754 | INFO | Added session ID 489: 🐍 Python - 1.0h
+2025-10-12 16:03:16,678 | INFO | Added session ID 490: 🐍 Python - Reading a File
+2025-10-12 16:03:16,679 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:03:16,679 | INFO | Added session ID 490: 🐍 Python - 1.0h
+2025-10-12 16:03:25,577 | INFO | Added session ID 491: 🐍 Python - Storing data (json,csv)
+2025-10-12 16:03:25,578 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:03:25,578 | INFO | Added session ID 491: 🐍 Python - 1.0h
+2025-10-12 16:03:30,626 | INFO | Added session ID 492: 🐍 Python - Writing a file
+2025-10-12 16:03:30,626 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:03:30,626 | INFO | Added session ID 492: 🐍 Python - 1.0h
+2025-10-12 16:05:03,705 | INFO | Added session ID 493: 🐍 Python - Basics Errors
+2025-10-12 16:05:03,706 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:05:03,706 | INFO | Added session ID 493: 🐍 Python - 1.0h
+2025-10-12 16:05:08,382 | INFO | Added session ID 494: 🐍 Python - Errors & Exceptions
+2025-10-12 16:05:08,382 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:05:08,382 | INFO | Added session ID 494: 🐍 Python - 1.0h
+2025-10-12 16:05:14,797 | INFO | Added session ID 495: 🐍 Python - Handling  Exceptions
+2025-10-12 16:05:14,797 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:05:14,798 | INFO | Added session ID 495: 🐍 Python - 1.0h
+2025-10-12 16:05:24,291 | INFO | Deleted session ID 495
+2025-10-12 16:05:24,291 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:05:34,162 | INFO | Added session ID 496: 🐍 Python - Raising Exceptions
+2025-10-12 16:05:34,162 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:05:34,163 | INFO | Added session ID 496: 🐍 Python - 1.0h
+2025-10-12 16:05:39,968 | INFO | Added session ID 497: 🐍 Python - Working with exceptions
+2025-10-12 16:05:39,968 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:05:39,968 | INFO | Added session ID 497: 🐍 Python - 1.0h
+2025-10-12 16:05:53,250 | INFO | Added session ID 498: 🐍 Python - .env
+2025-10-12 16:05:53,250 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:05:53,251 | INFO | Added session ID 498: 🐍 Python - 1.0h
+2025-10-12 16:06:06,831 | INFO | Added session ID 499: 🐍 Python - Accessing json
+2025-10-12 16:06:06,831 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:06:06,832 | INFO | Added session ID 499: 🐍 Python - 1.0h
+2025-10-12 16:06:15,245 | INFO | Added session ID 500: 🐍 Python - Advance Working with private API
+2025-10-12 16:06:15,245 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:06:15,246 | INFO | Added session ID 500: 🐍 Python - 1.0h
+2025-10-12 16:06:20,835 | INFO | Added session ID 501: 🐍 Python - Basics API
+2025-10-12 16:06:20,835 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:06:20,836 | INFO | Added session ID 501: 🐍 Python - 1.0h
+2025-10-12 16:06:26,912 | INFO | Added session ID 502: 🐍 Python - Basics Header & Body
+2025-10-12 16:06:26,912 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:06:26,913 | INFO | Added session ID 502: 🐍 Python - 1.0h
+2025-10-12 16:06:44,710 | INFO | Added session ID 503: 🐍 Python - Different ways
+2025-10-12 16:06:44,711 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:06:44,711 | INFO | Added session ID 503: 🐍 Python - 1.0h
+2025-10-12 16:06:44,774 | INFO | Added session ID 504: 🐍 Python - Different ways
+2025-10-12 16:06:44,774 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:06:44,774 | INFO | Added session ID 504: 🐍 Python - 1.0h
+2025-10-12 16:07:01,203 | INFO | Added session ID 505: 🐍 Python - Environment Variables
+2025-10-12 16:07:01,203 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:07:01,204 | INFO | Added session ID 505: 🐍 Python - 1.0h
+2025-10-12 16:07:22,036 | INFO | Added session ID 506: 🐍 Python - Error & Default Values
+2025-10-12 16:07:22,037 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:07:22,037 | INFO | Added session ID 506: 🐍 Python - 1.0h
+2025-10-12 16:07:30,342 | INFO | Added session ID 507: 🐍 Python - Intro to environment Variables
+2025-10-12 16:07:30,342 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:07:30,342 | INFO | Added session ID 507: 🐍 Python - 1.0h
+2025-10-12 16:07:36,230 | INFO | Added session ID 508: 🐍 Python - Query Parameters
+2025-10-12 16:07:36,230 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:07:36,230 | INFO | Added session ID 508: 🐍 Python - 1.0h
+2025-10-12 16:07:54,723 | INFO | Added session ID 509: 🐍 Python - Query Parameters
+2025-10-12 16:07:54,723 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:07:54,723 | INFO | Added session ID 509: 🐍 Python - 1.0h
+2025-10-12 16:09:15,170 | INFO | Deleted session ID 509
+2025-10-12 16:09:15,171 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:09:23,843 | INFO | Added session ID 510: 🐍 Python - Request  Basics API
+2025-10-12 16:09:23,843 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:09:23,843 | INFO | Added session ID 510: 🐍 Python - 1.0h
+2025-10-12 16:09:36,912 | INFO | Added session ID 511: 🐍 Python - Status Code
+2025-10-12 16:09:36,913 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:09:36,913 | INFO | Added session ID 511: 🐍 Python - 1.0h
+2025-10-12 16:09:51,710 | INFO | Added session ID 512: 🐍 Python - Using Request  API
+2025-10-12 16:09:51,710 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:09:51,711 | INFO | Added session ID 512: 🐍 Python - 1.0h
+2025-10-12 16:09:58,275 | INFO | Added session ID 513: 🐍 Python - Working with  API
+2025-10-12 16:09:58,275 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:09:58,276 | INFO | Added session ID 513: 🐍 Python - 1.0h
+2025-10-12 16:10:11,178 | INFO | Added session ID 514: 🐍 Python - Working with private API
+2025-10-12 16:10:11,178 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:10:11,179 | INFO | Added session ID 514: 🐍 Python - 1.0h
+2025-10-12 16:11:52,268 | INFO | Added session ID 515: 🧱 T-SQL (primary) - Row and Collumns
+2025-10-12 16:11:52,270 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:11:52,270 | INFO | Added session ID 515: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:12:01,351 | INFO | Added session ID 516: 🧱 T-SQL (primary) - Select Data
+2025-10-12 16:12:01,351 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:12:01,352 | INFO | Added session ID 516: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:12:11,082 | INFO | Added session ID 517: 🧱 T-SQL (primary) - Select Multiple Collumns
+2025-10-12 16:12:11,082 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:12:11,082 | INFO | Added session ID 517: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:12:37,478 | INFO | Added session ID 518: 🧱 T-SQL (primary) - Select Distinct Values
+2025-10-12 16:12:37,479 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:12:37,479 | INFO | Added session ID 518: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:12:48,927 | INFO | Added session ID 519: 🧱 T-SQL (primary) - Ordering data
+2025-10-12 16:12:48,927 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:12:48,928 | INFO | Added session ID 519: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:12:55,600 | INFO | Added session ID 520: 🧱 T-SQL (primary) - Ascending
+2025-10-12 16:12:55,600 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:12:55,600 | INFO | Added session ID 520: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:13:15,165 | INFO | Added session ID 521: 🧱 T-SQL (primary) - Descending
+2025-10-12 16:13:15,165 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:13:15,165 | INFO | Added session ID 521: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:13:32,760 | INFO | Added session ID 522: 🧱 T-SQL (primary) - Using conditions
+2025-10-12 16:13:32,761 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:13:32,762 | INFO | Added session ID 522: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:13:41,198 | INFO | Added session ID 523: 🧱 T-SQL (primary) - Checking Equality
+2025-10-12 16:13:41,199 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:13:41,199 | INFO | Added session ID 523: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:13:48,423 | INFO | Added session ID 524: 🧱 T-SQL (primary) - Filtering Collumns
+2025-10-12 16:13:48,423 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:13:48,423 | INFO | Added session ID 524: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:14:15,054 | INFO | Added session ID 525: 🧱 T-SQL (primary) - The inequality operator
+2025-10-12 16:14:15,054 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:14:15,055 | INFO | Added session ID 525: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:14:52,046 | INFO | Added session ID 526: 🧱 T-SQL (primary) - Greater or Equal
+2025-10-12 16:14:52,047 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:14:52,047 | INFO | Added session ID 526: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:15:04,654 | INFO | Added session ID 527: 🧱 T-SQL (primary) - Less or Equal
+2025-10-12 16:15:04,655 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:15:04,655 | INFO | Added session ID 527: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:15:45,872 | INFO | Added session ID 528: 🧱 T-SQL (primary) - Adding
+2025-10-12 16:15:45,872 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:15:45,873 | INFO | Added session ID 528: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:15:51,930 | INFO | Added session ID 529: 🧱 T-SQL (primary) - Removing
+2025-10-12 16:15:51,931 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:15:51,931 | INFO | Added session ID 529: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:16:06,744 | INFO | Added session ID 530: 🧱 T-SQL (primary) - Updated
+2025-10-12 16:16:06,745 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:16:06,745 | INFO | Added session ID 530: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:16:42,218 | INFO | Added session ID 531: 🧱 T-SQL (primary) - Table Creation
+2025-10-12 16:16:42,219 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:16:42,219 | INFO | Added session ID 531: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:16:54,255 | INFO | Added session ID 532: 🧱 T-SQL (primary) - Alter
+2025-10-12 16:16:54,255 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:16:54,255 | INFO | Added session ID 532: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:17:05,959 | INFO | Added session ID 533: 🧱 T-SQL (primary) - Listing
+2025-10-12 16:17:05,960 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:17:05,960 | INFO | Added session ID 533: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:17:14,918 | INFO | Added session ID 534: 🧱 T-SQL (primary) - Dropping Tables
+2025-10-12 16:17:14,918 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:17:14,919 | INFO | Added session ID 534: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:18:05,686 | INFO | Added session ID 535: 🧱 T-SQL (primary) - Renaming
+2025-10-12 16:18:05,687 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:18:05,688 | INFO | Added session ID 535: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:18:12,818 | INFO | Added session ID 536: 🧱 T-SQL (primary) - Multiple Collumns
+2025-10-12 16:18:12,819 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:18:12,819 | INFO | Added session ID 536: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:18:31,249 | INFO | Added session ID 537: 🧱 T-SQL (primary) - Max
+2025-10-12 16:18:31,249 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:18:31,250 | INFO | Added session ID 537: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:18:39,270 | INFO | Added session ID 538: 🧱 T-SQL (primary) - Min
+2025-10-12 16:18:39,271 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:18:39,271 | INFO | Added session ID 538: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:18:50,793 | INFO | Added session ID 539: 🧱 T-SQL (primary) - Aggregate Functions
+2025-10-12 16:18:50,794 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:18:50,794 | INFO | Added session ID 539: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:19:09,812 | INFO | Added session ID 540: 🧱 T-SQL (primary) - Average
+2025-10-12 16:19:09,813 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:19:09,813 | INFO | Added session ID 540: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:19:38,041 | INFO | Added session ID 541: 🧱 T-SQL (primary) - Count Table rows
+2025-10-12 16:19:38,041 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:19:38,042 | INFO | Added session ID 541: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:20:44,835 | INFO | Added session ID 542: 🧱 T-SQL (primary) - Summing up
+2025-10-12 16:20:44,836 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:20:44,836 | INFO | Added session ID 542: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:23:14,484 | INFO | Added skill: Gouping → Aggregate Functions
+2025-10-12 16:23:14,484 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:26:12,460 | INFO | Deleted skill: Gouping → Aggregate Functions
+2025-10-12 16:26:12,462 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:26:53,404 | INFO | SQLite database initialized successfully
+2025-10-12 16:26:53,422 | INFO | CachedQueryService: Fetched 72 tech stack entries with metrics (cached)
+2025-10-12 16:28:43,108 | INFO | SQLite database initialized successfully
+2025-10-12 16:28:43,117 | INFO | CachedQueryService: Fetched 72 tech stack entries with metrics (cached)
+2025-10-12 16:32:24,813 | INFO | SQLite database initialized successfully
+2025-10-12 16:32:24,827 | INFO | CachedQueryService: Fetched 72 tech stack entries with metrics (cached)
+2025-10-12 16:34:14,854 | INFO | SQLite database initialized successfully
+2025-10-12 16:34:14,868 | INFO | CachedQueryService: Fetched 72 tech stack entries with metrics (cached)
+2025-10-12 16:35:14,798 | INFO | Added skill: Grouping → Aggregate Functions
+2025-10-12 16:35:14,799 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:35:33,490 | INFO | Added skill: Understanding Groups → Aggregate Functions
+2025-10-12 16:35:33,491 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:35:48,756 | INFO | Added skill: Filtering Groups → Aggregate Functions
+2025-10-12 16:35:48,756 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:36:32,322 | INFO | Added skill: SQL Aggregate Function → Aggregate Functions
+2025-10-12 16:36:32,323 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:37:16,576 | INFO | Added skill: Joins → Join
+2025-10-12 16:37:16,576 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:37:35,298 | INFO | Added skill: Udenstanding Joins → Join
+2025-10-12 16:37:35,299 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:37:46,908 | INFO | Added skill: Inner Joins → Join
+2025-10-12 16:37:46,908 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:38:10,999 | INFO | Added skill: MUltiple Matches → Join
+2025-10-12 16:38:10,999 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:39:09,831 | INFO | SQLite database initialized successfully
+2025-10-12 16:39:09,846 | INFO | CachedQueryService: Fetched 72 tech stack entries with metrics (cached)
+2025-10-12 16:39:31,598 | INFO | SQLite database initialized successfully
+2025-10-12 16:40:36,497 | INFO | Added session ID 543: 🧱 T-SQL (primary) - Grouping
+2025-10-12 16:40:36,500 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:40:36,501 | INFO | Added session ID 543: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:40:53,281 | INFO | Added session ID 544: 🧱 T-SQL (primary) - Understanding Groups
+2025-10-12 16:40:53,282 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:40:53,282 | INFO | Added session ID 544: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:41:02,171 | INFO | Added session ID 545: 🧱 T-SQL (primary) - Filtering Groups
+2025-10-12 16:41:02,172 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:41:02,172 | INFO | Added session ID 545: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:41:49,742 | INFO | Added session ID 546: 🧱 T-SQL (primary) - Aggregate Functions
+2025-10-12 16:41:49,743 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:41:49,743 | INFO | Added session ID 546: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:42:08,472 | INFO | Added session ID 547: 🧱 T-SQL (primary) - Udenstanding Joins
+2025-10-12 16:42:08,473 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:42:08,473 | INFO | Added session ID 547: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:42:22,470 | INFO | Added session ID 548: 🧱 T-SQL (primary) - Inner Joins
+2025-10-12 16:42:22,470 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:42:22,470 | INFO | Added session ID 548: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:42:39,622 | INFO | Added session ID 549: 🧱 T-SQL (primary) - Joins
+2025-10-12 16:42:39,623 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:42:39,623 | INFO | Added session ID 549: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:42:50,864 | INFO | Added session ID 550: 🧱 T-SQL (primary) - MUltiple Matches
+2025-10-12 16:42:50,865 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:42:50,865 | INFO | Added session ID 550: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:43:40,043 | INFO | Added session ID 551: 🧱 T-SQL (primary) - Ascending
+2025-10-12 16:43:40,044 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:43:40,044 | INFO | Added session ID 551: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:43:44,103 | INFO | Added session ID 552: 🧱 T-SQL (primary) - Checking Equality
+2025-10-12 16:43:44,104 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:43:44,104 | INFO | Added session ID 552: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:43:49,183 | INFO | Added session ID 553: 🧱 T-SQL (primary) - Descending
+2025-10-12 16:43:49,184 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:43:49,184 | INFO | Added session ID 553: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:44:17,827 | INFO | Added session ID 554: 🧱 T-SQL (primary) - Equal
+2025-10-12 16:44:17,828 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:44:17,828 | INFO | Added session ID 554: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:44:22,298 | INFO | Added session ID 555: 🧱 T-SQL (primary) - Filtering Collumns
+2025-10-12 16:44:22,298 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:44:22,299 | INFO | Added session ID 555: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:44:27,031 | INFO | Added session ID 556: 🧱 T-SQL (primary) - Greater or Equal
+2025-10-12 16:44:27,031 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:44:27,032 | INFO | Added session ID 556: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:44:32,501 | INFO | Added session ID 557: 🧱 T-SQL (primary) - Less
+2025-10-12 16:44:32,501 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:44:32,502 | INFO | Added session ID 557: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:45:08,665 | INFO | Added session ID 558: 🧱 T-SQL (primary) - Less or Equal
+2025-10-12 16:45:08,666 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:45:08,667 | INFO | Added session ID 558: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:45:15,332 | INFO | Added session ID 559: 🧱 T-SQL (primary) - Ordering data
+2025-10-12 16:45:15,333 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:45:15,333 | INFO | Added session ID 559: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:45:21,327 | INFO | Added session ID 560: 🧱 T-SQL (primary) - Row and Collumns
+2025-10-12 16:45:21,328 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:45:21,328 | INFO | Added session ID 560: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:45:37,648 | INFO | Added session ID 561: 🧱 T-SQL (primary) - Select Data
+2025-10-12 16:45:37,648 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:45:37,649 | INFO | Added session ID 561: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:45:45,921 | INFO | Added session ID 562: 🧱 T-SQL (primary) - Select Distinct Values
+2025-10-12 16:45:45,921 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:45:45,922 | INFO | Added session ID 562: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:45:52,080 | INFO | Added session ID 563: 🧱 T-SQL (primary) - Select Multiple Collumns
+2025-10-12 16:45:52,080 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:45:52,080 | INFO | Added session ID 563: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:45:56,534 | INFO | Added session ID 564: 🧱 T-SQL (primary) - The inequality operator
+2025-10-12 16:45:56,534 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:45:56,534 | INFO | Added session ID 564: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:46:03,557 | INFO | Added session ID 565: 🧱 T-SQL (primary) - Using conditions
+2025-10-12 16:46:03,557 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:46:03,557 | INFO | Added session ID 565: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:47:12,699 | INFO | Added session ID 566: 🧱 T-SQL (primary) - Adding
+2025-10-12 16:47:12,699 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:47:12,700 | INFO | Added session ID 566: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:47:12,792 | INFO | Added session ID 567: 🧱 T-SQL (primary) - Adding
+2025-10-12 16:47:12,793 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:47:12,793 | INFO | Added session ID 567: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:47:17,256 | INFO | Added session ID 568: 🧱 T-SQL (primary) - Alter
+2025-10-12 16:47:17,256 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:47:17,256 | INFO | Added session ID 568: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:47:22,760 | INFO | Added session ID 569: 🧱 T-SQL (primary) - Dropping Tables
+2025-10-12 16:47:22,760 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:47:22,761 | INFO | Added session ID 569: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:47:27,098 | INFO | Added session ID 570: 🧱 T-SQL (primary) - Listing
+2025-10-12 16:47:27,098 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:47:27,099 | INFO | Added session ID 570: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:47:36,180 | INFO | Added session ID 571: 🧱 T-SQL (primary) - Removing
+2025-10-12 16:47:36,181 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:47:36,181 | INFO | Added session ID 571: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:47:42,095 | INFO | Added session ID 572: 🧱 T-SQL (primary) - Table Creation
+2025-10-12 16:47:42,095 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:47:42,095 | INFO | Added session ID 572: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:47:49,671 | INFO | Added session ID 573: 🧱 T-SQL (primary) - Updated
+2025-10-12 16:47:49,672 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:47:49,673 | INFO | Added session ID 573: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:48:09,928 | INFO | Added session ID 574: 🧱 T-SQL (primary) - And
+2025-10-12 16:48:09,929 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:48:09,929 | INFO | Added session ID 574: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:48:18,530 | INFO | Added session ID 575: 🧱 T-SQL (primary) - And Between /Like
+2025-10-12 16:48:18,530 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:48:18,530 | INFO | Added session ID 575: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:48:23,471 | INFO | Added session ID 576: 🧱 T-SQL (primary) - And any condition
+2025-10-12 16:48:23,472 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:48:23,472 | INFO | Added session ID 576: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:48:28,918 | INFO | Added session ID 577: 🧱 T-SQL (primary) - And chaining conditions
+2025-10-12 16:48:28,918 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:48:28,918 | INFO | Added session ID 577: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:48:38,120 | INFO | Added session ID 578: 🧱 T-SQL (primary) - Between
+2025-10-12 16:48:38,121 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:48:38,121 | INFO | Added session ID 578: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:48:47,044 | INFO | Added session ID 579: 🧱 T-SQL (primary) - Filtering
+2025-10-12 16:48:47,044 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:48:47,044 | INFO | Added session ID 579: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:48:55,939 | INFO | Added session ID 580: 🧱 T-SQL (primary) - Looking for patterns
+2025-10-12 16:48:55,940 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:48:55,940 | INFO | Added session ID 580: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:49:17,052 | INFO | Added session ID 581: 🧱 T-SQL (primary) - Not
+2025-10-12 16:49:17,053 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:49:17,053 | INFO | Added session ID 581: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:49:38,325 | INFO | Added session ID 582: 🧱 T-SQL (primary) - Or  any conditions
+2025-10-12 16:49:38,326 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:49:38,326 | INFO | Added session ID 582: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:49:47,557 | INFO | Added session ID 583: 🧱 T-SQL (primary) - Or  any conditions
+2025-10-12 16:49:47,558 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:49:47,558 | INFO | Added session ID 583: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:49:54,197 | INFO | Added session ID 584: 🧱 T-SQL (primary) - Or  vs in
+2025-10-12 16:49:54,198 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:49:54,198 | INFO | Added session ID 584: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:50:01,287 | INFO | Added session ID 585: 🧱 T-SQL (primary) - Or chaining condition with or
+2025-10-12 16:50:01,288 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:50:01,288 | INFO | Added session ID 585: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:50:24,681 | INFO | Added session ID 586: 🧱 T-SQL (primary) - Placing Wildcards
+2025-10-12 16:50:24,682 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:50:24,682 | INFO | Added session ID 586: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:50:36,605 | INFO | Added session ID 587: 🧱 T-SQL (primary) - Using Wilcards
+2025-10-12 16:50:36,606 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:50:36,606 | INFO | Added session ID 587: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:50:48,226 | INFO | Added session ID 588: 🧱 T-SQL (primary) - Inner Joins
+2025-10-12 16:50:48,226 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:50:48,227 | INFO | Added session ID 588: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:50:53,802 | INFO | Added session ID 589: 🧱 T-SQL (primary) - Joins
+2025-10-12 16:50:53,802 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:50:53,803 | INFO | Added session ID 589: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:51:12,552 | INFO | Added session ID 590: 🧱 T-SQL (primary) - MUltiple Matches
+2025-10-12 16:51:12,552 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:51:12,553 | INFO | Added session ID 590: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:51:17,372 | INFO | Added session ID 591: 🧱 T-SQL (primary) - Udenstanding Joins
+2025-10-12 16:51:17,372 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:51:17,372 | INFO | Added session ID 591: 🧱 T-SQL (primary) - 1.0h
+2025-10-12 16:51:50,431 | INFO | Updated technology ID 74: 🧱 T-SQL (primary)
+2025-10-12 16:51:50,432 | INFO | Updated technology ID 74: 🧱 T-SQL (primary)
+2025-10-12 16:51:50,432 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 16:52:04,647 | INFO | CachedQueryService: Fetched 72 tech stack entries with metrics (cached)
+2025-10-12 16:53:14,687 | INFO | Updated technology ID 74: 🧱 T-SQL (primary)
+2025-10-12 16:53:14,688 | INFO | Updated technology ID 74: 🧱 T-SQL (primary)
+2025-10-12 16:53:14,688 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 17:23:22,636 | INFO | CachedQueryService: Fetched 72 tech stack entries with metrics (cached)
+2025-10-12 17:25:32,686 | INFO | CachedQueryService: Fetched 72 tech stack entries with metrics (cached)
+2025-10-12 17:29:59,136 | INFO | Added category: ⌨️ Keyboard Practice
+2025-10-12 17:29:59,139 | INFO | Added dropdown: category_name = ⌨️ Keyboard Practice
+2025-10-12 17:29:59,139 | INFO | CategorySyncService: Added ⌨️ Keyboard Practice to both tables
+2025-10-12 17:29:59,140 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 17:31:01,565 | INFO | Added technology: ⚡️ Typing  Speed (ID: 119)
+2025-10-12 17:31:01,566 | INFO | Added dropdown: technology = ⚡️ Typing  Speed
+2025-10-12 17:31:01,566 | INFO | TechnologySyncService: Added ⚡️ Typing  Speed to both tech_stack and dropdowns
+2025-10-12 17:31:01,567 | INFO | CachedQueryService: Cache invalidated

@@ -26,6 +26,11 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)s | %(message)s"
 )
 
+@st.cache_resource
+def get_database():
+    """Get cached database connection (singleton)."""
+    return DatabaseStorage()
+
 def main():
     """Main Streamlit application function."""
     # Page configuration
@@ -45,13 +50,14 @@ def main():
         </style>
     """, unsafe_allow_html=True)
     
-    # Initialize database (v2.0)
-    if "db" not in st.session_state:
-        st.session_state.db = DatabaseStorage()
+    # Get cached database connection
+    db = get_database()
+    st.session_state.db = db
     
-    # Initialize session state
+    # Restore current page from database (persists across restarts)
     if "current_page" not in st.session_state:
-        st.session_state.current_page = "home_v2"
+        saved_page = db.get_app_state("current_page", "home_v2")
+        st.session_state.current_page = saved_page
     
     # Load learning sessions from database
     if "learning_sessions" not in st.session_state:
@@ -100,38 +106,47 @@ def main():
         # Navigation buttons with professional styling
         if st.button("🏠 Home Dashboard", width="stretch"):
             st.session_state.current_page = "home_v2"
+            db.save_app_state("current_page", "home_v2")
             st.rerun()
         
         if st.button("📚 Sessions", width="stretch"):
             st.session_state.current_page = "clean_dashboard"
+            db.save_app_state("current_page", "clean_dashboard")
             st.rerun()
             
         if st.button("🎓 Log Session", width="stretch"):
             st.session_state.current_page = "learning_tracker"
+            db.save_app_state("current_page", "learning_tracker")
             st.rerun()
         
         if st.button("🎯 Tech Stack ", width="stretch"):
             st.session_state.current_page = "tech_stack_crud"
+            db.save_app_state("current_page", "tech_stack_crud")
             st.rerun()
         
         if st.button("📋 Planning", width="stretch"):
             st.session_state.current_page = "planning"
+            db.save_app_state("current_page", "planning")
             st.rerun()
         
         if st.button("🧮 Calculator", width="stretch"):
             st.session_state.current_page = "calculator"
+            db.save_app_state("current_page", "calculator")
             st.rerun()
         
         if st.button("📝 Dropdown Manager", width="stretch"):
             st.session_state.current_page = "dropdown_manager"
+            db.save_app_state("current_page", "dropdown_manager")
             st.rerun()
         
         if st.button("📊 Analytics", width="stretch"):
             st.session_state.current_page = "analytics"
+            db.save_app_state("current_page", "analytics")
             st.rerun()
         
         if st.button("📚 Learning Sources", width="stretch"):
             st.session_state.current_page = "learning_sources"
+            db.save_app_state("current_page", "learning_sources")
             st.rerun()
         
         st.markdown("---")

@@ -51,6 +51,9 @@ class DatabaseStorage:
             if self.conn is None:
                 self.conn = sqlite3.connect(self.db_path, check_same_thread=False)
                 self.conn.row_factory = sqlite3.Row  # Enable dict-like access
+                # Enable WAL mode for better concurrency
+                self.conn.execute("PRAGMA journal_mode=WAL;")
+                self.conn.execute("PRAGMA busy_timeout=5000;")
             return self.conn
 
     def _get_cursor(self, conn):
@@ -199,6 +202,15 @@ class DatabaseStorage:
                 id {primary_key},
                 name TEXT UNIQUE NOT NULL,
                 created_at {timestamp}
+            )
+        """)
+
+        # App state table - persist UI state across restarts
+        cursor.execute(f"""
+            CREATE TABLE IF NOT EXISTS app_state (
+                key TEXT PRIMARY KEY,
+                value TEXT NOT NULL,
+                updated_at {timestamp}
             )
         """)
 
@@ -1000,6 +1012,52 @@ class DatabaseStorage:
         """)
 
         return [row[0] for row in cursor.fetchall()]
+
+    # ==================== APP STATE OPERATIONS ====================
+
+    def save_app_state(self, key: str, value: str) -> bool:
+        """Save app state for persistence across restarts."""
+        placeholder = self._get_placeholder()
+        try:
+            conn = self._get_connection()
+            cursor = self._get_cursor(conn)
+            
+            if self.use_postgresql:
+                cursor.execute(
+                    f"""
+                    INSERT INTO app_state (key, value)
+                    VALUES ({placeholder}, {placeholder})
+                    ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value
+                """,
+                    (key, value),
+                )
+            else:
+                cursor.execute(
+                    f"""
+                    INSERT OR REPLACE INTO app_state (key, value)
+                    VALUES ({placeholder}, {placeholder})
+                """,
+                    (key, value),
+                )
+            
+            conn.commit()
+            return True
+        except Exception as e:
+            logging.error(f"Error saving app state: {e}")
+            return False
+
+    def get_app_state(self, key: str, default: str = None) -> Optional[str]:
+        """Get app state value by key."""
+        placeholder = self._get_placeholder()
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        cursor.execute(
+            f"SELECT value FROM app_state WHERE key = {placeholder}",
+            (key,),
+        )
+        
+        row = cursor.fetchone()
+        return row[0] if row else default
 
     # ==================== SESSION TYPE OPERATIONS ====================
 
