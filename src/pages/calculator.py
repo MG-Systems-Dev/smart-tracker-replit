@@ -5,6 +5,7 @@ Calculates completion time based on total hours and work schedule.
 
 import streamlit as st
 from src.database.operations import DatabaseStorage
+from src.utils.navigation import navigate_to
 
 def show_calculator_page():
     """Display the Calculator page for workload estimation."""
@@ -19,8 +20,7 @@ def show_calculator_page():
     
     # Back button
     if st.button("← Back to Home", help="Return to main page"):
-        st.session_state.current_page = "home_v2"
-        st.rerun()
+        navigate_to("home_v2")
     
     # Initialize database
     if 'db' not in st.session_state:

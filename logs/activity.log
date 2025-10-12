@@ -3828,3 +3828,5 @@
 2025-10-12 17:31:01,566 | INFO | Added dropdown: technology = ⚡️ Typing  Speed
 2025-10-12 17:31:01,566 | INFO | TechnologySyncService: Added ⚡️ Typing  Speed to both tech_stack and dropdowns
 2025-10-12 17:31:01,567 | INFO | CachedQueryService: Cache invalidated
+2025-10-12 18:47:24,143 | INFO | SQLite database initialized successfully
+2025-10-12 18:47:24,165 | INFO | CachedQueryService: Fetched 73 tech stack entries with metrics (cached)

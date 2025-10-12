@@ -17,6 +17,7 @@ sys.path.insert(0, str(project_root))
 # Now import from src
 from src.database.operations import DatabaseStorage
 from src.core.config import __version__
+from src.utils.navigation import navigate_to as nav
 
 # Setup logging
 os.makedirs("logs", exist_ok=True)
@@ -105,49 +106,31 @@ def main():
         
         # Navigation buttons with professional styling
         if st.button("🏠 Home Dashboard", width="stretch"):
-            st.session_state.current_page = "home_v2"
-            db.save_app_state("current_page", "home_v2")
-            st.rerun()
+            nav("home_v2")
         
         if st.button("📚 Sessions", width="stretch"):
-            st.session_state.current_page = "clean_dashboard"
-            db.save_app_state("current_page", "clean_dashboard")
-            st.rerun()
+            nav("clean_dashboard")
             
         if st.button("🎓 Log Session", width="stretch"):
-            st.session_state.current_page = "learning_tracker"
-            db.save_app_state("current_page", "learning_tracker")
-            st.rerun()
+            nav("learning_tracker")
         
         if st.button("🎯 Tech Stack ", width="stretch"):
-            st.session_state.current_page = "tech_stack_crud"
-            db.save_app_state("current_page", "tech_stack_crud")
-            st.rerun()
+            nav("tech_stack_crud")
         
         if st.button("📋 Planning", width="stretch"):
-            st.session_state.current_page = "planning"
-            db.save_app_state("current_page", "planning")
-            st.rerun()
+            nav("planning")
         
         if st.button("🧮 Calculator", width="stretch"):
-            st.session_state.current_page = "calculator"
-            db.save_app_state("current_page", "calculator")
-            st.rerun()
+            nav("calculator")
         
         if st.button("📝 Dropdown Manager", width="stretch"):
-            st.session_state.current_page = "dropdown_manager"
-            db.save_app_state("current_page", "dropdown_manager")
-            st.rerun()
+            nav("dropdown_manager")
         
         if st.button("📊 Analytics", width="stretch"):
-            st.session_state.current_page = "analytics"
-            db.save_app_state("current_page", "analytics")
-            st.rerun()
+            nav("analytics")
         
         if st.button("📚 Learning Sources", width="stretch"):
-            st.session_state.current_page = "learning_sources"
-            db.save_app_state("current_page", "learning_sources")
-            st.rerun()
+            nav("learning_sources")
         
         st.markdown("---")
         

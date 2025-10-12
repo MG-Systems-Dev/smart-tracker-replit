@@ -7,6 +7,7 @@ import streamlit as st
 from datetime import datetime, timedelta
 from src.database.operations import DatabaseStorage
 from src.services.cached_queries import CachedQueryService
+from src.utils.navigation import navigate_to
 
 def show_tech_stack_crud_page():
     """Display the Tech Stack visual dashboard."""
@@ -21,8 +22,7 @@ def show_tech_stack_crud_page():
     
     # Back button
     if st.button("← Back to Home", help="Return to main page"):
-        st.session_state.current_page = "home_v2"
-        st.rerun()
+        navigate_to("home_v2")
     
     # Initialize database
     if 'db' not in st.session_state:

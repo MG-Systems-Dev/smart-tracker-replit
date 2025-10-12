@@ -8,6 +8,7 @@ from datetime import date
 from src.database.operations import DatabaseStorage
 from src.utils.dropdowns import DropdownManager
 from src.services import CachedQueryService
+from src.utils.navigation import navigate_to
 import logging
 
 def show_log_session_page():
@@ -22,8 +23,7 @@ def show_log_session_page():
     
     # Back button
     if st.button("← Back to Home"):
-        st.session_state.current_page = "home_v2"
-        st.rerun()
+        navigate_to("home_v2")
     
     # Initialize database
     if 'db' not in st.session_state:

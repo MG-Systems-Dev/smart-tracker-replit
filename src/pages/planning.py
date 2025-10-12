@@ -5,6 +5,7 @@ Displays progress, goals, and completion tracking.
 
 import streamlit as st
 from src.database.operations import DatabaseStorage
+from src.utils.navigation import navigate_to
 
 def show_planning_page():
     """Display dynamic learning roadmap grouped by category."""
@@ -18,8 +19,7 @@ def show_planning_page():
     
     # Back button
     if st.button("← Back to Home", help="Return to main page"):
-        st.session_state.current_page = "home_v2"
-        st.rerun()
+        navigate_to("home_v2")
     
     # Initialize database
     if 'db' not in st.session_state:

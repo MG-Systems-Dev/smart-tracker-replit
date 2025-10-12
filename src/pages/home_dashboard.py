@@ -6,6 +6,7 @@ No editing functionality - pure KPI and metrics display.
 import streamlit as st
 from src.database.operations import DatabaseStorage
 from src.services import CachedQueryService
+from src.utils.navigation import navigate_to
 from datetime import datetime, timedelta
 
 def show_home_kpi_dashboard():
@@ -151,23 +152,19 @@ def show_home_kpi_dashboard():
     
     with nav_col1:
         if st.button("🎓 Log Session", use_container_width=True, type="primary"):
-            st.session_state.current_page = "learning_tracker"
-            st.rerun()
+            navigate_to("learning_tracker")
     
     with nav_col2:
         if st.button("🎯 Tech Stack", use_container_width=True):
-            st.session_state.current_page = "tech_stack_crud"
-            st.rerun()
+            navigate_to("tech_stack_crud")
     
     with nav_col3:
         if st.button("📋 Planning", use_container_width=True):
-            st.session_state.current_page = "planning"
-            st.rerun()
+            navigate_to("planning")
     
     with nav_col4:
         if st.button("🧮 Calculator", use_container_width=True):
-            st.session_state.current_page = "calculator"
-            st.rerun()
+            navigate_to("calculator")
     
     st.markdown("---")
     

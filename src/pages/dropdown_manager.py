@@ -9,6 +9,7 @@ from src.utils.dropdowns import DropdownManager
 from src.database.operations import DatabaseStorage
 from src.services.sync_service import TechnologySyncService, CategorySyncService
 from src.services.cached_queries import CachedQueryService
+from src.utils.navigation import navigate_to
 from datetime import datetime
 import logging
 
@@ -25,8 +26,7 @@ def show_dropdown_manager_page():
     
     # Back button
     if st.button("← Back to Home", help="Return to main page"):
-        st.session_state.current_page = "home_v2"
-        st.rerun()
+        navigate_to("home_v2")
     
     # Initialize database and services
     if 'db' not in st.session_state:

@@ -9,6 +9,7 @@ from datetime import datetime
 from src.database.operations import DatabaseStorage
 from src.services import CachedQueryService
 from src.utils.dropdowns import DropdownManager
+from src.utils.navigation import navigate_to
 
 def show_edit_session_form(db: DatabaseStorage, session_id: int):
     """Display edit form for a specific session."""
@@ -242,8 +243,7 @@ def show_sessions_page():
     
     # Back button
     if st.button("← Back to Home", help="Return to main page"):
-        st.session_state.current_page = "home_v2"
-        st.rerun()
+        navigate_to("home_v2")
     
     # Initialize database
     if 'db' not in st.session_state:

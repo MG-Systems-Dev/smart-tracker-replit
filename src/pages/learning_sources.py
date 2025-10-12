@@ -7,6 +7,7 @@ import streamlit as st
 from datetime import datetime, timedelta
 from src.database.operations import DatabaseStorage
 from src.services.cached_queries import CachedQueryService
+from src.utils.navigation import navigate_to
 
 def show_learning_sources_page():
     """Display Learning Sources KPI Dashboard."""
@@ -19,8 +20,7 @@ def show_learning_sources_page():
     """, unsafe_allow_html=True)
     
     if st.button("← Back to Home", help="Return to main page"):
-        st.session_state.current_page = "home_v2"
-        st.rerun()
+        navigate_to("home_v2")
     
     if 'db' not in st.session_state:
         st.session_state.db = DatabaseStorage()

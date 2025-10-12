@@ -6,6 +6,7 @@ Shows detailed metrics for categories, technologies, and work items.
 import streamlit as st
 from src.database.operations import DatabaseStorage
 from src.services.cached_queries import CachedQueryService
+from src.utils.navigation import navigate_to
 
 def show_analytics_page():
     """Display the Analytics Dashboard page."""
@@ -20,8 +21,7 @@ def show_analytics_page():
     
     # Back button
     if st.button("← Back to Home", help="Return to main page"):
-        st.session_state.current_page = "home_v2"
-        st.rerun()
+        navigate_to("home_v2")
     
     # Initialize database
     if 'db' not in st.session_state:
