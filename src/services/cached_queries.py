@@ -323,7 +323,7 @@ class CachedQueryService:
             ORDER BY s.work_item, hours DESC
         ''')
         
-        # Organize by work item
+        # Organize by work item + technology (unique key)
         work_item_data = {}
         for row in cursor.fetchall():
             row_dict = dict(row)
@@ -334,8 +334,11 @@ class CachedQueryService:
             hours = row_dict['hours']
             sessions = row_dict['sessions']
             
-            if work_item not in work_item_data:
-                work_item_data[work_item] = {
+            # Use combination of work_item + technology as unique key
+            unique_key = f"{work_item}|{tech_name}"
+            
+            if unique_key not in work_item_data:
+                work_item_data[unique_key] = {
                     'work_item': work_item,
                     'technology': tech_name,
                     'total_hours': 0,
@@ -345,21 +348,21 @@ class CachedQueryService:
                     'skills': []
                 }
             
-            work_item_data[work_item]['total_hours'] += hours
-            work_item_data[work_item]['total_sessions'] += sessions
+            work_item_data[unique_key]['total_hours'] += hours
+            work_item_data[unique_key]['total_sessions'] += sessions
             
             if session_type == 'Studying':
-                work_item_data[work_item]['studying_hours'] += hours
+                work_item_data[unique_key]['studying_hours'] += hours
             elif session_type == 'Practice':
-                work_item_data[work_item]['practice_hours'] += hours
+                work_item_data[unique_key]['practice_hours'] += hours
             
             # Add skill if not already there
-            existing_skill = next((s for s in work_item_data[work_item]['skills'] if s['name'] == skill), None)
+            existing_skill = next((s for s in work_item_data[unique_key]['skills'] if s['name'] == skill), None)
             if existing_skill:
                 existing_skill['hours'] += hours
                 existing_skill['sessions'] += sessions
             else:
-                work_item_data[work_item]['skills'].append({
+                work_item_data[unique_key]['skills'].append({
                     'name': skill,
                     'hours': hours,
                     'sessions': sessions

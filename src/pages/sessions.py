@@ -158,7 +158,18 @@ def show_edit_session_form(db: DatabaseStorage, session_id: int):
         col3, col4 = st.columns(2)
         
         with col3:
-            category_source = st.text_input("📚 Category Source", value=session.get('category_source', ''))
+            # Category Source - dropdown from database
+            all_sources = db.get_all_category_sources()
+            current_source = session.get('category_source', '')
+            
+            if all_sources:
+                # Try to find current source in list
+                source_index = all_sources.index(current_source) if current_source in all_sources else 0
+                category_source = st.selectbox("📚 Category Source", options=all_sources, index=source_index, key="category_source_edit")
+            else:
+                st.info("💡 No sources available. Add them in Dropdown Manager → Category Sources tab.")
+                category_source = st.text_input("📚 Category Source (custom)", value=current_source, key="category_source_edit_custom")
+            
             difficulty = dropdown_manager.render_independent_dropdown('difficulty', key_suffix="edit")
         
         with col4:
@@ -349,32 +360,73 @@ def show_sessions_page():
         elif sort_by == 'Hours (Least)':
             filtered_sessions = sorted(filtered_sessions, key=lambda x: x['hours'])
         
-        # Display sessions
+        # Display sessions grouped by year
         st.markdown("---")
         st.markdown(f"### 📋 Sessions ({len(filtered_sessions)} shown)")
         
+        # Group sessions by year
+        from datetime import datetime
+        sessions_by_year = {}
         for session in filtered_sessions:
-            with st.expander(f"📅 {session['date']} - {session['technology']} - {session['topic'] or 'No topic'}", expanded=False):
-                col_info, col_actions = st.columns([3, 1])
+            try:
+                year = datetime.strptime(session['date'].split()[0], '%Y-%m-%d').year
+            except:
+                year = "Unknown"
+            
+            if year not in sessions_by_year:
+                sessions_by_year[year] = []
+            sessions_by_year[year].append(session)
+        
+        # Display each year in an expandable box (newest first)
+        for year in sorted(sessions_by_year.keys(), reverse=True):
+            year_sessions = sessions_by_year[year]
+            year_hours = sum(s['hours'] for s in year_sessions)
+            
+            with st.expander(f"📅 **{year}** ({len(year_sessions)} sessions, {year_hours:.1f} hours)", expanded=False):
                 
-                with col_info:
-                    st.write(f"**Type:** {session['type']} | **Hours:** {session['hours']} | **Status:** {session['status']}")
-                    st.write(f"**Difficulty:** {session['difficulty']}")
-                    if session.get('tags'):
-                        st.write(f"**Tags:** {session['tags']}")
-                    if session.get('notes'):
-                        st.write(f"**Notes:** {session['notes']}")
-                
-                with col_actions:
-                    if st.button("✏️ Edit", key=f"edit_{session['session_id']}", type="primary"):
-                        st.session_state.editing_session_id = session['session_id']
-                        st.rerun()
+                # Group year sessions by month
+                sessions_by_month = {}
+                for session in year_sessions:
+                    try:
+                        date_obj = datetime.strptime(session['date'].split()[0], '%Y-%m-%d')
+                        month = date_obj.strftime('%B')  # Full month name
+                        month_num = date_obj.month  # For sorting
+                    except:
+                        month = "Unknown"
+                        month_num = 0
                     
-                    if st.button("🗑️ Delete", key=f"delete_{session['session_id']}"):
-                        db.delete_session(session['session_id'])
-                        CachedQueryService.invalidate_cache()
-                        st.success("Session deleted!")
-                        st.rerun()
+                    if month not in sessions_by_month:
+                        sessions_by_month[month] = {'sessions': [], 'month_num': month_num}
+                    sessions_by_month[month]['sessions'].append(session)
+                
+                # Display each month in an expandable box (newest first)
+                for month in sorted(sessions_by_month.keys(), key=lambda m: sessions_by_month[m]['month_num'], reverse=True):
+                    month_sessions = sessions_by_month[month]['sessions']
+                    month_hours = sum(s['hours'] for s in month_sessions)
+                    
+                    with st.expander(f"📆 **{month}** ({len(month_sessions)} sessions, {month_hours:.1f} hours)", expanded=False):
+                        for session in month_sessions:
+                            with st.expander(f"📅 {session['date']} - {session['technology']} - {session['topic'] or 'No topic'}", expanded=False):
+                                col_info, col_actions = st.columns([3, 1])
+                                
+                                with col_info:
+                                    st.write(f"**Type:** {session['type']} | **Hours:** {session['hours']} | **Status:** {session['status']}")
+                                    st.write(f"**Difficulty:** {session['difficulty']}")
+                                    if session.get('tags'):
+                                        st.write(f"**Tags:** {session['tags']}")
+                                    if session.get('notes'):
+                                        st.write(f"**Notes:** {session['notes']}")
+                                
+                                with col_actions:
+                                    if st.button("✏️ Edit", key=f"edit_{session['session_id']}", type="primary"):
+                                        st.session_state.editing_session_id = session['session_id']
+                                        st.rerun()
+                                    
+                                    if st.button("🗑️ Delete", key=f"delete_{session['session_id']}"):
+                                        db.delete_session(session['session_id'])
+                                        CachedQueryService.invalidate_cache()
+                                        st.success("Session deleted!")
+                                        st.rerun()
         
         # Export to CSV
         if st.button("💾 Export to CSV"):

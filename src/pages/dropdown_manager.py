@@ -47,6 +47,7 @@ def show_dropdown_manager_page():
         "📁 Manage Categories", 
         "🔧 Manage Technologies",
         "📋 Manage Dropdowns",
+        "🧠 Category Sources",
         "📊 Statistics"
     ])
     
@@ -552,8 +553,54 @@ def show_dropdown_manager_page():
                                 else:
                                     st.error("Failed to delete")
     
-    # ==================== TAB 4: STATISTICS ====================
+    # ==================== TAB 4: CATEGORY SOURCES ====================
     with tabs[3]:
+        st.markdown("### 🧠 Category Sources Management")
+        st.caption("Manage learning platforms and sources (e.g., Udemy, YouTube, Books)")
+        
+        # Add new category source
+        st.markdown("#### ➕ Add New Source")
+        with st.form("add_source_form"):
+            new_source = st.text_input("Source Name", placeholder="e.g., Udemy, YouTube, Coursera, Books")
+            submitted_source = st.form_submit_button("💾 Add Source", type="primary")
+            
+            if submitted_source:
+                if new_source and new_source.strip():
+                    if db.add_category_source(new_source.strip()):
+                        st.success(f"✅ Added source: {new_source.strip()}")
+                        CachedQueryService.invalidate_cache()
+                        st.rerun()
+                    else:
+                        st.error("❌ Source already exists")
+                else:
+                    st.error("Please enter a source name")
+        
+        st.markdown("---")
+        
+        # Show existing sources
+        st.markdown("#### 📋 Existing Sources")
+        all_sources = db.get_all_category_sources()
+        
+        if not all_sources:
+            st.info("No sources yet. Add your first one above!")
+        else:
+            st.caption(f"Total: {len(all_sources)} sources")
+            
+            for source in all_sources:
+                col1, col2 = st.columns([4, 1])
+                with col1:
+                    st.markdown(f"**{source}**")
+                with col2:
+                    if st.button("🗑️", key=f"del_source_{source}", help="Delete this source"):
+                        if db.delete_category_source(source):
+                            st.success(f"Deleted: {source}")
+                            CachedQueryService.invalidate_cache()
+                            st.rerun()
+                        else:
+                            st.error("Failed to delete")
+    
+    # ==================== TAB 5: STATISTICS ====================
+    with tabs[4]:
         st.markdown("### 📊 Data Overview")
         
         col1, col2 = st.columns(2)

@@ -193,6 +193,15 @@ class DatabaseStorage:
             )
         """)
 
+        # Category Sources table - learning platforms/sources
+        cursor.execute(f"""
+            CREATE TABLE IF NOT EXISTS category_sources (
+                id {primary_key},
+                name TEXT UNIQUE NOT NULL,
+                created_at {timestamp}
+            )
+        """)
+
         # Create indexes for better query performance
         cursor.execute(
             "CREATE INDEX IF NOT EXISTS idx_sessions_date ON sessions(session_date)"
@@ -937,6 +946,60 @@ class DatabaseStorage:
         """)
 
         return [{"name": row[0], "work_item": row[1]} for row in cursor.fetchall()]
+
+    # ==================== CATEGORY SOURCES OPERATIONS ====================
+
+    def add_category_source(self, name: str) -> bool:
+        """Add a new category source (learning platform)."""
+        placeholder = self._get_placeholder()
+        try:
+            conn = self._get_connection()
+            cursor = self._get_cursor(conn)
+            cursor.execute(
+                f"""
+                INSERT INTO category_sources (name)
+                VALUES ({placeholder})
+            """,
+                (name,),
+            )
+            conn.commit()
+            logging.info(f"Added category source: {name}")
+            return True
+        except (psycopg2.IntegrityError, sqlite3.IntegrityError):
+            conn.rollback()
+            logging.warning(f"Category source {name} already exists")
+            return False
+
+    def delete_category_source(self, name: str) -> bool:
+        """Delete a category source."""
+        placeholder = self._get_placeholder()
+        try:
+            conn = self._get_connection()
+            cursor = self._get_cursor(conn)
+            cursor.execute(
+                f"""
+                DELETE FROM category_sources
+                WHERE name = {placeholder}
+            """,
+                (name,),
+            )
+            conn.commit()
+            logging.info(f"Deleted category source: {name}")
+            return True
+        except Exception as e:
+            logging.error(f"Error deleting category source: {e}")
+            return False
+
+    def get_all_category_sources(self) -> List[str]:
+        """Get all category sources."""
+        conn = self._get_connection()
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT name FROM category_sources
+            ORDER BY name
+        """)
+
+        return [row[0] for row in cursor.fetchall()]
 
     # ==================== SESSION TYPE OPERATIONS ====================
 

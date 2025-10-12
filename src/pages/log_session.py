@@ -76,23 +76,33 @@ def show_log_session_page():
         st.warning("⚠️ No technologies available.")
         selected_technology = ''
     
-    # Work Item - show all
+    # Work Item - filtered by selected technology
     st.markdown("**📋 Work Item**")
-    all_work_items = []
-    all_techs_list = [tech['name'] for tech in db.get_all_tech_stack()]
-    for tech in all_techs_list:
-        all_work_items.extend(db.get_work_items_by_technology(tech))
-    all_work_items = sorted(list(set(all_work_items)))
     
-    if all_work_items:
+    # Get all techs list for later use
+    all_techs_list = [tech['name'] for tech in db.get_all_tech_stack()]
+    
+    if selected_technology:
+        filtered_work_items = db.get_work_items_by_technology(selected_technology)
+        filtered_work_items = sorted(list(set(filtered_work_items)))
+    else:
+        # If no technology selected, show all work items
+        all_work_items = []
+        for tech in all_techs_list:
+            all_work_items.extend(db.get_work_items_by_technology(tech))
+        filtered_work_items = sorted(list(set(all_work_items)))
+    
+    if filtered_work_items:
         selected_work_item = st.selectbox(
             "work_item_dropdown",
-            options=[""] + all_work_items,
+            options=[""] + filtered_work_items,
             key=f"work_item_outside_form",
             label_visibility="collapsed",
-            help="Select a work item to filter skills"
+            help=f"Work items for '{selected_technology}'" if selected_technology else "All work items"
         )
     else:
+        if selected_technology:
+            st.info(f"💡 No work items for '{selected_technology}'. Leave empty or add in Dropdown Manager.")
         selected_work_item = ''
     
     # Skill - filtered by work item
@@ -147,7 +157,14 @@ def show_log_session_page():
         col3, col4 = st.columns(2)
         
         with col3:
-            category_source = dropdown_manager.render_independent_dropdown('category_source', key_suffix="entry")
+            # Category Source - dropdown from database
+            all_sources = db.get_all_category_sources()
+            if all_sources:
+                category_source = st.selectbox("📚 Category Source", options=all_sources, key="category_source_entry")
+            else:
+                st.info("💡 No sources available. Add them in Dropdown Manager → Category Sources tab.")
+                category_source = st.text_input("📚 Category Source (custom)", key="category_source_entry_custom", placeholder="e.g., Udemy, YouTube")
+            
             difficulty = dropdown_manager.render_independent_dropdown('difficulty', key_suffix="entry")
         
         with col4:

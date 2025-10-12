@@ -112,128 +112,128 @@ def show_tech_stack_crud_page():
         st.markdown("### 🗂️ Technologies by Category")
         
         for category, techs in sorted(by_category.items()):
-            # Category header
-            st.markdown(f"#### {category}")
-            st.caption(f"{len(techs)} technologies • {sum(t.get('logged_hours', 0) for t in techs):.1f} hours logged")
+            # Category as collapsible expander
+            category_hours = sum(t.get('logged_hours', 0) for t in techs)
             
-            # Display technology cards in expandable sections
-            for tech in sorted(techs, key=lambda x: x.get('logged_hours', 0), reverse=True):
-                tech_name = tech['name']
-                goal_hours = tech.get('goal_hours', 50)
-                logged_hours = tech.get('logged_hours', 0)
-                progress_pct = tech.get('progress_pct', 0)
-                session_count = tech.get('session_count', 0)
-                date_added = tech.get('date_added', 'Unknown')
-                
-                # Determine progress color
-                if progress_pct >= 100:
-                    progress_color = "#00FF00"
-                    status_emoji = "✅"
-                elif progress_pct >= 75:
-                    progress_color = "#FFD700"
-                    status_emoji = "🟡"
-                elif progress_pct >= 25:
-                    progress_color = "#FFA500"
-                    status_emoji = "🟠"
-                else:
-                    progress_color = "#FF4500"
-                    status_emoji = "🔴"
-                
-                # Technology card in expander (closed by default)
-                with st.expander(f"{status_emoji} {tech_name} - {logged_hours:.1f}h / {goal_hours:.0f}h ({progress_pct:.1f}%)", expanded=False):
-                    st.caption(f"📅 Added: {date_added}")
+            with st.expander(f"**{category}** ({len(techs)} technologies, {category_hours:.1f} hours)", expanded=False):
+                # Display technology cards in expandable sections
+                for tech in sorted(techs, key=lambda x: x.get('logged_hours', 0), reverse=True):
+                    tech_name = tech['name']
+                    goal_hours = tech.get('goal_hours', 50)
+                    logged_hours = tech.get('logged_hours', 0)
+                    progress_pct = tech.get('progress_pct', 0)
+                    session_count = tech.get('session_count', 0)
+                    date_added = tech.get('date_added', 'Unknown')
                     
-                    # Metrics row
-                    col_a, col_b, col_c, col_d = st.columns(4)
-                    
-                    with col_a:
-                        st.metric("🎯 Goal", f"{goal_hours:.0f}h")
-                    with col_b:
-                        st.metric("⏱️ Logged", f"{logged_hours:.1f}h")
-                    with col_c:
-                        st.metric("📝 Sessions", session_count)
-                    with col_d:
-                        hours_remaining = max(0, goal_hours - logged_hours)
-                        st.metric("⏳ Remaining", f"{hours_remaining:.1f}h")
-                    
-                    # Get sessions for this technology
-                    tech_sessions = db.get_all_sessions()
-                    tech_filtered = [s for s in tech_sessions if s.get('technology') == tech_name]
-                    
-                    # Calculate velocity and trends
-                    if tech_filtered:
-                        now = datetime.now()
-                        last_7_days = now - timedelta(days=7)
-                        last_30_days = now - timedelta(days=30)
-                        
-                        # Parse session dates and calculate velocity
-                        sessions_7d = []
-                        sessions_30d = []
-                        
-                        for s in tech_filtered:
-                            session_date_str = s.get('session_date', '')
-                            if session_date_str:
-                                try:
-                                    session_date = datetime.strptime(session_date_str.split()[0], '%Y-%m-%d')
-                                    if session_date >= last_7_days:
-                                        sessions_7d.append(s)
-                                    if session_date >= last_30_days:
-                                        sessions_30d.append(s)
-                                except:
-                                    pass
-                        
-                        hours_7d = sum(s.get('hours_spent', 0) for s in sessions_7d)
-                        hours_30d = sum(s.get('hours_spent', 0) for s in sessions_30d)
-                        
-                        velocity_weekly = hours_7d
-                        velocity_monthly = hours_30d / 4 if hours_30d > 0 else 0
-                        
-                        # Determine trend
-                        trend_emoji = ""
-                        if hours_7d > velocity_monthly:
-                            trend_emoji = "📈"
-                        elif hours_7d < velocity_monthly and velocity_monthly > 0:
-                            trend_emoji = "📉"
-                        else:
-                            trend_emoji = "➡️"
-                        
-                        # Display velocity metrics
-                        st.markdown("---")
-                        vel_col1, vel_col2, vel_col3 = st.columns(3)
-                        
-                        with vel_col1:
-                            st.metric("⚡ Weekly Velocity", f"{velocity_weekly:.1f}h", help="Hours logged in last 7 days")
-                        with vel_col2:
-                            st.metric("📊 Avg Weekly", f"{velocity_monthly:.1f}h", help="Average weekly hours (last 30 days)")
-                        with vel_col3:
-                            st.metric("📈 Trend", trend_emoji, help="Activity trend indicator")
-                    
-                    # Practice vs Studying breakdown for this tech
-                    tech_filtered = [s for s in tech_filtered if s.get('technology') == tech_name]
-                    
-                    if tech_filtered:
-                        studying_h = sum(s.get('hours_spent', 0) for s in tech_filtered if s.get('session_type') == 'Studying')
-                        practice_h = sum(s.get('hours_spent', 0) for s in tech_filtered if s.get('session_type') == 'Practice')
-                        total_typed = studying_h + practice_h
-                        
-                        if total_typed > 0:
-                            studying_pct = (studying_h / total_typed * 100)
-                            practice_pct = (practice_h / total_typed * 100)
-                            
-                            st.caption(f"📊 **Type Split:** 📚 Studying {studying_h:.1f}h ({studying_pct:.0f}%) • 💪 Practice {practice_h:.1f}h ({practice_pct:.0f}%)")
-                    
-                    # Progress bar
-                    st.progress(min(progress_pct / 100, 1.0))
-                    
-                    # Status message
+                    # Determine progress color
                     if progress_pct >= 100:
-                        st.success("🎉 Goal completed! Great work!")
+                        progress_color = "#00FF00"
+                        status_emoji = "✅"
                     elif progress_pct >= 75:
-                        st.info(f"🚀 Almost there! {hours_remaining:.1f} hours to go")
-                    elif progress_pct > 0:
-                        st.warning(f"💪 Keep going! {hours_remaining:.1f} hours remaining")
+                        progress_color = "#FFD700"
+                        status_emoji = "🟡"
+                    elif progress_pct >= 25:
+                        progress_color = "#FFA500"
+                        status_emoji = "🟠"
                     else:
-                        st.caption("🆕 No sessions logged yet - time to start learning!")
+                        progress_color = "#FF4500"
+                        status_emoji = "🔴"
+                
+                    # Technology card in expander (closed by default)
+                    with st.expander(f"{status_emoji} {tech_name} - {logged_hours:.1f}h / {goal_hours:.0f}h ({progress_pct:.1f}%)", expanded=False):
+                        st.caption(f"📅 Added: {date_added}")
+                        
+                        # Metrics row
+                        col_a, col_b, col_c, col_d = st.columns(4)
+                        
+                        with col_a:
+                            st.metric("🎯 Goal", f"{goal_hours:.0f}h")
+                        with col_b:
+                            st.metric("⏱️ Logged", f"{logged_hours:.1f}h")
+                        with col_c:
+                            st.metric("📝 Sessions", session_count)
+                        with col_d:
+                            hours_remaining = max(0, goal_hours - logged_hours)
+                            st.metric("⏳ Remaining", f"{hours_remaining:.1f}h")
+                    
+                        # Get sessions for this technology
+                        tech_sessions = db.get_all_sessions()
+                        tech_filtered = [s for s in tech_sessions if s.get('technology') == tech_name]
+                        
+                        # Calculate velocity and trends
+                        if tech_filtered:
+                            now = datetime.now()
+                            last_7_days = now - timedelta(days=7)
+                            last_30_days = now - timedelta(days=30)
+                            
+                            # Parse session dates and calculate velocity
+                            sessions_7d = []
+                            sessions_30d = []
+                            
+                            for s in tech_filtered:
+                                session_date_str = s.get('session_date', '')
+                                if session_date_str:
+                                    try:
+                                        session_date = datetime.strptime(session_date_str.split()[0], '%Y-%m-%d')
+                                        if session_date >= last_7_days:
+                                            sessions_7d.append(s)
+                                        if session_date >= last_30_days:
+                                            sessions_30d.append(s)
+                                    except:
+                                        pass
+                            
+                            hours_7d = sum(s.get('hours_spent', 0) for s in sessions_7d)
+                            hours_30d = sum(s.get('hours_spent', 0) for s in sessions_30d)
+                            
+                            velocity_weekly = hours_7d
+                            velocity_monthly = hours_30d / 4 if hours_30d > 0 else 0
+                            
+                            # Determine trend
+                            trend_emoji = ""
+                            if hours_7d > velocity_monthly:
+                                trend_emoji = "📈"
+                            elif hours_7d < velocity_monthly and velocity_monthly > 0:
+                                trend_emoji = "📉"
+                            else:
+                                trend_emoji = "➡️"
+                            
+                            # Display velocity metrics
+                            st.markdown("---")
+                            vel_col1, vel_col2, vel_col3 = st.columns(3)
+                            
+                            with vel_col1:
+                                st.metric("⚡ Weekly Velocity", f"{velocity_weekly:.1f}h", help="Hours logged in last 7 days")
+                            with vel_col2:
+                                st.metric("📊 Avg Weekly", f"{velocity_monthly:.1f}h", help="Average weekly hours (last 30 days)")
+                            with vel_col3:
+                                st.metric("📈 Trend", trend_emoji, help="Activity trend indicator")
+                        
+                        # Practice vs Studying breakdown for this tech
+                        tech_filtered = [s for s in tech_filtered if s.get('technology') == tech_name]
+                        
+                        if tech_filtered:
+                            studying_h = sum(s.get('hours_spent', 0) for s in tech_filtered if s.get('session_type') == 'Studying')
+                            practice_h = sum(s.get('hours_spent', 0) for s in tech_filtered if s.get('session_type') == 'Practice')
+                            total_typed = studying_h + practice_h
+                            
+                            if total_typed > 0:
+                                studying_pct = (studying_h / total_typed * 100)
+                                practice_pct = (practice_h / total_typed * 100)
+                                
+                                st.caption(f"📊 **Type Split:** 📚 Studying {studying_h:.1f}h ({studying_pct:.0f}%) • 💪 Practice {practice_h:.1f}h ({practice_pct:.0f}%)")
+                        
+                        # Progress bar
+                        st.progress(min(progress_pct / 100, 1.0))
+                        
+                        # Status message
+                        if progress_pct >= 100:
+                            st.success("🎉 Goal completed! Great work!")
+                        elif progress_pct >= 75:
+                            st.info(f"🚀 Almost there! {hours_remaining:.1f} hours to go")
+                        elif progress_pct > 0:
+                            st.warning(f"💪 Keep going! {hours_remaining:.1f} hours remaining")
+                        else:
+                            st.caption("🆕 No sessions logged yet - time to start learning!")
             
             st.markdown("")  # Add spacing between categories
         
