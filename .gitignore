@@ -1,8 +1,16 @@
 # Data files (SQLite - not used anymore, using PostgreSQL now)
 data/*.db
 data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+data/*.db.bak
 *.sqlite
 *.sqlite3
+
+# Environment variables and credentials
+.env
+credentials/
+*.json
 
 # Logs
 logs/

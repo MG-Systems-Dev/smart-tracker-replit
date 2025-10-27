@@ -17,7 +17,8 @@ A professional personal learning tracker with persistent PostgreSQL database, si
 ## Architecture
 
 ### Database Schema
-- **PostgreSQL** (migrated from SQLite for permanent persistence in Replit)
+- **PostgreSQL** (production/Replit) or **SQLite** (local development)
+- SQLite supports Google Drive sync for cloud backup/sync
 - Tables: `sessions`, `tech_stack`, `categories`, `dropdowns`, `work_items`, `skills`
 - 4-level hierarchical model: Category → Technology → Work Item → Skill/Topic
 
@@ -63,6 +64,7 @@ smart-tracker/
    ```bash
    pip install -r requirements.txt
    ```
+3. (Optional) For Google Drive sync, see [DRIVE_SYNC_GUIDE.md](DRIVE_SYNC_GUIDE.md)
 
 ### Running the Application
 
@@ -80,11 +82,30 @@ python main.py
 
 ## Database
 
-The application uses **PostgreSQL** for permanent data persistence:
+The application supports dual database modes:
 
-- **Development Database**: Managed by Replit, accessible via `DATABASE_URL` environment variable
-- **Migration**: Successfully migrated from SQLite to prevent data loss on app sleep/restart
-- **Connection**: Uses `psycopg2-binary` with connection pooling
+- **PostgreSQL** (production/Replit): Permanent data persistence via `DATABASE_URL` environment variable
+- **SQLite** (local development): File-based database at `data/smart_tracker.db`
+  - WAL mode enabled for better concurrency
+  - Optional Google Drive sync for cloud backup/sync
+  - See [DRIVE_SYNC_GUIDE.md](DRIVE_SYNC_GUIDE.md) for Drive integration
+
+### Google Drive Sync (SQLite Only)
+
+Enable cloud backup/sync for your local SQLite database:
+
+```bash
+# Download latest DB from Drive
+python scripts/sync_drive.py download
+
+# Upload local DB to Drive
+python scripts/sync_drive.py upload
+
+# View Drive file metadata
+python scripts/sync_drive.py metadata
+```
+
+See [DRIVE_SYNC_GUIDE.md](DRIVE_SYNC_GUIDE.md) for complete setup instructions.
 
 ## Core Pages
 
