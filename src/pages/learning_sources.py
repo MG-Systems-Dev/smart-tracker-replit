@@ -5,7 +5,7 @@ Analyze effectiveness, time investment, and ROI across different learning platfo
 
 import streamlit as st
 from datetime import datetime, timedelta
-from src.database.operations import DatabaseStorage
+from src.core.app import get_database
 from src.services.cached_queries import CachedQueryService
 from src.utils.navigation import navigate_to
 
@@ -22,10 +22,8 @@ def show_learning_sources_page():
     if st.button("← Back to Home", help="Return to main page"):
         navigate_to("home_v2")
     
-    if 'db' not in st.session_state:
-        st.session_state.db = DatabaseStorage()
-    
-    db = st.session_state.db
+    # Initialize database (singleton)
+    db = get_database()
     
     st.markdown("---")
     

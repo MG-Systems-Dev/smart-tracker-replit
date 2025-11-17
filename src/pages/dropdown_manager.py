@@ -6,7 +6,7 @@ Uses sync services to ensure data consistency across all tables.
 
 import streamlit as st
 from src.utils.dropdowns import DropdownManager
-from src.database.operations import DatabaseStorage
+from src.core.app import get_database
 from src.services.sync_service import TechnologySyncService, CategorySyncService
 from src.services.cached_queries import CachedQueryService
 from src.utils.navigation import navigate_to
@@ -28,11 +28,8 @@ def show_dropdown_manager_page():
     if st.button("← Back to Home", help="Return to main page"):
         navigate_to("home_v2")
     
-    # Initialize database and services
-    if 'db' not in st.session_state:
-        st.session_state.db = DatabaseStorage()
-    
-    db = st.session_state.db
+    # Initialize database and services (singleton)
+    db = get_database()
     dropdown_manager = DropdownManager(db)
     tech_service = TechnologySyncService(db)
     category_service = CategorySyncService(db)
