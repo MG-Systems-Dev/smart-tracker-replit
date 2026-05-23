@@ -720,7 +720,7 @@ class DatabaseStorage:
     def get_hours_by_technology(self) -> Dict[str, float]:
         """Get total hours spent per technology."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
         cursor.execute("""
             SELECT technology, SUM(hours_spent) as total_hours
             FROM sessions
@@ -737,7 +737,7 @@ class DatabaseStorage:
     def get_hours_by_category(self) -> Dict[str, float]:
         """Get total hours spent per category."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
         cursor.execute("""
             SELECT category_name, SUM(hours_spent) as total_hours
             FROM sessions
@@ -754,7 +754,7 @@ class DatabaseStorage:
     def get_hours_by_work_item(self) -> Dict[str, float]:
         """Get total hours spent per work item."""
         conn = self._get_connection()
-        cursor = conn.cursor()
+        cursor = self._get_cursor(conn)
         cursor.execute("""
             SELECT work_item, SUM(hours_spent) as total_hours
             FROM sessions

@@ -6,6 +6,7 @@ Provides filtering, sorting, and detailed session analytics.
 import streamlit as st
 import pandas as pd
 from datetime import datetime
+from src.core.app import get_database
 from src.database.operations import DatabaseStorage
 from src.services import CachedQueryService
 from src.utils.dropdowns import DropdownManager
@@ -245,11 +246,8 @@ def show_sessions_page():
     if st.button("← Back to Home", help="Return to main page"):
         navigate_to("home_v2")
     
-    # Initialize database
-    if 'db' not in st.session_state:
-        st.session_state.db = DatabaseStorage()
-    
-    db = st.session_state.db
+    # Initialize database (singleton)
+    db = get_database()
     
     # Check if we're editing a session
     if 'editing_session_id' in st.session_state and st.session_state.editing_session_id:

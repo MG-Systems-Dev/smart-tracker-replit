@@ -4,7 +4,7 @@ Shows detailed metrics for categories, technologies, and work items.
 """
 
 import streamlit as st
-from src.database.operations import DatabaseStorage
+from src.core.app import get_database
 from src.services.cached_queries import CachedQueryService
 from src.utils.navigation import navigate_to
 
@@ -23,11 +23,8 @@ def show_analytics_page():
     if st.button("← Back to Home", help="Return to main page"):
         navigate_to("home_v2")
     
-    # Initialize database
-    if 'db' not in st.session_state:
-        st.session_state.db = DatabaseStorage()
-    
-    db = st.session_state.db
+    # Initialize database (singleton)
+    db = get_database()
     
     st.markdown("---")
     

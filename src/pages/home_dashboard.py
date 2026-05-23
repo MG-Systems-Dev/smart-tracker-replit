@@ -4,7 +4,7 @@ No editing functionality - pure KPI and metrics display.
 """
 
 import streamlit as st
-from src.database.operations import DatabaseStorage
+from src.core.app import get_database
 from src.services import CachedQueryService
 from src.utils.navigation import navigate_to
 from datetime import datetime, timedelta
@@ -21,11 +21,8 @@ def show_home_kpi_dashboard():
     </div>
     """, unsafe_allow_html=True)
     
-    # Initialize database
-    if 'db' not in st.session_state:
-        st.session_state.db = DatabaseStorage()
-    
-    db = st.session_state.db
+    # Initialize database (singleton)
+    db = get_database()
     
     # ==================== KEY METRICS SECTION ====================
     st.markdown("### 📊 Key Performance Indicators")

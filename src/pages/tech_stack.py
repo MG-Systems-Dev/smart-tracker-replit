@@ -5,7 +5,7 @@ Read-only display showing technology cards grouped by category with progress met
 
 import streamlit as st
 from datetime import datetime, timedelta
-from src.database.operations import DatabaseStorage
+from src.core.app import get_database
 from src.services.cached_queries import CachedQueryService
 from src.utils.navigation import navigate_to
 
@@ -24,11 +24,8 @@ def show_tech_stack_crud_page():
     if st.button("← Back to Home", help="Return to main page"):
         navigate_to("home_v2")
     
-    # Initialize database
-    if 'db' not in st.session_state:
-        st.session_state.db = DatabaseStorage()
-    
-    db = st.session_state.db
+    # Initialize database (singleton)
+    db = get_database()
     
     # Info banner
     st.info("📝 **Note:** To add or edit technologies, use the Dropdown Manager page")

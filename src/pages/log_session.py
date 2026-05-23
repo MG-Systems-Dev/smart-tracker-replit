@@ -5,7 +5,7 @@ Uses the new hierarchical dropdown system for data entry.
 
 import streamlit as st
 from datetime import date
-from src.database.operations import DatabaseStorage
+from src.core.app import get_database
 from src.utils.dropdowns import DropdownManager
 from src.services import CachedQueryService
 from src.utils.navigation import navigate_to
@@ -25,11 +25,8 @@ def show_log_session_page():
     if st.button("← Back to Home"):
         navigate_to("home_v2")
     
-    # Initialize database
-    if 'db' not in st.session_state:
-        st.session_state.db = DatabaseStorage()
-    
-    db = st.session_state.db
+    # Initialize database (singleton)
+    db = get_database()
     dropdown_manager = DropdownManager(db)
     
     st.markdown("---")
